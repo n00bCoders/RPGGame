@@ -1,14 +1,14 @@
 public class Magic {
 
     String name = Monster.getNameOfTheMonster();
-    int spellDamage;
-    int requiredMana;
-    int mana = Monster.getMana();
-    int manaMax = Monster.getManaMax();
-    int health = Monster.getHealth();
-    int maxHealth = Monster.getHealthMax();
+    double spellDamage;
+    double requiredMana;
+    double mana = Monster.getMana();
+    double manaMax = Monster.getManaMax();
+    double health = Monster.getHealth();
+    double maxHealth = Monster.getHealthMax();
 
-    public int useFireBall(int lvl, int minMagicDamage, int maxMagicDamage){
+    public double useFireBall(int lvl, double minMagicDamage, double maxMagicDamage){
         requiredMana = 20;
         spellDamage = lvl * Random.RInt(minMagicDamage, maxMagicDamage);
 
@@ -23,7 +23,7 @@ public class Magic {
         }
     }
 
-    public int useIceSpike(int lvl, int minMagicDamage, int maxMagicDamage){
+    public double useIceSpike(int lvl, double minMagicDamage, double maxMagicDamage){
         requiredMana = 40;
         spellDamage = lvl * Random.RInt(minMagicDamage, maxMagicDamage);
 
@@ -38,7 +38,7 @@ public class Magic {
         }
     }
 
-    public void useHeal(int lvl, int minMagicDamage, int maxMagicDamage){
+    public void useHeal(int lvl, double minMagicDamage, double maxMagicDamage){
         requiredMana = 30;
         spellDamage = lvl * Random.RInt(minMagicDamage, maxMagicDamage);
 
@@ -62,7 +62,7 @@ public class Magic {
         }
     }
 
-    public void useStealHealth(int lvl, int minMagicDamage, int maxMagicDamage){
+    public void useStealHealth(int lvl, double minMagicDamage, double maxMagicDamage){
         requiredMana = 15;
         spellDamage = lvl * Random.RInt(minMagicDamage, maxMagicDamage);
 
@@ -87,8 +87,8 @@ public class Magic {
 
     }
 
-    public int useReinforcedAttack(int minDmg, int maxDmg){
-        int damage = Random.RInt(minDmg * 5, maxDmg * 2);
+    public double useReinforcedAttack(double minDmg, double maxDmg){
+        double damage = Random.RInt(minDmg * 5, maxDmg * 2);
         return damage;
     }
 }
