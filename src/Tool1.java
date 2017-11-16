@@ -16,6 +16,20 @@ public static String eq(int ID, int ID2){
 }
 }
 
+// [0] - [10] klucze
+// [1-2] - [10] itemy zwiazane z przemieszczaniem po mapie
+// [3] - [10] potki
+// [4-5] - [10] miecze
+// [6-7] - [10] zbroja
+
+
+// [0][0] klucz do skrzyni
+// [0][1] klucz do drzwi
+
+
+// [1][0] pochodnia
+// [1][1] tajemniczy amulet
+
 //class Key extends Tool{}
 //class Weapon extends Tool{}
 //class Armor extends Tool{}

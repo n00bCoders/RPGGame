@@ -1,48 +1,26 @@
-import org.jetbrains.annotations.Contract;
-
 public class Postac {
 	public double predkoscAtaku;
-
+	public double predkoscChodzenia;
+	public double hp = 100;
 	public double obrona;
 	public double atak;
 	public double money;
 	public int level;
 	public double kryt;
+	public double mana;
 	public double exp;
 	
 	public double zrecznosc;
 	public double inteligencja;
 	public double witalnosc;
 	public double sila;
-
-	private static double hp = 200;
-	private static double hpMax = 1000;
-	private static double mana = 245;
-	private static double manaMax = 1000;
-
-	public Postac(double predkoscAtaku, double hp, double obrona, double atak, double money, int level, double mana, double exp) {=
+	
+	public void atak (double predkoscAtaku, double atak, double kryt){
 		this.predkoscAtaku = predkoscAtaku;
-		this.hp = hp;
-
-	}
-
-	public static double getHp() {
-		return hp;
-	}
-	public static double getHpMax () { return hpMax; }
-	public static double getMana() {
-		return mana;
-	}
-	public static double getManaMax() {
-		return manaMax;
-	}
-
-	public double atak (double sila){
-		this.sila = sila;
-		double damage = sila;
-		System.out.println("Zadajesz: " + damage + " obrazen");
-		return damage;
-	}
+		this.atak = atak;
+		this.kryt = kryt;
+		double damage = predkoscAtaku + atak + kryt;
+		System.out.println("Zadajesz: " + damage + " obrazen");}
 	
 	public void obrona (double hp, double obrona){
 		this.hp = hp;
@@ -75,8 +53,27 @@ public class Postac {
 		System.out.println("Twoj level wynosi 9 ");}
 		}
 
-	public Postac(double v){
+	public Postac(){
 		
+	}
+
+	public boolean takeDamage(int damage) {
+		hp -= damage;
+		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + hp + " punktow zycia");
+		if (hp <= 0) {
+			System.out.println("Umarles");
+			return true;
+		}
+		return false;
+	}
+
+	public void dealDamage(int damage) {
+		System.out.println("Zadales: " + damage + " punktow obrazen");
+        Monster.takeDamage(damage);
+	}
+
+	public Postac(double predkoscChodzenia){
+		this.predkoscChodzenia = predkoscChodzenia;
 	}
 
 	public void probna(){
