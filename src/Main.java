@@ -14,5 +14,7 @@ public class Main {
         goblinus.dealDamage();
         //System.out.println(goblinus.getHealthStatusBar());
         //System.out.println(goblinus.getDamageStatusBar());
+
+
     }
 }

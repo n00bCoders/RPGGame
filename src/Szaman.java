@@ -1,8 +1,7 @@
 public class Szaman extends Postac {
 
-	public Postac (double predkoscAtaku, double hp, double obrona, double atak, double money, int level, double mana, double exp) {
-		super(predkoscAtaku - 100, )
-	}
-	
+		public Szaman(double predkoscAtaku, double obrona, double sila, double money, int level, double exp){
+			super(10, 55, 40, 1000, 4, 455);
+		}
 }
 
