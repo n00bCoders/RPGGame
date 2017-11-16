@@ -23,10 +23,10 @@ public class Monster {
     private double speedAttack;     //Znalezc sensowne zastosowanie
     private int lvl;        //Znalezc sensowne zastosowanie
     private static String nameOfTheMonster;
-    private int expMin;
-    private int expMax;
-    private int coinDropMin;
-    private int coinDropMax;
+    private static int expMin;
+    private static int expMax;
+    private static int coinDropMin;
+    private static int coinDropMax;
     private static int damageMin;
     private static int damageMax;
     private static int minMagicDmg;
@@ -162,22 +162,22 @@ public class Monster {
         current.healthPotions = Random.RInt(HEALTH_POTIONS_MIN, HEALTH_POTIONS_MAX);
     }
 
-    public boolean takeDamage(int damage) {
-        this.health = health - damage;
+    public static boolean takeDamage(int damage) {
+        health = health - damage;
         System.out.println(getNameOfTheMonster() + " przyjal obrazenia w wysokosci: " + damage + ", ma teraz: " + health + " punktow zycia");
-        if (this.health <= 0) {
+        if (health <= 0) {
             die();
             return true;
         }
         return false;
     }
 
-    public void dealDamage(int damage) {
+    public static void dealDamage(int damage) {
         System.out.println(nameOfTheMonster + " zadal Ci: " + damage + " punktow obrazen");
         /* Dodac przyjmowanie obrazen - coś w stylu playerHealth.takeDamage(damage) */
     }
 
-    private void die() {
+    private static void die() {
         /* złapać pomysł do napisana */
 
         //Rewards

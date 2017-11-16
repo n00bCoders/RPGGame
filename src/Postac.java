@@ -56,6 +56,22 @@ public class Postac {
 	public Postac(){
 		
 	}
+
+	public boolean takeDamage(int damage) {
+		hp -= damage;
+		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + hp + " punktow zycia");
+		if (hp <= 0) {
+			System.out.println("Umarles");
+			return true;
+		}
+		return false;
+	}
+
+	public void dealDamage(int damage) {
+		System.out.println("Zadales: " + damage + " punktow obrazen");
+        Monster.takeDamage(damage);
+	}
+
 	public Postac(double predkoscChodzenia){
 		this.predkoscChodzenia = predkoscChodzenia;
 	}
