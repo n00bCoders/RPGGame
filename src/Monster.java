@@ -15,7 +15,7 @@ public class Monster {
 
     //Static variables
     private static Monster current;
-
+//a
 
     //Properties (Constant)
     private static double healthMax;
