@@ -10,6 +10,7 @@ public class Move {
     public static void Camp() {
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 if(Tool1.eq(1,0)==others.othe(0)) {
@@ -43,17 +44,35 @@ public class Move {
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
                 Meadow(); //Tymczasowo
 
-            case "przeszukaj oboz":
+            case "przeszukaj oboz": //dodac sprawdzanei czy posiada juz te przedmioty
                 Tool1.add(0,1,0);
+                Tool1.addweapon(0,6,0);
+
+                System.out.println("Znalazles zardzewialy miecz oraz pochodnie");
                 System.out.println("-------------------------------");
                 System.out.println("+"+""+others.othe(0));
+                System.out.println("+"+""+Weapon.weapon(0));
                 System.out.println("-------------------------------");
+                System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
+                String b = scanner.nextLine();
+                if (b.equals("tak")){
+                    zalozone.equipWeapon(0,6,0);
+                    System.out.println("zalozyles "+ Weapon.weapon(0));
+                }else{
+                    System.out.println("to sie pierdol");
+                }
+
                 Camp();
 
             case "idz spac":
                 System.out.println("Spales wystarczajaca dlugo, czas rozpoczac swoja przygode.");
                 Camp();
-
+            case "eq":
+                zalozone.showWear();
+                Camp();
+            case "inventory":
+                zalozone.showEq();
+                Camp();
             default:
                 System.out.println("Co Ty odpierdalasz?");
                 Camp();
