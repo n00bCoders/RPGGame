@@ -1,5 +1,3 @@
-package genetyka;
-
 import java.util.Scanner;
 
 /**

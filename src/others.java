@@ -1,8 +1,3 @@
-package genetyka;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Przykład Jan on 10.11.2017.
  */

@@ -1,6 +1,3 @@
-package genetyka;
-
-
 public class Tool1 {
     public static String[][] equipment = new String[50][50];
 
