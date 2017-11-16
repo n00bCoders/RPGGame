@@ -1,5 +1,9 @@
 public class Wojownik extends Postac{
-	
+
+	public Wojownik() {
+		super(predkoscAtaku - 100);
+	}
+
 	public void atak (double predkoscAtaku, double atak, double kryt, double sila){
 		this.predkoscAtaku = predkoscAtaku;
 		this.atak = atak;
@@ -8,4 +12,6 @@ public class Wojownik extends Postac{
 		double damage = predkoscAtaku + atak + kryt + sila;
 		System.out.println("Zadajesz: " + damage + " obra�e�");}
 
+
+	}
 }
