@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Key1 {
    /* List<java.lang.String> klucze = new ArrayList<>();
 
