@@ -6,8 +6,10 @@ import java.util.Scanner;
 public class Move {
 
 
-
     public static void Camp() {
+        Goblin goblinus = new Goblin(46, 50, 30, 30, 1.5, 1, "Goblin", 5, 10, 5, 10, 5, 16, 7, 18);
+        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1);
+
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine(); // nasz glowny scanner
 
@@ -34,6 +36,9 @@ public class Move {
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
+                System.out.println("------------------------------------------");
+                System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
+                System.out.println("------------------------------------------");
                 Fight.Fight();
                 Fild();
 

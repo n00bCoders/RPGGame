@@ -7,7 +7,7 @@ public class Fight {
             if (Monster.getHealth() > 0){
                 Monster.dealDamage(15);
             }
-
+            System.out.println("------------------------------------------");
             Fight();
         }
         else{

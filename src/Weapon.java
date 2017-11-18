@@ -13,7 +13,7 @@ public class Weapon {
     public static void SendStats(){ // metoda ktora sprawdza zalozony item i przesyla odpowiednie wartosci do postaci
         switch (zalozone.wear[0][0]){
             case "zardzewialy miecz":
-                Postac.atak +=10;
+                //Postac.getAttack() +=10;
         }
     }
 
