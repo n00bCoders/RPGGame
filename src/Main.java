@@ -13,6 +13,5 @@ public class Main {
         //goblinus.dealDamage();
         //System.out.println(goblinus.getHealthStatusBar());
         Fight.Fight();
-        Postac.g
     }
 }
