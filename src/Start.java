@@ -12,7 +12,6 @@ public class Start {
         System.out.println("Budzisz sie rano i jedyne co pamietasz to tajemnicza postac w kapturze,");
         System.out.println("ktora Cie oswobodzila.");
         System.out.println("Co robisz ?");
-        Tool1.wypelnij();
         //Lokacja startowa
         Move.Camp();
     }
