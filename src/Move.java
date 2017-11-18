@@ -58,10 +58,10 @@ public class Move {
                 String b = scanner.nextLine();
                 if (b.equals("tak")){
                     zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
-                    System.out.println(Postac.atak);
+                    System.out.println(Postac.getAttack());
                     System.out.println("zalozyles "+ Weapon.weapon(0));
                     Weapon.SendStats(); // wysyla statystyki broni do postaci
-                    System.out.println(Postac.atak);
+                    System.out.println(Postac.getAttack());
                 }else{
                     System.out.println("to sie pierdol");
                 }
