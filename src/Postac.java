@@ -43,6 +43,10 @@ public class Postac {
 		healthMax = max;
 	}
 
+	public static void setAttack(double add){
+	    attack = getAttack() + add;
+    }
+
 
 	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength){
 		this.health = health;

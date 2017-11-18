@@ -12,8 +12,7 @@ public class Main {
         //goblinus.takeDamage(10);
         //goblinus.dealDamage();
         //System.out.println(goblinus.getHealthStatusBar());
-        //System.out.println(goblinus.getDamageStatusBar());
-        Fight fight = new Fight();
-        fight.Fight();
+        Fight.Fight();
+        Postac.g
     }
 }
