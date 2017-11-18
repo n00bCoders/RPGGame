@@ -3,7 +3,7 @@ public class Postac {
 	public double predkoscChodzenia;
 	public double hp = 100;
 	public double obrona;
-	public double atak;
+	public static double atak = 5;
 	public double money;
 	public int level;
 	public double kryt;

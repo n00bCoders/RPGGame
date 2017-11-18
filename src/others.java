@@ -7,7 +7,7 @@ import java.util.List;
 public class others {
     public static String othe(int index1){
 
-        String[] othe = new String[45];
+        String[] othe = new String[45];// tablica zawierajaca wszystkie itemy questowe
         othe[0] = "pochodnia";
         othe[1] = "Tajemniczy amulet";
 

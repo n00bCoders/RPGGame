@@ -7,17 +7,14 @@ public class Tool1 {
     //dodaje itemy z klasy key1 do eq (tablicy)
     public static void addweapon(int itemID, int index1, int index2){ equipment[index1][index2] = Weapon.weapon(itemID); }
     //dodaje itemy z klasy weapon do eq (tablicy)
-public static void wypelnij(){
-    for(int i=0; i< equipment.length; i++)
-        for(int j=0; j< equipment[i].length; j++)
-        equipment[i][j] = "chuj";
-    }
+
 
 public static String eq(int ID, int ID2){
 
     return equipment[ID][ID2];
 }
 }
+
 
 // [0] - [10] klucze
 // [1-2] - [10] itemy zwiazane z przemieszczaniem po mapie

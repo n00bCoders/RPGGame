@@ -9,11 +9,11 @@ public class Move {
 
     public static void Camp() {
         Scanner scanner = new Scanner(System.in);
-        String a = scanner.nextLine();
+        String a = scanner.nextLine(); // nasz glowny scanner
 
         switch (a) {
             case "idz na polnoc":
-                if(Tool1.eq(1,0)==others.othe(0)) {
+                if(Tool1.eq(1,0)==others.othe(0)) { //sprzwdza czy posiadamy dany item w eq
                     System.out.println("Droga jest zablokowana przez haszcze,");
                     System.out.println("jedyna opcja na przedostanie sie dalej");
                     System.out.println("to spalenie ich.");
@@ -44,8 +44,8 @@ public class Move {
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
                 Meadow(); //Tymczasowo
 
-            case "przeszukaj oboz": //dodac sprawdzanei czy posiada juz te przedmioty
-                Tool1.add(0,1,0);
+            case "przeszukaj oboz":
+                Tool1.add(0,1,0); // dodaje item do eq
                 Tool1.addweapon(0,6,0);
 
                 System.out.println("Znalazles zardzewialy miecz oraz pochodnie");
@@ -56,8 +56,11 @@ public class Move {
                 System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
                 String b = scanner.nextLine();
                 if (b.equals("tak")){
-                    zalozone.equipWeapon(0,6,0);
+                    zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
+                    System.out.println(Postac.atak);
                     System.out.println("zalozyles "+ Weapon.weapon(0));
+                    Weapon.SendStats(); // wysyla statystyki broni do postaci
+                    System.out.println(Postac.atak);
                 }else{
                     System.out.println("to sie pierdol");
                 }
@@ -70,7 +73,7 @@ public class Move {
             case "eq":
                 zalozone.showWear();
                 Camp();
-            case "inventory":
+            case "plecak":
                 zalozone.showEq();
                 Camp();
             default:
