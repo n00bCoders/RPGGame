@@ -76,10 +76,6 @@ public class Monster {
         return current;
     }
 
-    public static int getIndex(Monster i) {
-        return arrayEnemy.indexOf(i);
-    }
-
     public int getLvl() {
         //return lvl *= heroLvl;
         return lvl;
@@ -102,7 +98,7 @@ public class Monster {
     }
 
     public String getDamageStatusBar(){
-        return("Minimalny atak: " + getMinMagicDmg() + ", maksymalny atak: " + getMaxMagicDmg());
+        return("Minimalny atak: " + getDamageMin() + ", maksymalny atak: " + getDamageMax());
     }
 
 
@@ -111,7 +107,7 @@ public class Monster {
         this.healthPotions = amount;
     }
 
-    public static void setDamage(int min, int max) {
+    public static void setDamage(double min, double max) {
         damageMin = min;
         damageMax = max;
     }
@@ -129,10 +125,6 @@ public class Monster {
     public static void setMana(double current, double max) {
         mana = current;
         manaMax = max;
-    }
-
-    public static void set(int i) {
-        current = arrayEnemy.get(i);
     }
 
 
@@ -156,11 +148,6 @@ public class Monster {
     }
 
     //Other methods
-    public static void encounterNew() {
-        current = arrayEnemy.get(Random.RInt(0, arrayEnemy.size()));
-        current.health = current.healthMax;
-        current.healthPotions = Random.RInt(HEALTH_POTIONS_MIN, HEALTH_POTIONS_MAX);
-    }
 
     public static boolean takeDamage(double damage) {
         health = health - damage;
@@ -174,7 +161,7 @@ public class Monster {
 
     public static void dealDamage(double damage) {
         System.out.println(nameOfTheMonster + " zadal Ci: " + damage + " punktow obrazen");
-        /* Dodac przyjmowanie obrazen - coś w stylu playerHealth.takeDamage(damage) */
+        Postac.setHealth(Postac.getHealth() - damage, Postac.getHealthMax());
     }
 
     private static void die() {
@@ -202,7 +189,7 @@ public class Monster {
         }
     }
 
-    public void magicalAttack(int mana){
+    public void magicalAttack(double mana){
         Magic Magic = new Magic();
         double typeOfAttack;
         double damage;
@@ -243,7 +230,7 @@ public class Monster {
         }
     }
 
-    public void physicalAttack(int damageMin, int damageMax){
+    public void physicalAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
         dealDamage(damage);
     }
