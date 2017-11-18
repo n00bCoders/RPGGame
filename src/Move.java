@@ -34,6 +34,7 @@ public class Move {
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
+                Fight.Fight();
                 Fild();
 
             case "idz na wschod":
