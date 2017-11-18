@@ -15,7 +15,8 @@ public static String eq(int ID, int ID2){
 }
 }
 
-
+// BARDZO PROSZE WYPISYWAC WSZYSTKIE ITEMY KTORE DODAJECIE W KOMENTARZU NIZEJ
+// ORAZ TRZYMAC SIE WYZNACZONCYH MIEJSC NA DANY ITEM !
 // [0] - [10] klucze
 // [1-2] - [10] itemy zwiazane z przemieszczaniem po mapie
 // [3] - [10] potki
