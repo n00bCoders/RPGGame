@@ -6,7 +6,7 @@ public class Skeleton extends Monster {
 
     public void dealDamage(){
 
-        int typeOfAttack = Random.RInt(1,2);
+        double typeOfAttack = Random.RInt(1,2);
 
         if (getMana() >= 20) {
             if (typeOfAttack == 1){

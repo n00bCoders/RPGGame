@@ -15,27 +15,27 @@ public class Monster {
 
     //Static variables
     private static Monster current;
-
+//a
 
     //Properties (Constant)
-    private static int healthMax;
-    private static int manaMax;
+    private static double healthMax;
+    private static double manaMax;
     private double speedAttack;     //Znalezc sensowne zastosowanie
     private int lvl;        //Znalezc sensowne zastosowanie
     private static String nameOfTheMonster;
-    private int expMin;
-    private int expMax;
-    private int coinDropMin;
-    private int coinDropMax;
-    private static int damageMin;
-    private static int damageMax;
-    private static int minMagicDmg;
-    private static int maxMagicDmg;
+    private static double expMin;
+    private static double expMax;
+    private static double coinDropMin;
+    private static double coinDropMax;
+    private static double damageMin;
+    private static double damageMax;
+    private static double minMagicDmg;
+    private static double maxMagicDmg;
 
 
     //Variables
-    private static int health;
-    private static int mana;       //Znalezc sensowne zastosowanie
+    private static double health;
+    private static double mana;       //Znalezc sensowne zastosowanie
     private int healthPotions;
 
 
@@ -44,11 +44,11 @@ public class Monster {
         return this.healthPotions;
     }
 
-    public static int getHealth() {
+    public static double getHealth() {
         return health;
     }
 
-    public static int getHealthMax() {
+    public static double getHealthMax() {
         return healthMax;
     }
 
@@ -56,11 +56,11 @@ public class Monster {
         return (health + "/" + healthMax);
     }
 
-    public static int getMana() {
+    public static double getMana() {
         return mana;
     }
 
-    public static int getManaMax() {
+    public static double getManaMax() {
         return manaMax;
     }
 
@@ -76,33 +76,29 @@ public class Monster {
         return current;
     }
 
-    public static int getIndex(Monster i) {
-        return arrayEnemy.indexOf(i);
-    }
-
     public int getLvl() {
         //return lvl *= heroLvl;
         return lvl;
     }
 
-    public static int getMinMagicDmg() {
+    public static double getMinMagicDmg() {
         return minMagicDmg;
     }
 
-    public static int getMaxMagicDmg() {
+    public static double getMaxMagicDmg() {
         return maxMagicDmg;
     }
 
-    public static int getDamageMin() {
+    public static double getDamageMin() {
         return damageMin;
     }
 
-    public static int getDamageMax() {
+    public static double getDamageMax() {
         return damageMax;
     }
 
     public String getDamageStatusBar(){
-        return("Minimalny atak: " + getMinMagicDmg() + ", maksymalny atak: " + getMaxMagicDmg());
+        return("Minimalny atak: " + getDamageMin() + ", maksymalny atak: " + getDamageMax());
     }
 
 
@@ -111,7 +107,7 @@ public class Monster {
         this.healthPotions = amount;
     }
 
-    public static void setDamage(int min, int max) {
+    public static void setDamage(double min, double max) {
         damageMin = min;
         damageMax = max;
     }
@@ -121,23 +117,19 @@ public class Monster {
         this.coinDropMax = max;
     }
 
-    public static void setHealth(int current, int max) {
+    public static void setHealth(double current, double max) {
         health = current;
         healthMax = max;
     }
 
-    public static void setMana(int current, int max) {
+    public static void setMana(double current, double max) {
         mana = current;
         manaMax = max;
     }
 
-    public static void set(int i) {
-        current = arrayEnemy.get(i);
-    }
-
 
     //Monster constructor
-    public Monster(int health, int healthMax, int mana, int manaMax, double speedAttack, int lvl, String nameOfTheMonster, int expMin, int expMax, int coinDropMin, int coinDropMax, int damageMin, int damageMax, int minMagicDmg, int maxMagicDmg) {
+    public Monster(double health, double healthMax, double mana, double manaMax, double speedAttack, int lvl, String nameOfTheMonster, double expMin, double expMax, double coinDropMin, double coinDropMax, double damageMin, double damageMax, double minMagicDmg, double maxMagicDmg) {
         this.health = health;
         this.healthMax = healthMax;
         this.mana = mana;
@@ -156,33 +148,28 @@ public class Monster {
     }
 
     //Other methods
-    public static void encounterNew() {
-        current = arrayEnemy.get(Random.RInt(0, arrayEnemy.size()));
-        current.health = current.healthMax;
-        current.healthPotions = Random.RInt(HEALTH_POTIONS_MIN, HEALTH_POTIONS_MAX);
-    }
 
-    public boolean takeDamage(int damage) {
-        this.health = health - damage;
+    public static boolean takeDamage(double damage) {
+        health = health - damage;
         System.out.println(getNameOfTheMonster() + " przyjal obrazenia w wysokosci: " + damage + ", ma teraz: " + health + " punktow zycia");
-        if (this.health <= 0) {
+        if (health <= 0) {
             die();
             return true;
         }
         return false;
     }
 
-    public void dealDamage(int damage) {
+    public static void dealDamage(double damage) {
         System.out.println(nameOfTheMonster + " zadal Ci: " + damage + " punktow obrazen");
-        /* Dodac przyjmowanie obrazen - coś w stylu playerHealth.takeDamage(damage) */
+        Postac.setHealth(Postac.getHealth() - damage, Postac.getHealthMax());
     }
 
-    private void die() {
+    private static void die() {
         /* złapać pomysł do napisana */
 
         //Rewards
-        int coin = Random.RInt(coinDropMin, coinDropMax);
-        int exp = Random.RInt(expMin, expMax);
+        double coin = Random.RInt(coinDropMin, coinDropMax);
+        double exp = Random.RInt(expMin, expMax);
 
         System.out.println("Zajebałeś stworka, dostajesz: " + coin + " monet i " + exp + " punktów doświadczenia!");
 
@@ -202,10 +189,10 @@ public class Monster {
         }
     }
 
-    public void magicalAttack(int mana){
+    public void magicalAttack(double mana){
         Magic Magic = new Magic();
-        int typeOfAttack;
-        int damage;
+        double typeOfAttack;
+        double damage;
 
         if (mana >= 20 && mana < 30){
             damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
@@ -243,8 +230,8 @@ public class Monster {
         }
     }
 
-    public void physicalAttack(int damageMin, int damageMax){
-        int damage = Random.RInt(damageMin, damageMax);
+    public void physicalAttack(double damageMin, double damageMax){
+        double damage = Random.RInt(damageMin, damageMax);
         dealDamage(damage);
     }
 
