@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Start {
 
     public static void main(String[] args) {
+        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1);
+
         System.out.println("Witaj w Gothic 8 nie arkania");
         System.out.println("Twoja przygoda zaczyna sie w zrujnowanym obozowisku,");
         System.out.println("Byles jencem wojennym a obozowisko Twoich wrogow zostalo zaatakowane.");

@@ -4,12 +4,11 @@ public class Goblin extends Monster {
         super(health, healthMax, mana, manaMax, speedAttack, lvl, nameOfTheMonster, expMin, expMax, coinDropMin, coinDropMax, damageMin, damageMax, minMagicDmg, maxMagicDmg);
     }
 
-    public void dealDamage(){
+    public static void dealDamage(){
         Magic magic = new Magic();
 
-        magic.useStealHealth(getLvl(),getMinMagicDmg(), getMaxMagicDmg()); //Kradziez zycia
-
+        //magic.useStealHealth(getLvl(),getMinMagicDmg(), getMaxMagicDmg()); //Kradziez zycia
         physicalAttack(getDamageMin(), getDamageMax()); //Normalny atak
-        dealDamage(magic.useReinforcedAttack(getDamageMin(), getDamageMax())); //Wzmocniony atak
+        //dealDamage(magic.useReinforcedAttack(getDamageMin(), getDamageMax())); //Wzmocniony atak
     }
 }

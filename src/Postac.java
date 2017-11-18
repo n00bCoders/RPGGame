@@ -44,7 +44,7 @@ public class Postac {
 	}
 
 	public static void setAttack(double add){
-	    attack = getAttack() + add;
+	    attack += add;
     }
 
 
@@ -101,12 +101,13 @@ public class Postac {
 		}
 	}
 
-	public boolean takeDamage(int damage) {
+	public static boolean takeDamage(double damage) {
 		health -= damage;
 		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + health + " punktow zycia");
 		setHealth(getHealth() - damage, getHealthMax());
 		if (health <= 0) {
 			System.out.println("Umarles");
+			System.exit(1);
 			return true;
 		}
 		return false;

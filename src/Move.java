@@ -5,10 +5,7 @@ import java.util.Scanner;
  */
 public class Move {
 
-
     public static void Camp() {
-        Goblin goblinus = new Goblin(46, 50, 30, 30, 1.5, 1, "Goblin", 5, 10, 5, 10, 5, 16, 7, 18);
-        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1);
 
         Scanner scanner = new Scanner(System.in);
         String a = scanner.nextLine(); // nasz glowny scanner
@@ -33,12 +30,14 @@ public class Move {
 
 
             case "idz na poludnie":
+                Goblin goblinus = new Goblin(200, 50, 30, 30, 1.5, 1, "Goblin", 5, 10, 5, 10, 40, 86, 7, 18);
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
                 System.out.println("------------------------------------------");
                 System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
                 System.out.println("------------------------------------------");
+                System.out.println("Atak: " + Postac.getAttack());
                 Fight.Fight();
                 Fild();
 
@@ -62,11 +61,12 @@ public class Move {
                 System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
                 String b = scanner.nextLine();
                 if (b.equals("tak")){
+                    Goblin.setDamage(40, 80);
                     zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
                     System.out.println(Postac.getAttack());
                     System.out.println("zalozyles "+ Weapon.weapon(0));
                     Weapon.SendStats(); // wysyla statystyki broni do postaci
-                    System.out.println(Postac.getAttack());
+                    System.out.println("Atak: " + Postac.getAttack());
                 }else{
                     System.out.println("to sie pierdol");
                 }

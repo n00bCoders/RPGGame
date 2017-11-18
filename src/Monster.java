@@ -160,8 +160,8 @@ public class Monster {
     }
 
     public static void dealDamage(double damage) {
-        System.out.println(nameOfTheMonster + " zadal Ci: " + damage + " punktow obrazen");
-        Postac.setHealth(Postac.getHealth() - damage, Postac.getHealthMax());
+        damage = Random.RInt(getDamageMin(), getDamageMax());
+        Postac.takeDamage(damage);
     }
 
     private static void die() {
@@ -230,7 +230,7 @@ public class Monster {
         }
     }
 
-    public void physicalAttack(double damageMin, double damageMax){
+    public static void physicalAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
         dealDamage(damage);
     }

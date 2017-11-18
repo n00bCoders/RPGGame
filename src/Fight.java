@@ -5,7 +5,7 @@ public class Fight {
         if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
             Postac.dealDamage();
             if (Monster.getHealth() > 0){
-                Monster.dealDamage(15);
+                Goblin.dealDamage(); //Musi atakowac z Monstera, do poprawy
             }
             System.out.println("------------------------------------------");
             Fight();
