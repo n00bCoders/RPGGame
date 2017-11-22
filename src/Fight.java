@@ -1,11 +1,19 @@
 public class Fight {
 
     public static void Fight(){
+        double a = Random.RInt(1,2);
 
         if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
             Postac.dealDamage();
             if (Monster.getHealth() > 0){
-                Goblin.dealDamage(); //Musi atakowac z Monstera, do poprawy
+                if (a == 1 && Monster.getMana() > 15){
+                    System.out.println(a);
+                    Monster.magicalAttack(Monster.getMana()); //Musi atakowac z Monstera, do poprawy
+                }
+                else{
+                    System.out.println(a);
+                    Monster.physicalAttack(Monster.getDamageMin(), Monster.getDamageMax());
+                }
             }
             System.out.println("------------------------------------------");
             Fight();

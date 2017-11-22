@@ -20,8 +20,8 @@ public class Monster {
     //Properties (Constant)
     private static double healthMax;
     private static double manaMax;
-    private double speedAttack;     //Znalezc sensowne zastosowanie
-    private int lvl;        //Znalezc sensowne zastosowanie
+    private static double speedAttack;     //Znalezc sensowne zastosowanie
+    private static int lvl;        //Znalezc sensowne zastosowanie
     private static String nameOfTheMonster;
     private static double expMin;
     private static double expMax;
@@ -76,7 +76,7 @@ public class Monster {
         return current;
     }
 
-    public int getLvl() {
+    public static int getLvl() {
         //return lvl *= heroLvl;
         return lvl;
     }
@@ -161,7 +161,6 @@ public class Monster {
 
     public static void dealDamage(double damage) {
         damage = Random.RInt(getDamageMin(), getDamageMax());
-        Postac.takeDamage(damage);
     }
 
     private static void die() {
@@ -172,7 +171,8 @@ public class Monster {
         double exp = Random.RInt(expMin, expMax);
 
         System.out.println("Zajebałeś stworka, dostajesz: " + coin + " monet i " + exp + " punktów doświadczenia!");
-
+        Postac.setMoney(coin);
+        Postac.setExp(exp);
         //Dodać monety i expa do bohatera
 
         //Walka z kolejnym
@@ -189,14 +189,14 @@ public class Monster {
         }
     }
 
-    public void magicalAttack(double mana){
+    public static void magicalAttack(double mana){
         Magic Magic = new Magic();
         double typeOfAttack;
         double damage;
 
         if (mana >= 20 && mana < 30){
             damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-            dealDamage(damage);
+            Postac.takeDamage(damage);
             System.out.println("Zadal Ci obrazenia magiczne w wysokosci: " + damage);
             System.out.println("Mana miedzy 20 a 30");
         }
@@ -206,7 +206,7 @@ public class Monster {
             System.out.println("Mana miedzy 30 a 40, a randomowa liczba to: " + typeOfAttack);
             if (typeOfAttack == 1){
                 damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                dealDamage(damage);
+                Postac.takeDamage(damage);
             }
             else if (typeOfAttack == 2){
                 Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
@@ -218,21 +218,21 @@ public class Monster {
             System.out.println("Mana wieksza niz 40");
             if (typeOfAttack == 1){
                 damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                dealDamage(damage);
+                Postac.takeDamage(damage);
             }
             else if (typeOfAttack == 2){
                 Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
             }
             else{
                 damage = Magic.useIceSpike(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                dealDamage(damage);
+                Postac.takeDamage(damage);
             }
         }
     }
 
     public static void physicalAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
-        dealDamage(damage);
+        Postac.takeDamage(damage);
     }
 
 }

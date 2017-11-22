@@ -5,7 +5,9 @@ public class Main {
 
         System.out.println();
 
-        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1);
+        String a = "chuj";
+
+        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1, a);
         //wojownik.dealDamage();
         //goblinus.dealDamage();
         //System.out.println(wojownik.getHealthBar());

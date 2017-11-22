@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class Postac {
 
+	static Scanner scanner = new Scanner(System.in);
+
+	private static String nameOfThePlayer;
 	private static double health = 100;
 	private static double healthMax = 100;
 	private static double mana = 30;
@@ -7,16 +12,23 @@ public class Postac {
 	private static double speedAttack = 1.0;
 	private static double deffence = 5;
 	private static double attack = 5;
-	public double money = 0;
-	public int level;
-	public double crit = 1;
-
-	public double exp = 0;
+	private static double money = 0;
+	private static int level;
+	private static double crit = 1;
+	private static double exp = 0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
 	private static double vitality = 5;
 	private static double strength = 5;
+
+	public static String getName(){
+		return nameOfThePlayer;
+	}
+
+	public static double getCrit(){
+		return crit;
+	}
 
 	public static double getHealth(){
 		return health;
@@ -34,8 +46,24 @@ public class Postac {
 		return strength;
 	}
 
-	public String getHealthBar(){
+	public static String getHealthBar(){
 		return "Zycie: " + getHealth() + " / " + getHealthMax();
+	}
+
+	public static double getExp(){
+		return exp;
+	}
+
+	public static double getMoney(){
+		return money;
+	}
+
+	public static double getLvl(){
+		return level;
+	}
+
+	public static void setName(String nameOfThePlayer){
+		nameOfThePlayer = nameOfThePlayer;
 	}
 
 	public static void setHealth(double current, double max){
@@ -43,12 +71,21 @@ public class Postac {
 		healthMax = max;
 	}
 
-	public static void setAttack(double add){
-	    attack += add;
+	public static void setAttack(double addAttack){
+	    attack += addAttack;
     }
 
+    public static void setMoney(double addMoney){
+		money += addMoney;
+	}
 
-	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength){
+	public static void setExp(double addExp){
+    	exp += addExp;
+	}
+
+
+	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength, String nameOfThePlayer){
+		this.nameOfThePlayer = nameOfThePlayer;
 		this.health = health;
 		this.healthMax = healthMax;
 		this.mana = mana;
@@ -102,10 +139,10 @@ public class Postac {
 	}
 
 	public static boolean takeDamage(double damage) {
-		health -= damage;
-		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + health + " punktow zycia");
-		setHealth(getHealth() - damage, getHealthMax());
-		if (health <= 0) {
+		health = getHealth() - damage;
+		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + getHealth() + " punktow zycia");
+		System.out.println(getHealthBar());
+		if (getHealth() <= 0) {
 			System.out.println("Umarles");
 			System.exit(1);
 			return true;
@@ -115,6 +152,16 @@ public class Postac {
 
 	public static void dealDamage() {
 		double damage = getAttack()*getStrength();
+
+		String fight = scanner.nextLine();
+		
+		if (fight.equals("fight")){
+			System.out.println("napierdolosz mieczem");
+		}
+		if (fight.equals("magic")){
+			System.out.println("napierdalosz magia");
+		}
+
 		System.out.println("Zadales: " + damage + " punktow obrazen");
 		Monster.takeDamage(damage);
 	}
