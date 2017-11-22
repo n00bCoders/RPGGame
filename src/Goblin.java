@@ -8,7 +8,7 @@ public class Goblin extends Monster {
         Magic magic = new Magic();
 
         //magic.useStealHealth(getLvl(),getMinMagicDmg(), getMaxMagicDmg()); //Kradziez zycia
-        physicalAttack(getDamageMin(), getDamageMax()); //Normalny atak
+        physicAttack(getDamageMin(), getDamageMax()); //Normalny atak
         //dealDamage(magic.useReinforcedAttack(getDamageMin(), getDamageMax())); //Wzmocniony atak
     }
 }

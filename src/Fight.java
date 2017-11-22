@@ -8,11 +8,11 @@ public class Fight {
             if (Monster.getHealth() > 0){
                 if (a == 1 && Monster.getMana() > 15){
                     System.out.println(a);
-                    Monster.magicalAttack(Monster.getMana()); //Musi atakowac z Monstera, do poprawy
+                    Monster.magicAttack(Monster.getMana()); //Musi atakowac z Monstera, do poprawy
                 }
                 else{
                     System.out.println(a);
-                    Monster.physicalAttack(Monster.getDamageMin(), Monster.getDamageMax());
+                    Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
                 }
             }
             System.out.println("------------------------------------------");

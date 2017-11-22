@@ -10,14 +10,14 @@ public class Skeleton extends Monster {
 
         if (getMana() >= 20) {
             if (typeOfAttack == 1){
-                physicalAttack(getDamageMin(), getDamageMax());
+                physicAttack(getDamageMin(), getDamageMax());
             }
             else{
-                magicalAttack(getMana());
+                magicAttack(getMana());
             }
         }
         else{
-            physicalAttack(getDamageMin(), getDamageMax());
+            physicAttack(getDamageMin(), getDamageMax());
         }
     }
 }

@@ -13,15 +13,16 @@ public class Postac {
 	private static double deffence = 5;
 	private static double attack = 5;
 	private static double money = 0;
-	private static int level;
-	private static double crit = 1;
+	private static int level = 1;
 	private static double exp = 0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
 	private static double vitality = 5;
 	private static double strength = 5;
+	private static double crit = 1 * agility;
 
+	//GETTERS
 	public static String getName(){
 		return nameOfThePlayer;
 	}
@@ -38,8 +39,20 @@ public class Postac {
 		return healthMax;
 	}
 
+	public static double getMana(){
+		return mana;
+	}
+
+	public static double getManaMax(){
+		return manaMax;
+	}
+
 	public static double getAttack(){
 		return attack;
+	}
+
+	public static double getAttackPower(){
+		return attack*strength;
 	}
 
 	public static double getStrength(){
@@ -62,6 +75,11 @@ public class Postac {
 		return level;
 	}
 
+	public static double getIntelligence(){
+		return intelligence;
+	}
+
+	//SETTERS
 	public static void setName(String nameOfThePlayer){
 		nameOfThePlayer = nameOfThePlayer;
 	}
@@ -69,6 +87,11 @@ public class Postac {
 	public static void setHealth(double current, double max){
 		health = current;
 		healthMax = max;
+	}
+
+	public static void setMana(double current, double max){
+		mana = current;
+		manaMax = max;
 	}
 
 	public static void setAttack(double addAttack){
@@ -99,8 +122,8 @@ public class Postac {
 		this.strength = strength;
 	}
 
-	public void level(double exp) {
-		if (exp < 200) {
+	public void champLevel(double exp) {
+		if (getExp() < 200) {
 			this.level = 1;
 			System.out.println("Twoj level wynosi 1 ");
 		}
@@ -151,19 +174,53 @@ public class Postac {
 	}
 
 	public static void dealDamage() {
-		double damage = getAttack()*getStrength();
-
+		System.out.println("Co chcesz teraz zrobic?");
 		String fight = scanner.nextLine();
-		
+
 		if (fight.equals("fight")){
-			System.out.println("napierdolosz mieczem");
+			System.out.println("Napierdolosz mieczem");
+			physicAttack();
 		}
-		if (fight.equals("magic")){
-			System.out.println("napierdalosz magia");
+		else if (fight.equals("magic") && mana > 15){
+			System.out.println("Napierdalosz magia");
+			magicAttack();
+		}
+		else if (fight.equals("magic") && mana < 15){
+			System.out.println("Nie masz many na zaklecia");
+			dealDamage();
+		}
+		else{
+			System.out.println("Zla komenda");
+			dealDamage();
 		}
 
-		System.out.println("Zadales: " + damage + " punktow obrazen");
-		Monster.takeDamage(damage);
+
+	}
+
+	public static void magicAttack(){
+
+		System.out.println("Jakiego zaklecia chcialbys uzyc?");
+		String spell = scanner.nextLine();
+		if (spell.equals("fireball")){
+			Monster.takeDamage(HeroMagic.useFireBall());
+		}
+		if (spell.equals("wzmocniony atak")){
+			HeroMagic.useReinforcedAttack();
+		}
+	}
+
+	public static double physicAttack(){
+		double damage = attack*strength;
+		if(Random.Cryt() == true){
+			damage *= 2;
+			System.out.println("Zadales: " + damage + " punktow obrazen");
+			Monster.takeDamage(damage);
+		}
+		else{
+			System.out.println("Zadales: " + damage + " punktow obrazen");
+			Monster.takeDamage(damage);
+		}
+		return damage;
 	}
 
 	public Postac(){

@@ -1,11 +1,19 @@
 public class Tool1 {
     public static String[][] equipment = new String[50][50];
 
-    public static void add(int itemID, int index1, int index2){ equipment[index1][index2] = others.othe(itemID); }
+    public static void add(int itemID, int index1, int index2){
+        equipment[index1][index2] = others.othe(itemID);
+    }
     //dodaje itemy z klasy others do eq (tablicy)
-    public static void addkeys(int itemID, int index1, int index2){ equipment[index1][index2] = Key1.klucz(itemID); }
+
+    public static void addkeys(int itemID, int index1, int index2){
+        equipment[index1][index2] = Key1.klucz(itemID);
+    }
     //dodaje itemy z klasy key1 do eq (tablicy)
-    public static void addweapon(int itemID, int index1, int index2){ equipment[index1][index2] = Weapon.weapon(itemID); }
+
+    public static void addweapon(int itemID, int index1, int index2){
+        equipment[index1][index2] = Weapon.weapon(itemID);
+    }
     //dodaje itemy z klasy weapon do eq (tablicy)
 
 

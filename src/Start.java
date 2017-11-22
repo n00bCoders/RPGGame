@@ -12,7 +12,7 @@ public class Start {
         //String imie = scanner.nextLine();
         String imie = "x";
 
-        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1, imie);
+        Wojownik wojownik = new Wojownik(100, 100, 50, 50, 1.0, 5, 1, 5, 6, 5, 1, imie);
 
         System.out.println("Twoje imie to: " + Postac.getName());
         System.out.println("Twoja przygoda zaczyna sie w zrujnowanym obozowisku,");

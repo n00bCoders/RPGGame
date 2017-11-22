@@ -189,7 +189,7 @@ public class Monster {
         }
     }
 
-    public static void magicalAttack(double mana){
+    public static void magicAttack(double mana){
         Magic Magic = new Magic();
         double typeOfAttack;
         double damage;
@@ -230,7 +230,7 @@ public class Monster {
         }
     }
 
-    public static void physicalAttack(double damageMin, double damageMax){
+    public static void physicAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
         Postac.takeDamage(damage);
     }

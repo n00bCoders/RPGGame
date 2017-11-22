@@ -30,7 +30,7 @@ public class Move {
 
 
             case "idz na poludnie":
-                Goblin goblinus = new Goblin(200, 50, 30, 30, 1.5, 1, "Goblin", 5, 10, 5, 10, 10, 20, 7, 18);
+                Goblin goblinus = new Goblin(200, 200, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
@@ -89,6 +89,11 @@ public class Move {
             case "exp":
                 System.out.println(Postac.getExp());
                 Camp();
+            case "lvl":
+                System.out.println(Postac.getLvl());
+                Camp();
+            case "exit":
+                System.exit(1);
             default:
                 System.out.println("Co Ty odpierdalasz?");
                 Camp();
