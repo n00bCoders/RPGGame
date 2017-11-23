@@ -3,7 +3,10 @@ import java.util.Arrays;
 public class zalozone {
     public static String[][] wear = new String[1][1];
 
-    public static void equipWeapon(int itemID, int index1, int index2) {wear[0][0] = Tool1.equipment[index1][index2];}
+    public static void equipWeapon(int itemID, int index1, int index2) {
+        wear[0][0] = Tool1.equipment[index1][index2];
+    }
+
     public static void equipArrmor(int itemID, int index1, int index2) {
         wear[0][1] = Tool1.equipment[index1][index2];
     }

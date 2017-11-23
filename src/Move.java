@@ -51,7 +51,7 @@ public class Move {
                 Meadow(); //Tymczasowo
 
             case "przeszukaj oboz":
-                Tool1.add(0,1,0); // dodaje item do eq
+                Tool1.add(0, 2 ,3); // dodaje item do eq
                 Tool1.addweapon(0,6,0);
 
                 System.out.println("Znalazles zardzewialy miecz oraz pochodnie");

@@ -13,5 +13,5 @@ public class others {
 
         return othe[index1];
     }
-    }
+}
 

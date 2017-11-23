@@ -15,7 +15,6 @@ public class Monster {
 
     //Static variables
     private static Monster current;
-//a
 
     //Properties (Constant)
     private static double healthMax;
@@ -31,6 +30,8 @@ public class Monster {
     private static double damageMax;
     private static double minMagicDmg;
     private static double maxMagicDmg;
+    private static double deffence;
+    private static double resistance;
 
 
     //Variables
@@ -40,6 +41,14 @@ public class Monster {
 
 
     //Getters
+    public static double getDeffence(){
+        return deffence;
+    }
+
+    public static double getResistance(){
+        return resistance;
+    }
+
     public int getHealtPotion(int amount) {
         return this.healthPotions;
     }
@@ -164,8 +173,6 @@ public class Monster {
     }
 
     private static void die() {
-        /* złapać pomysł do napisana */
-
         //Rewards
         double coin = Random.RInt(coinDropMin, coinDropMax);
         double exp = Random.RInt(expMin, expMax);
@@ -173,10 +180,6 @@ public class Monster {
         System.out.println("Zajebałeś stworka, dostajesz: " + coin + " monet i " + exp + " punktów doświadczenia!");
         Postac.setMoney(coin);
         Postac.setExp(exp);
-        //Dodać monety i expa do bohatera
-
-        //Walka z kolejnym
-        //encounterNew(); -> nie wiem czemu nie działa :/
     }
 
     public boolean useHealthPotions() {
@@ -197,30 +200,27 @@ public class Monster {
         if (mana >= 20 && mana < 30){
             damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
             Postac.takeDamage(damage);
-            System.out.println("Zadal Ci obrazenia magiczne w wysokosci: " + damage);
-            System.out.println("Mana miedzy 20 a 30");
+            System.out.println("Zadales obrazenia magiczne w wysokosci: " + damage);
         }
         else if (mana >= 30 && mana < 40){
             typeOfAttack = Random.RInt(1,2);
 
-            System.out.println("Mana miedzy 30 a 40, a randomowa liczba to: " + typeOfAttack);
             if (typeOfAttack == 1){
                 damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
                 Postac.takeDamage(damage);
             }
-            else if (typeOfAttack == 2){
+            else if (typeOfAttack == 2 && health < healthMax){
                 Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
             }
         }
         else if(mana >=40){
             typeOfAttack = Random.RInt(1,3);
 
-            System.out.println("Mana wieksza niz 40");
             if (typeOfAttack == 1){
                 damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
                 Postac.takeDamage(damage);
             }
-            else if (typeOfAttack == 2){
+            else if (typeOfAttack == 2 && health < healthMax){
                 Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
             }
             else{

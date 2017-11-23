@@ -123,7 +123,7 @@ public class Postac {
 	}
 
 	public void champLevel(double exp) {
-		if (getExp() < 200) {
+		if (exp < 200) {
 			this.level = 1;
 			System.out.println("Twoj level wynosi 1 ");
 		}
@@ -204,8 +204,15 @@ public class Postac {
 		if (spell.equals("fireball")){
 			Monster.takeDamage(HeroMagic.useFireBall());
 		}
-		if (spell.equals("wzmocniony atak")){
+		else if (spell.equals("wzmocniony atak")){
 			HeroMagic.useReinforcedAttack();
+		}
+		else if(spell.equals("leczenie")){
+			HeroMagic.useHeal();
+		}
+		else if (spell.equals("help")){
+			System.out.println("Dostepne zaklecia to: fireball, heal, wzmocniony atak");
+			magicAttack();
 		}
 	}
 

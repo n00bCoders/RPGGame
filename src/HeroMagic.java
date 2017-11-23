@@ -1,5 +1,3 @@
-import javafx.geometry.Pos;
-
 public class HeroMagic {
 
     public static double useFireBall(){
