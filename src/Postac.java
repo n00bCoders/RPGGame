@@ -106,6 +106,14 @@ public class Postac {
     	exp += addExp;
 	}
 
+	public static void setStrength(double addStrength){
+		strength += addStrength;
+	}
+
+	public static void setCrit(double crit){
+		crit += crit;
+	}
+
 
 	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength, String nameOfThePlayer){
 		this.nameOfThePlayer = nameOfThePlayer;
