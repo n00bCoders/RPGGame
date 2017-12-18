@@ -39,16 +39,21 @@ public class Move {
                 System.out.println("------------------------------------------");
                 System.out.println("Atak: " + Postac.getAttack());
                 Fight.Fight();
-                Camp();
+                Camp(); //Chwilowa zmiana
                 //Fild();
 
             case "idz na wschod":
                 System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
-                Move.Well();
+                System.out.println("Znalazles miecz");
+                Bag.addWeapon(Items.);
+                Move.Camp(); //Chwilowa zmiana
+                //Move.Well();
 
             case "idz na zachod":
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
-                Meadow(); //Tymczasowo
+                Bag.bag[0][2] = "Zardzewialy miecz";
+                Camp(); //Chwilowa zmiana
+                //Meadow(); //Tymczasowo
 
             case "przeszukaj oboz":
                 Tool1.add(0, 2 ,3); // dodaje item do eq
@@ -81,7 +86,7 @@ public class Move {
                 zalozone.showWear();
                 Camp();
             case "plecak":
-                zalozone.showEq();
+                Bag.bag();
                 Camp();
             case "pieniazki":
                 System.out.println(Postac.getMoney());
