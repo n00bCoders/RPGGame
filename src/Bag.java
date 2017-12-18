@@ -23,10 +23,10 @@ public class Bag {
         }
     }
 
-    public static void addWeapon(int itemID){
+    public static void addWeapon(int id){
         for (int i = 0; i < bag.length; i++){
             if (bag[0][i] == 0){
-                bag[0][i] = itemID;
+                bag[0][i] = id;
                 break;
             }
             else{

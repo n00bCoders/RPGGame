@@ -6,7 +6,10 @@ import java.util.Scanner;
 public class Start {
 
     public static void main(String[] args) {
+        Weapons weapons = new Weapons();
+
         Scanner scanner = new Scanner(System.in);
+        System.out.println(weapons.wypisz());
         System.out.println("Witaj w Gothic 8 nie arkania");
         System.out.println("Podaj imie bohatera");
         //String imie = scanner.nextLine();
