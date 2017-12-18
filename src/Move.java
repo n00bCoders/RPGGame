@@ -12,7 +12,7 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-                if(Tool1.eq(1,0)==others.othe(0)) { //sprzwdza czy posiadamy dany item w eq
+                if(0==1) { //sprzwdza czy posiadamy dany item w eq
                     System.out.println("Droga jest zablokowana przez haszcze,");
                     System.out.println("jedyna opcja na przedostanie sie dalej");
                     System.out.println("to spalenie ich.");
@@ -45,33 +45,33 @@ public class Move {
             case "idz na wschod":
                 System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 System.out.println("Znalazles miecz");
-                Bag.addWeapon(Items.);
+                Bag.addWeapon(0);
                 Move.Camp(); //Chwilowa zmiana
                 //Move.Well();
 
             case "idz na zachod":
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
-                Bag.bag[0][2] = "Zardzewialy miecz";
+                //Bag.bag[0][2] = "Zardzewialy miecz";
                 Camp(); //Chwilowa zmiana
                 //Meadow(); //Tymczasowo
 
             case "przeszukaj oboz":
-                Tool1.add(0, 2 ,3); // dodaje item do eq
-                Tool1.addweapon(0,6,0);
+                //Tool1.add(0, 2 ,3); // dodaje item do eq
+               // Tool1.addweapon(0,6,0);
 
                 System.out.println("Znalazles zardzewialy miecz oraz pochodnie");
                 System.out.println("-------------------------------");
-                System.out.println("+"+""+others.othe(0));
-                System.out.println("+"+""+Weapon.weapon(0));
+                //System.out.println("+"+""+others.othe(0));
+                //System.out.println("+"+""+Weapon.weapon(0));
                 System.out.println("-------------------------------");
-                System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
+                //System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
                 String b = scanner.nextLine();
                 if (b.equals("tak")){
                     Goblin.setDamage(40, 80);
-                    zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
+                    //zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
                     System.out.println(Postac.getAttack());
-                    System.out.println("zalozyles "+ Weapon.weapon(0));
-                    Weapon.SendStats(); // wysyla statystyki broni do postaci
+                   // System.out.println("zalozyles "+ Weapon.weapon(0));
+                    //Weapon.SendStats(); // wysyla statystyki broni do postaci
                     System.out.println("Atak: " + Postac.getAttack());
                 }else{
                     System.out.println("to sie pierdol");
@@ -83,7 +83,7 @@ public class Move {
                 System.out.println("Spales wystarczajaca dlugo, czas rozpoczac swoja przygode.");
                 Camp();
             case "eq":
-                zalozone.showWear();
+                //zalozone.showWear();
                 Camp();
             case "plecak":
                 Bag.bag();
@@ -141,9 +141,9 @@ public class Move {
 
             case "wez klucz":
                 System.out.println("Zabierasz klucz");
-                Tool1.addkeys(0,0,0);
+                //Tool1.addkeys(0,0,0);
                 System.out.println("-------------------------------");
-                System.out.println("+"+""+Key1.klucz(0));
+                //System.out.println("+"+""+Key1.klucz(0));
                 System.out.println("-------------------------------");
                 Well();
 
