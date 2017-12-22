@@ -1,3 +1,7 @@
+package Classes;
+
+import Monsters.Monster;
+
 public class Human extends Monster {
 
     public Human(int health, int healthMax, int mana, int manaMax, double speedAttack, int lvl, String nameOfTheMonster, int expMin, int expMax, int coinDropMin, int coinDropMax, int damageMin, int damageMax, int minMagicDmg, int maxMagicDmg) {

@@ -1,3 +1,11 @@
+package Game;
+
+import Fighting.Fight;
+import Items.BAGZ;
+import Items.Bag;
+import Monsters.Goblin;
+import Monsters.Monster;
+
 import java.util.Scanner;
 
 /**
@@ -30,7 +38,7 @@ public class Move {
 
 
             case "idz na poludnie":
-                Goblin goblinus = new Goblin(200, 200, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
+                Goblin goblinus = new Goblin(200, 200, 30, 30, 1.5, 1, "Monsters.Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
@@ -47,11 +55,11 @@ public class Move {
                 System.out.println("Znalazles miecz");
                 Bag.addWeapon(0);
                 Move.Camp(); //Chwilowa zmiana
-                //Move.Well();
+                //Game.Move.Well();
 
             case "idz na zachod":
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
-                //Bag.bag[0][2] = "Zardzewialy miecz";
+                BAGZ.addWeapon(0);
                 Camp(); //Chwilowa zmiana
                 //Meadow(); //Tymczasowo
 
@@ -86,7 +94,7 @@ public class Move {
                 //zalozone.showWear();
                 Camp();
             case "plecak":
-                Bag.bag();
+                BAGZ.bag();
                 Camp();
             case "pieniazki":
                 System.out.println(Postac.getMoney());

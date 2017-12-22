@@ -1,3 +1,8 @@
+package Monsters;
+
+import Fighting.Magic;
+import Monsters.Monster;
+
 public class Goblin extends Monster {
 
     public Goblin(int health, int healthMax, int mana, int manaMax, double speedAttack, int lvl, String nameOfTheMonster, int expMin, int expMax, int coinDropMin, int coinDropMax, int damageMin, int damageMax, int minMagicDmg, int maxMagicDmg) {

@@ -1,3 +1,9 @@
+package Fighting;
+
+import Additional.Random;
+import Game.Postac;
+import Monsters.Monster;
+
 public class HeroMagic {
 
     public static double useFireBall(){

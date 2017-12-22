@@ -1,3 +1,7 @@
+package Items;
+
+import Game.Postac;
+
 public class Armor extends Items {
 
     public Armor(int id, String name, double health, double deffence){

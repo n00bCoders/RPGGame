@@ -1,4 +1,6 @@
-public class QuestItems extends Items{
+package Items;
+
+public class QuestItems extends Items {
 
     public QuestItems(int id, String name){
         super(id, name);

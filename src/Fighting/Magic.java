@@ -1,3 +1,8 @@
+package Fighting;
+
+import Additional.Random;
+import Monsters.Monster;
+
 public class Magic {
 
     String name = Monster.getNameOfTheMonster();

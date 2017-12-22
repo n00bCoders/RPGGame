@@ -1,3 +1,5 @@
+package Items;
+
 public class Bag {
 
     static int[][] bag = new int[4][3];
@@ -35,34 +37,4 @@ public class Bag {
         }
 
     }
-
-    /*
-    public static void addShield(String shieldName){
-        for (int i = 0; i < bag.length; i++){
-            if (bag[1][i] == null){
-                bag[1][i] = shieldName;
-                break;
-            }
-        }
-    }
-
-    public static void addArmor(String armorName){
-        for (int i = 0; i < bag.length; i++){
-            if (bag[1][i] == null){
-                bag[2][i] = armorName;
-                break;
-            }
-        }
-    }
-
-    public static void addJewellery(String jewelleryName){
-        for (int i = 0; i < bag.length; i++){
-            if (bag[1][i] == null){
-                bag[3][i] = jewelleryName;
-                break;
-            }
-        }
-    }
-
-    */
 }

@@ -1,3 +1,7 @@
+package Monsters;
+
+import Additional.Random;
+
 public class Skeleton extends Monster {
 
     public Skeleton(int health, int healthMax, int mana, int manaMax, double speedAttack, int lvl, String nameOfTheMonster, int expMin, int expMax, int coinDropMin, int coinDropMax, int damageMin, int damageMax, int minMagicDmg, int maxMagicDmg) {
@@ -8,16 +12,16 @@ public class Skeleton extends Monster {
 
         double typeOfAttack = Random.RInt(1,2);
 
-        if (getMana() >= 20) {
+        if (Monster.getMana() >= 20) {
             if (typeOfAttack == 1){
-                physicAttack(getDamageMin(), getDamageMax());
+                Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
             }
             else{
-                magicAttack(getMana());
+                Monster.magicAttack(Monster.getMana());
             }
         }
         else{
-            physicAttack(getDamageMin(), getDamageMax());
+            Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
         }
     }
 }
