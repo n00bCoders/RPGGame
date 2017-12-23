@@ -1,6 +1,4 @@
-package Classes;
-
-import Monsters.Monster;
+package Monsters;
 
 public class Human extends Monster {
 

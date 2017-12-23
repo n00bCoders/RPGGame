@@ -2,7 +2,7 @@ package Items;
 
 import Game.Postac;
 
-public class Weapons extends Items {
+public class Weapons{
 
     int id;
     String name;
@@ -30,7 +30,7 @@ public class Weapons extends Items {
             new Weapons(1, "dupochuj", 9, 5, 9)
     };
 
-    public static void wypisz(int weaponID){
+    public static void stats(int weaponID){
         System.out.println("Id: " + weaponzs[weaponID].id);
         System.out.println("Nazwa: " + weaponzs[weaponID].name);
         System.out.println("Atak: " + weaponzs[weaponID].atk);

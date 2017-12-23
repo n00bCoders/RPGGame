@@ -33,10 +33,6 @@ public class Postac {
 		return nameOfThePlayer;
 	}
 
-	public static double getCrit(){
-		return crit;
-	}
-
 	public static double getHealth(){
 		return health;
 	}
@@ -45,12 +41,24 @@ public class Postac {
 		return healthMax;
 	}
 
+	public static String getHealthBar(){
+		return "Zycie: " + getHealth() + " / " + getHealthMax();
+	}
+
 	public static double getMana(){
 		return mana;
 	}
 
 	public static double getManaMax(){
 		return manaMax;
+	}
+
+	public static String getManaBar(){
+		return "Mana: " + getMana() + " / " + getManaMax();
+	}
+
+	public static double getCrit(){
+		return crit;
 	}
 
 	public static double getAttack(){
@@ -63,10 +71,6 @@ public class Postac {
 
 	public static double getStrength(){
 		return strength;
-	}
-
-	public static String getHealthBar(){
-		return "Zycie: " + getHealth() + " / " + getHealthMax();
 	}
 
 	public static double getExp(){
@@ -83,6 +87,16 @@ public class Postac {
 
 	public static double getIntelligence(){
 		return intelligence;
+	}
+
+	public static void getStats(){
+		System.out.println("Twoje imie: " + getName());
+		System.out.println("Twoje zycie: " + getHealthBar());
+		System.out.println("Twoja mana: " + getManaBar());
+		System.out.println("Twoja szansa na uderzenie krytyczne: " + getCrit());
+		System.out.println("Twoj atak: " + getAttack());
+		System.out.println("Twoja sila: " + getStrength());
+		System.out.println("itd.");
 	}
 
 	//SETTERS

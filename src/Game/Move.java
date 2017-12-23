@@ -107,6 +107,9 @@ public class Move {
                 Camp();
             case "exit":
                 System.exit(1);
+            case "stats":
+                Postac.getStats();
+                Camp();
             default:
                 System.out.println("Co Ty odpierdalasz?");
                 Camp();

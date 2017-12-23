@@ -1,19 +1,18 @@
+import Items.Armors;
+import Items.Weapons;
+
 public class Main {
     public static void main(String args[]){
 
-        Goblin goblinus = new Goblin(46, 50, 30, 30, 1.5, 1, "Goblin", 5, 10, 5, 10, 5, 16, 7, 18);
+        //Wypisywanie statystyk z Weapons
+        System.out.println("Miecze:");
+        Weapons.stats(1);
+        Weapons.stats(0);
 
-        System.out.println();
+        //Wypisywanie statystyk z Armors
+        System.out.println("Zbroje:");
+        Armors.stats(0);
+        Armors.stats(1);
 
-        String a = "chuj";
-
-        Wojownik wojownik = new Wojownik(100, 100, 30, 30, 1.0, 5, 1, 5, 5, 5, 1, a);
-        //wojownik.dealDamage();
-        //goblinus.dealDamage();
-        //System.out.println(wojownik.getHealthBar());
-        //goblinus.takeDamage(10);
-        //goblinus.dealDamage();
-        //System.out.println(goblinus.getHealthStatusBar());
-        //Fight.Fight();
     }
 }
