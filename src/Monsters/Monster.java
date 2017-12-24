@@ -3,7 +3,6 @@ package Monsters;
 import Fighting.Magic;
 import Game.Postac;
 import Additional.Random;
-import java.util.ArrayList;
 
 
 public class Monster {
@@ -14,18 +13,14 @@ public class Monster {
     private static final int HEALTH_POTIONS_MIN = 0;
 
 
-    //Enemy list
-    public static final ArrayList<Monster> arrayEnemy = new ArrayList<>();
-
-
     //Static variables
     private static Monster current;
 
     //Properties (Constant)
     private static double healthMax;
     private static double manaMax;
-    private static double speedAttack;     //Znalezc sensowne zastosowanie
-    private static int lvl;        //Znalezc sensowne zastosowanie
+    private static double speedAttack;
+    private static int lvl;
     private static String nameOfTheMonster;
     private static double expMin;
     private static double expMax;
@@ -41,7 +36,7 @@ public class Monster {
 
     //Variables
     private static double health;
-    private static double mana;       //Znalezc sensowne zastosowanie
+    private static double mana;
     private int healthPotions;
 
 
@@ -86,13 +81,9 @@ public class Monster {
         return nameOfTheMonster;
     }
 
-    public static Monster get() {
-        return current;
-    }
 
     public static int getLvl() {
-        //return lvl *= heroLvl;
-        return lvl;
+        return lvl *= Postac.getLvl();
     }
 
     public static double getMinMagicDmg() {
@@ -142,7 +133,7 @@ public class Monster {
     }
 
 
-    //Monsters.Monster constructor
+    //Monster constructor
     public Monster(double health, double healthMax, double mana, double manaMax, double speedAttack, int lvl, String nameOfTheMonster, double expMin, double expMax, double coinDropMin, double coinDropMax, double damageMin, double damageMax, double minMagicDmg, double maxMagicDmg) {
         this.health = health;
         this.healthMax = healthMax;
@@ -161,8 +152,8 @@ public class Monster {
         this.maxMagicDmg = maxMagicDmg;
     }
 
-    //Other methods
 
+    //Other methods
     public static boolean takeDamage(double damage) {
         health = health - damage;
         System.out.println(getNameOfTheMonster() + " przyjal obrazenia w wysokosci: " + damage + ", ma teraz: " + health + " punktow zycia");

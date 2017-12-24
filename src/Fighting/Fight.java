@@ -6,7 +6,14 @@ import Monsters.Monster;
 
 public class Fight {
 
-    public static void Fight(){
+    public static void startBattle(){
+        System.out.println("------------------------------------------");
+        System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
+        System.out.println("------------------------------------------");
+        continueBattle();
+    }
+
+    public static void continueBattle(){
         double a = Random.RInt(1,2);
 
         if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
@@ -14,7 +21,7 @@ public class Fight {
             if (Monster.getHealth() > 0){
                 if (a == 1 && Monster.getMana() > 15){
                     System.out.println(a);
-                    Monster.magicAttack(Monster.getMana()); //Musi atakowac z Monstera, do poprawy
+                    Monster.magicAttack(Monster.getMana());
                 }
                 else{
                     System.out.println(a);
@@ -22,11 +29,17 @@ public class Fight {
                 }
             }
             System.out.println("------------------------------------------");
-            Fight();
+            continueBattle();
         }
         else{
             System.out.println("Koniec walki");
+            //freeMemory();
         }
     }
+
+    /*public static void freeMemory(){
+        Monster. = null;
+    }
+    */
 
 }

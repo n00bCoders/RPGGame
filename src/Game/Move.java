@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Created by Przykład Jan on 07.11.2017.
  */
-public class Move {
+public class Move{
 
     public static void Camp() {
 
@@ -38,35 +38,40 @@ public class Move {
 
 
             case "idz na poludnie":
-                Goblin goblinus = new Goblin(200, 200, 30, 30, 1.5, 1, "Monsters.Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
+                Goblin goblinus = new Goblin(50, 50, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
                 System.out.println("Widzisz pobojowiski z setkami zwlok.");
                 System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
                 System.out.println("i ludzi ktorzy Cie uwolnili.");
-                System.out.println("------------------------------------------");
-                System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
-                System.out.println("------------------------------------------");
-                System.out.println("Atak: " + Postac.getAttack());
-                Fight.Fight();
-                Camp(); //Chwilowa zmiana
+                Fight.startBattle();
+                Camp();
                 //Fild();
 
             case "idz na wschod":
                 System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 System.out.println("Znalazles miecz");
                 Bag.addWeapon(0);
-                Move.Camp(); //Chwilowa zmiana
-                //Game.Move.Well();
+                Well();
 
             case "idz na zachod":
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
-                BAGZ.addWeapon(0);
-                Camp(); //Chwilowa zmiana
-                //Meadow(); //Tymczasowo
+                Meadow(); //Tymczasowo
+
+            case "stats":
+                Postac.getStats();
+                Camp();
+
+            case "exit":
+                System.exit(1);
+
+            case "plecak":
+                BAGZ.bag();
+                Camp();
+
+            case "eq":
+                //zalozone.showWear();
+                Camp();
 
             case "przeszukaj oboz":
-                //Tool1.add(0, 2 ,3); // dodaje item do eq
-               // Tool1.addweapon(0,6,0);
-
                 System.out.println("Znalazles zardzewialy miecz oraz pochodnie");
                 System.out.println("-------------------------------");
                 //System.out.println("+"+""+others.othe(0));
@@ -84,32 +89,8 @@ public class Move {
                 }else{
                     System.out.println("to sie pierdol");
                 }
-
                 Camp();
 
-            case "idz spac":
-                System.out.println("Spales wystarczajaca dlugo, czas rozpoczac swoja przygode.");
-                Camp();
-            case "eq":
-                //zalozone.showWear();
-                Camp();
-            case "plecak":
-                BAGZ.bag();
-                Camp();
-            case "pieniazki":
-                System.out.println(Postac.getMoney());
-                Camp();
-            case "exp":
-                System.out.println(Postac.getExp());
-                Camp();
-            case "lvl":
-                System.out.println(Postac.getLvl());
-                Camp();
-            case "exit":
-                System.exit(1);
-            case "stats":
-                Postac.getStats();
-                Camp();
             default:
                 System.out.println("Co Ty odpierdalasz?");
                 Camp();
@@ -136,6 +117,21 @@ public class Move {
             case "idz na zachod":
                 System.out.println("Wracasz to zrujnowanego obozowiska.");
                 Move.Camp();
+
+            case "stats":
+                Postac.getStats();
+                Well();
+
+            case "exit":
+                System.exit(1);
+
+            case "plecak":
+                BAGZ.bag();
+                Well();
+
+            case "eq":
+                //zalozone.showWear();
+                Well();
 
             case "podejdz do studni":
                 System.out.println("Podchodzisz do studni, widzisz stare wiaderko przymocowane lina do kolowrotka.");
@@ -179,7 +175,7 @@ public class Move {
                 Move.Camp();
 
             case "idz na poludnie":
-                System.out.println("Na połodnie od pobojowiska jest skarpa,");
+                System.out.println("Na południe od pobojowiska jest skarpa,");
                 System.out.println("Jedyne co mozesz zrobic to z niej skoczyc");
                 System.out.println("ale tego osobisicie nie doradzam.");
                 Fild();
@@ -192,14 +188,29 @@ public class Move {
                 System.out.println("Tam nic nie ma, mozesz jedynie wrocic do obozowiska.");
                 Camp();
 
+            case "stats":
+                Postac.getStats();
+                Fild();
+
+            case "exit":
+                System.exit(1);
+
+            case "plecak":
+                BAGZ.bag();
+                Fild();
+
+            case "eq":
+                //zalozone.showWear();
+                Fild();
+
             case "przeszukaj zwloki":
                 System.out.println("Przeszukujac zwloki natrafiasz na kilka mikstur leczniczych");
                 System.out.println("|HP| Potion + 2");
-                Camp();
+                Fild();
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Fild();
         }
     }
 
@@ -225,6 +236,21 @@ public class Move {
                 System.out.println("Miej się na bacznosci nigdy nie wiesz co moze Cie spotkac.");
                 Move.Cave();
 
+            case "stats":
+                Postac.getStats();
+                Meadow();
+
+            case "exit":
+                System.exit(1);
+
+            case "plecak":
+                BAGZ.bag();
+                Meadow();
+
+            case "eq":
+                //zalozone.showWear();
+                Meadow();
+
             case "zbieraj kwiatki":
                 System.out.println("Andrzej co Ty pedal jestes ? #nohomo");
                 Meadow();
@@ -246,5 +272,6 @@ public class Move {
                 Move.Camp();
         }
     }
+
 }
 

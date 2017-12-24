@@ -42,7 +42,7 @@ public class Postac {
 	}
 
 	public static String getHealthBar(){
-		return "Zycie: " + getHealth() + " / " + getHealthMax();
+		return getHealth() + " / " + getHealthMax();
 	}
 
 	public static double getMana(){
@@ -54,27 +54,19 @@ public class Postac {
 	}
 
 	public static String getManaBar(){
-		return "Mana: " + getMana() + " / " + getManaMax();
+		return getMana() + " / " + getManaMax();
 	}
 
-	public static double getCrit(){
-		return crit;
+	public static double getSpeedAttack(){
+		return speedAttack;
+	}
+
+	public static double getDeffence() {
+		return deffence;
 	}
 
 	public static double getAttack(){
 		return attack;
-	}
-
-	public static double getAttackPower(){
-		return attack*strength;
-	}
-
-	public static double getStrength(){
-		return strength;
-	}
-
-	public static double getExp(){
-		return exp;
 	}
 
 	public static double getMoney(){
@@ -85,19 +77,54 @@ public class Postac {
 		return level;
 	}
 
+	public static double getExp(){
+		return exp;
+	}
+
+
+
+	public static double getAgility() {
+		return agility;
+	}
+
 	public static double getIntelligence(){
 		return intelligence;
 	}
 
-	public static void getStats(){
-		System.out.println("Twoje imie: " + getName());
-		System.out.println("Twoje zycie: " + getHealthBar());
-		System.out.println("Twoja mana: " + getManaBar());
-		System.out.println("Twoja szansa na uderzenie krytyczne: " + getCrit());
-		System.out.println("Twoj atak: " + getAttack());
-		System.out.println("Twoja sila: " + getStrength());
-		System.out.println("itd.");
+	public static double getVitality() {
+		return vitality;
 	}
+
+	public static double getStrength(){
+		return strength;
+	}
+
+	public static double getCrit(){
+		return crit;
+	}
+
+
+
+	public static double getAttackPower(){
+		return attack*strength;
+	}
+
+	public static void getStats(){
+		System.out.println("Imie: " + getName());
+		System.out.println("Zycie: " + getHealthBar());
+		System.out.println("Mana: " + getManaBar());
+		System.out.println("Predkosc ataku: " + getSpeedAttack());
+		System.out.println("Obrona: " + getDeffence());
+		System.out.println("Atak: " + getAttack());
+		System.out.println("Lvl: " + getLvl());
+		System.out.println("Exp: " + getExp());
+		System.out.println("Zrecznosc: " + getAgility());
+		System.out.println("Inteligencja: " + getIntelligence());
+		System.out.println("Witalnosc: " + getVitality());
+		System.out.println("Sila: " + getStrength());
+		System.out.println("Szansa na uderzenie krytyczne: " + getCrit() + "%");
+	}
+
 
 	//SETTERS
 	public static void setName(String nameOfThePlayer){
@@ -114,6 +141,14 @@ public class Postac {
 		manaMax = max;
 	}
 
+	public static void setSpeedAttack(double speedAttack) {
+		Postac.speedAttack = speedAttack;
+	}
+
+	public static void setDeffence(double addDeffence){
+		deffence += addDeffence;
+	}
+
 	public static void setAttack(double addAttack){
 	    attack += addAttack;
     }
@@ -122,8 +157,26 @@ public class Postac {
 		money += addMoney;
 	}
 
+	public static void setLevel(double addLvl){
+		level += addLvl;
+	}
+
 	public static void setExp(double addExp){
     	exp += addExp;
+	}
+
+
+
+	public static void setAgility(double agility) {
+		Postac.agility = agility;
+	}
+
+	public static void setIntelligence(double intelligence) {
+		Postac.intelligence = intelligence;
+	}
+
+	public static void setVitality(double vitality) {
+		Postac.vitality = vitality;
 	}
 
 	public static void setStrength(double addStrength){
@@ -134,10 +187,9 @@ public class Postac {
 		crit += addCrit;
 	}
 
-	public static void setDeffence(double addDeffence){
-		deffence += addDeffence;
-	}
 
+
+	//Hero constructor
 	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength, String nameOfThePlayer){
 		this.nameOfThePlayer = nameOfThePlayer;
 		this.health = health;
@@ -153,7 +205,9 @@ public class Postac {
 		this.strength = strength;
 	}
 
-	public void champLevel(double exp) {
+
+	//Other methods
+	public void champLevel() {
 		if (exp < 200) {
 			this.level = 1;
 			System.out.println("Twoj level wynosi 1 ");
@@ -208,17 +262,20 @@ public class Postac {
 		System.out.println("Co chcesz teraz zrobic?");
 		String fight = scanner.nextLine();
 
-		if (fight.equals("fight")){
+		if (fight.equals("atakuj")){
 			System.out.println("Napierdolosz mieczem");
 			physicAttack();
 		}
-		else if (fight.equals("magic") && mana > 15){
+		else if (fight.equals("magia") && mana > 15){
 			System.out.println("Napierdalosz magia");
 			magicAttack();
 		}
-		else if (fight.equals("magic") && mana < 15){
+		else if (fight.equals("magia") && mana < 15){
 			System.out.println("Nie masz many na zaklecia");
 			dealDamage();
+		}
+		else if (fight.equals("pomoc")){
+			System.out.println("Dostepne komendy to: atakuj, magia");
 		}
 		else{
 			System.out.println("Zla komenda");

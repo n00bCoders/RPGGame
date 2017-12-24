@@ -14,5 +14,10 @@ public class Main {
         Armors.stats(0);
         Armors.stats(1);
 
+        /*
+        TO DO:
+        1. Zrobić ekwipunek.
+        2. Zrobić lvlowanie postaci.
+         */
     }
 }
