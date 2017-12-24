@@ -1,6 +1,7 @@
 package Monsters;
 
 import Additional.Random;
+import Fighting.Magic;
 
 public class Skeleton extends Monster {
 
@@ -8,20 +9,28 @@ public class Skeleton extends Monster {
         super(health - 40, healthMax - 40, mana, manaMax, speedAttack, lvl, nameOfTheMonster, expMin, expMax, coinDropMin, coinDropMax, damageMin, damageMax, minMagicDmg, maxMagicDmg);
     }
 
-    public void dealDamage(){
+    public static void fight() {
+        double randomAttack = Random.RInt(1, 2);
 
-        double typeOfAttack = Random.RInt(1,2);
-
-        if (Monster.getMana() >= 20) {
-            if (typeOfAttack == 1){
-                Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
+        if (randomAttack == 1) {
+            if (getMana() >= 15) {
+                dealMagicDamage();
+            } else {
+                dealDamage();
             }
-            else{
-                Monster.magicAttack(Monster.getMana());
-            }
-        }
-        else{
-            Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
+        } else {
+            dealDamage();
         }
     }
+
+    public static void dealDamage() {
+        physicAttack(getDamageMin(), getDamageMax()); //Normalny atak
+    }
+
+    public static void dealMagicDamage() {
+        Magic magic = new Magic();
+
+        magic.useFireBall(getLvl(), getMinMagicDmg() * 1.5, getMaxMagicDmg() * 1.5);
+    }
+
 }

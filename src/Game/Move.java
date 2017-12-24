@@ -5,6 +5,7 @@ import Items.BAGZ;
 import Items.Bag;
 import Monsters.Goblin;
 import Monsters.Monster;
+import Monsters.Zombie;
 
 import java.util.Scanner;
 
@@ -47,9 +48,10 @@ public class Move{
                 //Fild();
 
             case "idz na wschod":
+                Zombie zombie = new Zombie(50, 50, 30, 30, 1, 1, "Zombie", 100, 200, 5, 40, 15, 25, 5, 10);
+                Fight.startBattle();
                 System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
                 System.out.println("Znalazles miecz");
-                Bag.addWeapon(0);
                 Well();
 
             case "idz na zachod":

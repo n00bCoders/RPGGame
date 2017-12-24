@@ -2,7 +2,7 @@ import Items.Armors;
 import Items.Weapons;
 
 public class Main {
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         //Wypisywanie statystyk z Weapons
         System.out.println("Miecze:");
@@ -19,6 +19,8 @@ public class Main {
         1. Zrobić ekwipunek.
         2. Zrobić lvlowanie postaci.
         3. Program się sypie, jeśli ziomek wybierze klasę z poza listy.
+        4. Łotrowi nie daje bonusowego crita.
+        5. Zombie sie wysypuje prawdopodobnie przy zadawaniu reinforcedAttack
          */
     }
 }

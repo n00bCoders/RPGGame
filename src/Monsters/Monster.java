@@ -37,7 +37,7 @@ public class Monster {
     //Variables
     private static double health;
     private static double mana;
-    private int healthPotions;
+    private static int healthPotions;
 
 
     //Getters
@@ -49,8 +49,8 @@ public class Monster {
         return resistance;
     }
 
-    public int getHealtPotion(int amount) {
-        return this.healthPotions;
+    public static int getHealtPotion(int amount) {
+        return healthPotions;
     }
 
     public static double getHealth() {
@@ -61,7 +61,7 @@ public class Monster {
         return healthMax;
     }
 
-    public String getHealthStatusBar() {
+    public static String getHealthStatusBar() {
         return (health + "/" + healthMax);
     }
 
@@ -73,7 +73,7 @@ public class Monster {
         return manaMax;
     }
 
-    public String getManaStatusBar() {
+    public static String getManaStatusBar() {
         return (mana + "/" + manaMax);
     }
 
@@ -102,7 +102,7 @@ public class Monster {
         return damageMax;
     }
 
-    public String getDamageStatusBar(){
+    public static String getDamageStatusBar(){
         return("Minimalny atak: " + getDamageMin() + ", maksymalny atak: " + getDamageMax());
     }
 
@@ -156,16 +156,12 @@ public class Monster {
     //Other methods
     public static boolean takeDamage(double damage) {
         health = health - damage;
-        System.out.println(getNameOfTheMonster() + " przyjal obrazenia w wysokosci: " + damage + ", ma teraz: " + health + " punktow zycia");
+        System.out.println(getNameOfTheMonster() + " ma teraz: " + getHealthStatusBar() + " punktow zycia");
         if (health <= 0) {
             die();
             return true;
         }
         return false;
-    }
-
-    public static void dealDamage(double damage) {
-        damage = Random.RInt(getDamageMin(), getDamageMax());
     }
 
     private static void die() {
@@ -228,6 +224,7 @@ public class Monster {
 
     public static void physicAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
+        System.out.println(getNameOfTheMonster() + " zadał Ci: " + damage + " punktów obrażeń");
         Postac.takeDamage(damage);
     }
 

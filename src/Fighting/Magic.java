@@ -93,6 +93,10 @@ public class Magic {
     }
 
     public double useReinforcedAttack(double minDmg, double maxDmg){
+        requiredMana = 20;
+
+        Monster.setMana(mana - requiredMana, manaMax);
+
         double damage = Random.RInt(minDmg * 5, maxDmg * 2);
         return damage;
     }

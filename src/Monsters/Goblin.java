@@ -1,5 +1,6 @@
 package Monsters;
 
+import Additional.Random;
 import Fighting.Magic;
 import Monsters.Monster;
 
@@ -9,11 +10,31 @@ public class Goblin extends Monster {
         super(health, healthMax, mana, manaMax, speedAttack, lvl, nameOfTheMonster, expMin, expMax, coinDropMin, coinDropMax, damageMin, damageMax, minMagicDmg, maxMagicDmg);
     }
 
+    public static void fight(){
+        double randomAttack = Random.RInt(1,2);
+
+        if (randomAttack == 1){
+            if (getMana() >= 15){
+                dealMagicDamage();
+            }
+            else {
+                dealDamage();
+            }
+        }
+        else {
+            dealDamage();
+        }
+
+
+    }
+
     public static void dealDamage(){
+        physicAttack(getDamageMin(), getDamageMax()); //Normalny atak
+    }
+
+    public static void dealMagicDamage(){
         Magic magic = new Magic();
 
-        //magic.useStealHealth(getLvl(),getMinMagicDmg(), getMaxMagicDmg()); //Kradziez zycia
-        physicAttack(getDamageMin(), getDamageMax()); //Normalny atak
-        //dealDamage(magic.useReinforcedAttack(getDamageMin(), getDamageMax())); //Wzmocniony atak
+        magic.useStealHealth(getLvl(),getMinMagicDmg() * 1.5, getMaxMagicDmg() * 1.5); //Kradziez zycia
     }
 }

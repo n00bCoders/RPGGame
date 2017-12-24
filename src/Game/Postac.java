@@ -19,7 +19,7 @@ public class Postac {
 	private static double deffence = 5;
 	private static double attack = 5;
 	private static double money = 0;
-	private static int level = 1;
+	private static int level = champLevel();
 	private static double exp = 0;
 
 	private static double agility = 5;
@@ -207,49 +207,49 @@ public class Postac {
 
 
 	//Other methods
-	public void champLevel() {
+	public static int champLevel() {
 		if (exp < 200) {
-			this.level = 1;
 			System.out.println("Twoj level wynosi 1 ");
+			return level = 1;
 		}
 		if (exp >= 200 && exp < 300) {
-			this.level = 2;
 			System.out.println("Twoj level wynosi 2 ");
+			return level = 2;
 		}
 		if (exp >= 300 && exp < 400) {
-			this.level = 3;
 			System.out.println("Twoj level wynosi 3 ");
+			return level = 3;
 		}
 		if (exp >= 400 && exp < 500) {
-			this.level = 4;
 			System.out.println("Twoj level wynosi 4 ");
+			return level = 4;
 		}
 		if (exp >= 500 && exp < 600) {
-			this.level = 5;
 			System.out.println("Twoj level wynosi 5 ");
+			return level = 5;
 		}
 		if (exp >= 600 && exp < 700) {
-			this.level = 6;
 			System.out.println("Twoj level wynosi 6 ");
+			return level = 6;
 		}
 		if (exp >= 700 && exp < 800) {
-			this.level = 7;
 			System.out.println("Twoj level wynosi 7 ");
+			return level = 7;
 		}
 		if (exp >= 800 && exp < 900) {
-			this.level = 8;
 			System.out.println("Twoj level wynosi 8 ");
+			return level = 8;
 		}
 		if (exp >= 900 && exp < 1000) {
-			this.level = 9;
 			System.out.println("Twoj level wynosi 9 ");
+			return level = 9;
 		}
+		return 0;
 	}
 
 	public static boolean takeDamage(double damage) {
 		health = getHealth() - damage;
-		System.out.println(Monster.getNameOfTheMonster() + " zadal Ci: " + damage + ", punktow obrazen, masz teraz: " + getHealth() + " punktow zycia");
-		System.out.println(getHealthBar());
+		System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
 		if (getHealth() <= 0) {
 			System.out.println("Umarles");
 			System.exit(1);
@@ -276,6 +276,7 @@ public class Postac {
 		}
 		else if (fight.equals("pomoc")){
 			System.out.println("Dostepne komendy to: atakuj, magia");
+			dealDamage();
 		}
 		else{
 			System.out.println("Zla komenda");

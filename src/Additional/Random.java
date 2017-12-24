@@ -28,14 +28,11 @@ public class Random {
         }
 
         int x = (int)RInt(1, tablica.length);
-        System.out.println(x);
 
         if(x <= C){
-            System.out.println(true + " BIJESZ Z KRYTA JAK POJEBANY");
             return true;  // BIJESZ Z KRYTA JAK POJEBANY
 
         }else{
-            System.out.println(false + " ZNACZY ŻE KRYT NIE SIADNOŁ");
             return false;  // ZNACZY ŻE KRYT NIE SIADNOŁ
 
         }
