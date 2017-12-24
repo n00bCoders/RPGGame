@@ -17,7 +17,6 @@ public class Start {
         System.out.println("Co robisz ?");
 
         //Lokacja startowa
-        Move.Camp();
     }
 }
 

@@ -18,6 +18,7 @@ public class Main {
         TO DO:
         1. Zrobić ekwipunek.
         2. Zrobić lvlowanie postaci.
+        3. Program się sypie, jeśli ziomek wybierze klasę z poza listy.
          */
     }
 }
