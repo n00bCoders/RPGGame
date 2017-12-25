@@ -6,7 +6,7 @@ import Monsters.Monster;
 
 import java.util.Scanner;
 
-public class Postac {
+public class Player {
 
 	static Scanner scanner = new Scanner(System.in);
 
@@ -142,7 +142,7 @@ public class Postac {
 	}
 
 	public static void setSpeedAttack(double speedAttack) {
-		Postac.speedAttack = speedAttack;
+		Player.speedAttack = speedAttack;
 	}
 
 	public static void setDeffence(double addDeffence){
@@ -168,15 +168,15 @@ public class Postac {
 
 
 	public static void setAgility(double agility) {
-		Postac.agility = agility;
+		Player.agility = agility;
 	}
 
 	public static void setIntelligence(double intelligence) {
-		Postac.intelligence = intelligence;
+		Player.intelligence = intelligence;
 	}
 
 	public static void setVitality(double vitality) {
-		Postac.vitality = vitality;
+		Player.vitality = vitality;
 	}
 
 	public static void setStrength(double addStrength){
@@ -190,7 +190,7 @@ public class Postac {
 
 
 	//Hero constructor
-	public Postac(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength, String nameOfThePlayer){
+	public Player(double health, double healthMax, double mana, double manaMax, double speedAttack, double deffence, double attack, double agility, double intelligence, double vitality, double strength, String nameOfThePlayer){
 		this.nameOfThePlayer = nameOfThePlayer;
 		this.health = health;
 		this.healthMax = healthMax;
@@ -263,7 +263,6 @@ public class Postac {
 		String fight = scanner.nextLine();
 
 		if (fight.equals("atakuj")){
-			System.out.println("Napierdolosz mieczem");
 			physicAttack();
 		}
 		else if (fight.equals("magia") && mana > 15){
@@ -305,7 +304,7 @@ public class Postac {
 		}
 	}
 
-	public static double physicAttack(){
+	public static void physicAttack(){
 		double damage = attack*strength;
 		if(Random.Cryt() == true){
 			damage *= 2;
@@ -316,10 +315,9 @@ public class Postac {
 			System.out.println("Zadales: " + damage + " punktow obrazen");
 			Monster.takeDamage(damage);
 		}
-		return damage;
 	}
 
-	public Postac(){
+	public Player(){
 
 	}
 }

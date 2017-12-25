@@ -1,7 +1,7 @@
 package Fighting;
 
 import Additional.Random;
-import Game.Postac;
+import Game.Player;
 import Monsters.Goblin;
 import Monsters.Monster;
 import Monsters.Skeleton;
@@ -32,11 +32,11 @@ public class Fight {
     public static void continueBattle(){
         double attack = Random.RInt(1,2);
 
-        if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
-            Postac.dealDamage();
+        if (Monster.getHealth() > 0 && Player.getHealth() > 0){
+            Player.dealDamage();
             if (Monster.getHealth() > 0){
                 if (attack == 1 && Monster.getMana() > 15){
-                    Monster.magicAttack(Monster.getMana());
+                    Monster.magicAttack();
                 }
                 else{
                     Monster.physicAttack(Monster.getDamageMin(), Monster.getDamageMax());
@@ -51,8 +51,8 @@ public class Fight {
     }
 
     public static void goblinFight(){
-        if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
-            Postac.dealDamage();
+        if (Monster.getHealth() > 0 && Player.getHealth() > 0){
+            Player.dealDamage();
             if (Monster.getHealth() > 0){
                 Goblin.fight();
             }
@@ -65,8 +65,8 @@ public class Fight {
     }
 
     public static void skeletonFight(){
-        if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
-            Postac.dealDamage();
+        if (Monster.getHealth() > 0 && Player.getHealth() > 0){
+            Player.dealDamage();
             if (Monster.getHealth() > 0){
                 Skeleton.fight();
             }
@@ -79,8 +79,8 @@ public class Fight {
     }
 
     public static void zombieFight(){
-        if (Monster.getHealth() > 0 && Postac.getHealth() > 0){
-            Postac.dealDamage();
+        if (Monster.getHealth() > 0 && Player.getHealth() > 0){
+            Player.dealDamage();
             if (Monster.getHealth() > 0){
                 Zombie.fight();
             }

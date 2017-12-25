@@ -1,6 +1,6 @@
 package Additional;
 
-import Game.Postac;
+import Game.Player;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,7 +15,7 @@ public class Random {
     public static boolean Cryt(){
 
         int R = 100;
-        int C = (int) Postac.getCrit();
+        int C = (int) Player.getCrit();
         int[] tablica = new int[R];
         int[] tablica1 = new int[C];
 

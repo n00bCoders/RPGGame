@@ -15,22 +15,22 @@ public class Zombie extends Monster {
         if (randomAttack == 1) {
             if (getMana() >= 20) {
                 dealMagicDamage();
-            } else {
+            }
+            else {
                 dealDamage();
             }
-        } else {
+        }
+        else {
             dealDamage();
         }
     }
 
     public static void dealDamage() {
-        physicAttack(getDamageMin(), getDamageMax()); //Normalny atak
+        physicAttack(getDamageMin(), getDamageMax());
     }
 
     public static void dealMagicDamage() {
-        Magic magic = new Magic();
-
-        magic.useReinforcedAttack(getDamageMin() * 2, getDamageMax() * 2);
+        Magic.useReinforcedAttack(getDamageMin() * 2, getDamageMax() * 2);
     }
 
 

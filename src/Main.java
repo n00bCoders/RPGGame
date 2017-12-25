@@ -20,7 +20,6 @@ public class Main {
         2. Zrobić lvlowanie postaci.
         3. Program się sypie, jeśli ziomek wybierze klasę z poza listy.
         4. Łotrowi nie daje bonusowego crita.
-        5. Zombie sie wysypuje prawdopodobnie przy zadawaniu reinforcedAttack
          */
     }
 }

@@ -1,7 +1,7 @@
 package Monsters;
 
 import Fighting.Magic;
-import Game.Postac;
+import Game.Player;
 import Additional.Random;
 
 
@@ -83,7 +83,7 @@ public class Monster {
 
 
     public static int getLvl() {
-        return lvl *= Postac.getLvl();
+        return lvl *= Player.getLvl();
     }
 
     public static double getMinMagicDmg() {
@@ -170,8 +170,8 @@ public class Monster {
         double exp = Random.RInt(expMin, expMax);
 
         System.out.println("Zajebałeś stworka, dostajesz: " + coin + " monet i " + exp + " punktów doświadczenia!");
-        Postac.setMoney(coin);
-        Postac.setExp(exp);
+        Player.setMoney(coin);
+        Player.setExp(exp);
     }
 
     public boolean useHealthPotions() {
@@ -184,48 +184,14 @@ public class Monster {
         }
     }
 
-    public static void magicAttack(double mana){
-        Magic Magic = new Magic();
-        double typeOfAttack;
-        double damage;
-
-        if (mana >= 20 && mana < 30){
-            damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-            Postac.takeDamage(damage);
-            System.out.println("Zadales obrazenia magiczne w wysokosci: " + damage);
-        }
-        else if (mana >= 30 && mana < 40){
-            typeOfAttack = Random.RInt(1,2);
-
-            if (typeOfAttack == 1){
-                damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                Postac.takeDamage(damage);
-            }
-            else if (typeOfAttack == 2 && health < healthMax){
-                Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-            }
-        }
-        else if(mana >=40){
-            typeOfAttack = Random.RInt(1,3);
-
-            if (typeOfAttack == 1){
-                damage = Magic.useFireBall(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                Postac.takeDamage(damage);
-            }
-            else if (typeOfAttack == 2 && health < healthMax){
-                Magic.useHeal(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-            }
-            else{
-                damage = Magic.useIceSpike(getLvl(), getMinMagicDmg(), getMaxMagicDmg());
-                Postac.takeDamage(damage);
-            }
-        }
+    public static void magicAttack(){
+        Magic.useMagic();
     }
 
     public static void physicAttack(double damageMin, double damageMax){
         double damage = Random.RInt(damageMin, damageMax);
         System.out.println(getNameOfTheMonster() + " zadał Ci: " + damage + " punktów obrażeń");
-        Postac.takeDamage(damage);
+        Player.takeDamage(damage);
     }
 
 }

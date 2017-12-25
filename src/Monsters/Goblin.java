@@ -33,8 +33,6 @@ public class Goblin extends Monster {
     }
 
     public static void dealMagicDamage(){
-        Magic magic = new Magic();
-
-        magic.useStealHealth(getLvl(),getMinMagicDmg() * 1.5, getMaxMagicDmg() * 1.5); //Kradziez zycia
+        Magic.useStealHealth();
     }
 }

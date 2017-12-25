@@ -1,6 +1,6 @@
 package Items;
 
-import Game.Postac;
+import Game.Player;
 
 public class Armors {
 
@@ -14,9 +14,9 @@ public class Armors {
         this.id = id;
         this.name = name;
         this.health = health;
-        Postac.setHealth(Postac.getHealth() + health, Postac.getHealthMax() + health);
+        Player.setHealth(Player.getHealth() + health, Player.getHealthMax() + health);
         this.deffence = deffence;
-        Postac.setDeffence(deffence);
+        Player.setDeffence(deffence);
     }
 
     public Armors(){

@@ -2,9 +2,7 @@ package Game;
 
 import Fighting.Fight;
 import Items.BAGZ;
-import Items.Bag;
 import Monsters.Goblin;
-import Monsters.Monster;
 import Monsters.Zombie;
 
 import java.util.Scanner;
@@ -59,7 +57,7 @@ public class Move{
                 Meadow(); //Tymczasowo
 
             case "stats":
-                Postac.getStats();
+                Player.getStats();
                 Camp();
 
             case "exit":
@@ -84,10 +82,10 @@ public class Move{
                 if (b.equals("tak")){
                     Goblin.setDamage(40, 80);
                     //zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
-                    System.out.println(Postac.getAttack());
+                    System.out.println(Player.getAttack());
                    // System.out.println("zalozyles "+ Weapon.weapon(0));
                     //Weapon.SendStats(); // wysyla statystyki broni do postaci
-                    System.out.println("Atak: " + Postac.getAttack());
+                    System.out.println("Atak: " + Player.getAttack());
                 }else{
                     System.out.println("to sie pierdol");
                 }
@@ -121,7 +119,7 @@ public class Move{
                 Move.Camp();
 
             case "stats":
-                Postac.getStats();
+                Player.getStats();
                 Well();
 
             case "exit":
@@ -191,7 +189,7 @@ public class Move{
                 Camp();
 
             case "stats":
-                Postac.getStats();
+                Player.getStats();
                 Fild();
 
             case "exit":
@@ -239,7 +237,7 @@ public class Move{
                 Move.Cave();
 
             case "stats":
-                Postac.getStats();
+                Player.getStats();
                 Meadow();
 
             case "exit":

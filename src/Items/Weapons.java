@@ -1,6 +1,6 @@
 package Items;
 
-import Game.Postac;
+import Game.Player;
 
 public class Weapons{
 
@@ -14,11 +14,11 @@ public class Weapons{
         this.id = id;
         this.name = name;
         this.atk = atk;
-        Postac.setAttack(atk);
+        Player.setAttack(atk);
         this.str = str;
-        Postac.setStrength(str);
+        Player.setStrength(str);
         this.crit = crit;
-        Postac.setCrit(crit);
+        Player.setCrit(crit);
     }
 
     public Weapons(){

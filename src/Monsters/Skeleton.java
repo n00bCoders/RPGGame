@@ -30,7 +30,7 @@ public class Skeleton extends Monster {
     public static void dealMagicDamage() {
         Magic magic = new Magic();
 
-        magic.useFireBall(getLvl(), getMinMagicDmg() * 1.5, getMaxMagicDmg() * 1.5);
+        magic.useFireBall();
     }
 
 }
