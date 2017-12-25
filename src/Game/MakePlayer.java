@@ -21,7 +21,7 @@ public class MakePlayer {
         int playerClass = scanner.nextInt();
 
         if (playerClass == 1 ){
-            Warrior warrior = new Warrior(100, 100, 30, 30, 0.8, 5, 5, 3, 5, 5, 5, name);
+            Warrior warrior = new Warrior(100, 100, 30, 30, 0.8, 5, 10, 3, 5, 5, 5, name);
             System.out.println("Wybrałeś/aś wojownika, powodzenia!");
         }
         else if (playerClass == 2){

@@ -32,6 +32,7 @@ public class Monster {
     private static double maxMagicDmg;
     private static double deffence;
     private static double resistance;
+    private static boolean isDead = false;
 
 
     //Variables
@@ -106,6 +107,9 @@ public class Monster {
         return("Minimalny atak: " + getDamageMin() + ", maksymalny atak: " + getDamageMax());
     }
 
+    public static boolean getIsDead(){
+        return isDead;
+    }
 
     //Setters
     public void setHealthPotions(int amount) {
@@ -132,9 +136,13 @@ public class Monster {
         manaMax = max;
     }
 
+    public static void setIsDead(boolean isKilled){
+        isDead = isKilled;
+    }
+
 
     //Monster constructor
-    public Monster(double health, double healthMax, double mana, double manaMax, double speedAttack, int lvl, String nameOfTheMonster, double expMin, double expMax, double coinDropMin, double coinDropMax, double damageMin, double damageMax, double minMagicDmg, double maxMagicDmg) {
+    public Monster(double health, double healthMax, double mana, double manaMax, double speedAttack, int lvl, String nameOfTheMonster, double expMin, double expMax, double coinDropMin, double coinDropMax, double damageMin, double damageMax, double minMagicDmg, double maxMagicDmg, boolean isDead) {
         this.health = health;
         this.healthMax = healthMax;
         this.mana = mana;
@@ -150,6 +158,7 @@ public class Monster {
         this.damageMax = damageMax;
         this.minMagicDmg = minMagicDmg;
         this.maxMagicDmg = maxMagicDmg;
+        this.isDead = isDead;
     }
 
 

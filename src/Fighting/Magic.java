@@ -6,39 +6,24 @@ import Monsters.Monster;
 
 public class Magic {
 
-    public static double useFireBall() {
+    public static void useFireBall()    {
         int requiredMana = 20;
         double spellDamage = Monster.getLvl() * Random.RInt(Monster.getMinMagicDmg(), Monster.getMaxMagicDmg());
 
         System.out.println(Monster.getNameOfTheMonster() + " uzyl FireBall! i zadal Ci: " + spellDamage + " punktow obrazen!");
         Monster.setMana((Monster.getMana() - requiredMana), Monster.getManaMax());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        return spellDamage;
+        Player.takeDamage(spellDamage);
     }
 
-    public static double useIceSpike() {
+    public static void useIceSpike() {
         int requiredMana = 40;
         double spellDamage = Monster.getLvl() * Random.RInt(Monster.getMinMagicDmg(), Monster.getMaxMagicDmg());
 
         System.out.println(Monster.getNameOfTheMonster() + " uzyl IceSpike! i zadal Ci: " + spellDamage + " punktow obrazen!");
         Monster.setMana((Monster.getMana() - requiredMana), Monster.getManaMax());
 
-        return spellDamage;
+        Player.takeDamage(spellDamage);
     }
 
     public static void useHeal() {
@@ -67,6 +52,9 @@ public class Magic {
         int requiredMana = 15;
         double spellDamage = Monster.getLvl() * Random.RInt(Monster.getMinMagicDmg(), Monster.getMaxMagicDmg());
 
+        if (Monster.getNameOfTheMonster().equals("Goblin"))
+            spellDamage *= 1.5;
+
         if (spellDamage >= Monster.getHealthMax() - Monster.getHealth()) {
             spellDamage = Monster.getHealthMax() - Monster.getHealth();
             System.out.println(Monster.getNameOfTheMonster() + " użył kradzieży życia! i zabrał Ci: " + spellDamage + " punktow zycia");
@@ -85,14 +73,13 @@ public class Magic {
 
     public static void useReinforcedAttack(double minDmg, double maxDmg) {
         int requiredMana = 20;
-
         Monster.setMana(Monster.getMana() - requiredMana, Monster.getManaMax());
 
-
         double damage = Random.RInt(minDmg * 2, maxDmg * 5);
+        if (Monster.getNameOfTheMonster().equals("Zombie"))
+            damage *= 2;
 
         System.out.println(Monster.getNameOfTheMonster() + " użył wzmocnionego ataku i zadał Ci: " + damage + " punktów obrażeń!");
-
         Player.takeDamage(damage);
     }
 

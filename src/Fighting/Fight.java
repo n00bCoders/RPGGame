@@ -10,23 +10,27 @@ import Monsters.Zombie;
 public class Fight {
 
     public static void startBattle(){
-        System.out.println("------------------------------------------");
-        System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
-        System.out.println("------------------------------------------");
+        if (Monster.getIsDead() == false){
+            System.out.println("------------------------------------------");
+            System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
+            System.out.println("------------------------------------------");
 
-        if (Monster.getNameOfTheMonster().equals("Goblin")){
-            goblinFight();
-        }
-        else if (Monster.getNameOfTheMonster().equals("Szkielet")){
-            skeletonFight();
-        }
-        else if (Monster.getNameOfTheMonster().equals("Zombie")){
-            zombieFight();
+            if (Monster.getNameOfTheMonster().equals("Goblin")){
+                goblinFight();
+            }
+            else if (Monster.getNameOfTheMonster().equals("Szkielet")){
+                skeletonFight();
+            }
+            else if (Monster.getNameOfTheMonster().equals("Zombie")){
+                zombieFight();
+            }
+            else {
+                continueBattle();
+            }
         }
         else {
-            continueBattle();
+            isDead();
         }
-
     }
 
     public static void continueBattle(){
@@ -94,5 +98,11 @@ public class Fight {
 
     public static void endFight(){
         System.out.println("Koniec walki");
+        isDead();
     }
+
+    public static void isDead(){
+        Monster.setIsDead(true);
+    }
+
 }

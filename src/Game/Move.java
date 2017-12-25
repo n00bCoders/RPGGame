@@ -1,8 +1,8 @@
 package Game;
 
 import Fighting.Fight;
-import Items.BAGZ;
 import Monsters.Goblin;
+import Monsters.Monster;
 import Monsters.Zombie;
 
 import java.util.Scanner;
@@ -37,20 +37,41 @@ public class Move{
 
 
             case "idz na poludnie":
-                Goblin goblinus = new Goblin(50, 50, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
-                System.out.println("Widzisz pobojowiski z setkami zwlok.");
-                System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
-                System.out.println("i ludzi ktorzy Cie uwolnili.");
-                Fight.startBattle();
-                Camp();
-                //Fild();
+                if (Monster.getIsDead() == false){
+                    Goblin goblinus = new Goblin(50, 50, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18, false);
+                    Fight.startBattle();
+                    if (Monster.getIsDead() == true){
+                        goblinus = null;
+                    }
+                    System.out.println("Widzisz pobojowiski z setkami zwlok.");
+                    System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
+                    System.out.println("i ludzi ktorzy Cie uwolnili.");
+                    Fild();
+                }
+                else {
+                    System.out.println("Goblin rozjebany, idziemy do Filda");
+                    Fild();
+                }
+
 
             case "idz na wschod":
-                Zombie zombie = new Zombie(50, 50, 30, 30, 1, 1, "Zombie", 100, 200, 5, 40, 15, 25, 5, 10);
-                Fight.startBattle();
-                System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
-                System.out.println("Znalazles miecz");
-                Well();
+                if (Monster.getIsDead() == false){
+                    Zombie zombie = new Zombie(50, 50, 30, 30, 1, 1, "Zombie", 100, 200, 5, 40, 15, 25, 5, 10, false);
+                    System.out.println("isDead: " + Monster.getIsDead());
+                    Fight.startBattle();
+                    if (Monster.getIsDead() == true){
+                        System.out.println("isDead: " + Monster.getIsDead());
+                        zombie = null;
+                    }
+                    System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
+                    System.out.println("Znalazles miecz");
+                    Well();
+                }
+                else {
+                    System.out.println("Juz zajebałes ziombiaczka, idziemy do studni");
+                    Well();
+                }
+
 
             case "idz na zachod":
                 System.out.println("Wchodzisz na przepiekna lake, w oddali rozciagaja sie pasma gorskie.");
@@ -64,7 +85,7 @@ public class Move{
                 System.exit(1);
 
             case "plecak":
-                BAGZ.bag();
+                System.out.println("Plecak");
                 Camp();
 
             case "eq":
@@ -126,7 +147,7 @@ public class Move{
                 System.exit(1);
 
             case "plecak":
-                BAGZ.bag();
+                System.out.println("Plecak");
                 Well();
 
             case "eq":
@@ -196,7 +217,7 @@ public class Move{
                 System.exit(1);
 
             case "plecak":
-                BAGZ.bag();
+                System.out.println("Plecak");
                 Fild();
 
             case "eq":
@@ -244,7 +265,7 @@ public class Move{
                 System.exit(1);
 
             case "plecak":
-                BAGZ.bag();
+                System.out.println("Plecak");
                 Meadow();
 
             case "eq":

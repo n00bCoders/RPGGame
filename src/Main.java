@@ -20,6 +20,8 @@ public class Main {
         2. Zrobić lvlowanie postaci.
         3. Program się sypie, jeśli ziomek wybierze klasę z poza listy.
         4. Łotrowi nie daje bonusowego crita.
+        5. Zrobić jakiś warunek w booleanie, żeby sprawdzał czy zabiliśmy już tego przeciwnika. np. idę na wschód, zabiję Zombie
+            i chcę żeby było coś w stylu isZombieDead = true;
          */
     }
 }
