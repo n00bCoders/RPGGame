@@ -23,5 +23,9 @@ public class Main {
         5. Zrobić jakiś warunek w booleanie, żeby sprawdzał czy zabiliśmy już tego przeciwnika. np. idę na wschód, zabiję Zombie
             i chcę żeby było coś w stylu isZombieDead = true;
          */
+
+        /*
+        Testing Git pull
+         */
     }
 }

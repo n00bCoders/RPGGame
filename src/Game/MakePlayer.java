@@ -13,7 +13,7 @@ public class MakePlayer {
         System.out.println("Podaj imie bohatera");
         String name = scanner.nextLine();
 
-        System.out.println("Wybierz klasę (Wpisz numer klasy) :");
+        System.out.println("Wybierz klasę (Podaj numer): ");
         System.out.println("1 - Warrior: Zdrowie * 1.3, Mana * 0.4, Obrona + 5, Atak + 5, Inteligencja - 3, Witalność + 2");
         System.out.println("2 - Łotr: Zdrowie * 0.8, Prędkość ataku: * 1.1, Obrona - 3, Atak + 1, Zręczność + 5, Witalnośc - 2");
         System.out.println("3 - Szaman");
