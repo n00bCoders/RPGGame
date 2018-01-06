@@ -1,38 +1,29 @@
 package Items;
 
-import Game.Player;
+public class Armors extends Items {
 
-public class Armors {
+    double improveHP;
+    double improveDeffence;
+    double improveBlock;
+    double improveMana;
 
-    int id;
-    String name;
-    double health;
-    double deffence;
-    double crit;
+    double requireStrength;
 
-    public Armors(int id, String name, double health, double deffence) {
-        this.id = id;
-        this.name = name;
-        this.health = health;
-        Player.setHealth(Player.getHealth() + health, Player.getHealthMax() + health);
-        this.deffence = deffence;
-        Player.setDeffence(deffence);
+    int durablity;
+
+    public Armors(int dimension_x, int dimension_y, String name, int id,
+                   int improveHP, int improveDeffence,
+                   double improveBlock, int improveMana,
+                   int requireStrength, int durablity){
+        super(name, dimension_x, dimension_y, id);
+
+        this.improveHP = improveHP;
+        this.improveDeffence = improveDeffence;
+        this.improveBlock = improveBlock;
+        this.improveMana = improveMana;
+        this.requireStrength = requireStrength;
+        this.durablity = durablity;
+
     }
 
-    public Armors(){
-
-    }
-
-    public static Armors[] armors = new Armors[] {
-            new Armors(0, "Chujowa zbroja", 1000, 500),
-            new Armors(1, "Gowniana zbroja", 2000, 1000)
-    };
-
-    public static void stats(int weaponID){
-        System.out.println("Id: " + armors[weaponID].id);
-        System.out.println("Nazwa: " + armors[weaponID].name);
-        System.out.println("Zdrowie: " + armors[weaponID].health);
-        System.out.println("Obrona: " + armors[weaponID].deffence);
-        System.out.println();
-    }
 }
