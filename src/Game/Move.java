@@ -19,14 +19,14 @@ public class Move{
 
         switch (a) {
             case "idz na polnoc":
-                if(0==1) { //sprzwdza czy posiadamy dany item w eq
+                if (0 == 1) { //sprzwdza czy posiadamy dany item w eq
                     System.out.println("Droga jest zablokowana przez haszcze,");
                     System.out.println("jedyna opcja na przedostanie sie dalej");
                     System.out.println("to spalenie ich.");
                     System.out.println("Twoja pochodnia utworzyla niezly pozar,");
                     System.out.println("musisz go ugasic zeby przedostac sie dalej");
                     Camp();
-                }else {
+                } else {
                     System.out.println("Droga jest zablokowana przez haszcze,");
                     System.out.println("jedyna opcja na przedostanie sie dalej");
                     System.out.println("to spalenie ich. Niestety nie posiadasz");
@@ -37,40 +37,22 @@ public class Move{
 
 
             case "idz na poludnie":
-                if (Monster.getIsDead() == false){
-                    Goblin goblinus = new Goblin(50, 50, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18, false);
-                    Fight.startBattle();
-                    if (Monster.getIsDead() == true){
-                        goblinus = null;
-                    }
-                    System.out.println("Widzisz pobojowiski z setkami zwlok.");
-                    System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
-                    System.out.println("i ludzi ktorzy Cie uwolnili.");
-                    Fild();
-                }
-                else {
-                    System.out.println("Goblin rozjebany, idziemy do Filda");
-                    Fild();
-                }
+                Goblin goblinus = new Goblin(50, 50, 30, 30, 1.5, 1, "Goblin", 100, 200, 5, 10, 10, 20, 7, 18);
+                Fight.startBattle();
+                System.out.println("Widzisz pobojowiski z setkami zwlok.");
+                System.out.println("To tutaj stoczyla sie walka Twoich wrogow");
+                System.out.println("i ludzi ktorzy Cie uwolnili.");
+                Fild();
 
 
             case "idz na wschod":
-                if (Monster.getIsDead() == false){
-                    Zombie zombie = new Zombie(50, 50, 30, 30, 1, 1, "Zombie", 100, 200, 5, 40, 15, 25, 5, 10, false);
-                    System.out.println("isDead: " + Monster.getIsDead());
-                    Fight.startBattle();
-                    if (Monster.getIsDead() == true){
-                        System.out.println("isDead: " + Monster.getIsDead());
-                        zombie = null;
-                    }
-                    System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
-                    System.out.println("Znalazles miecz");
-                    Well();
-                }
-                else {
-                    System.out.println("Juz zajebałes ziombiaczka, idziemy do studni");
-                    Well();
-                }
+                Zombie zombie = new Zombie(50, 50, 30, 30, 1, 1, "Zombie", 100, 200, 5, 40, 15, 25, 5, 10);
+
+                Fight.startBattle();
+
+                System.out.println("Podazajac na wschod widzisz duzy plac a na jego srodku studnie");
+                System.out.println("Znalazles miecz");
+                Well();
 
 
             case "idz na zachod":
@@ -100,14 +82,14 @@ public class Move{
                 System.out.println("-------------------------------");
                 //System.out.println("Czy chcesz załozyć "+Weapon.weapon(0));
                 String b = scanner.nextLine();
-                if (b.equals("tak")){
+                if (b.equals("tak")) {
                     Goblin.setDamage(40, 80);
                     //zalozone.equipWeapon(0,6,0);// dodaje item z eq do tablicy "zalozone"
                     System.out.println(Player.getAttack());
-                   // System.out.println("zalozyles "+ Weapon.weapon(0));
+                    // System.out.println("zalozyles "+ Weapon.weapon(0));
                     //Weapon.SendStats(); // wysyla statystyki broni do postaci
                     System.out.println("Atak: " + Player.getAttack());
-                }else{
+                } else {
                     System.out.println("to sie pierdol");
                 }
                 Camp();
@@ -117,6 +99,8 @@ public class Move{
                 Camp();
         }
     }
+
+
 
     public static void Well() {
         Scanner scanner = new Scanner(System.in);

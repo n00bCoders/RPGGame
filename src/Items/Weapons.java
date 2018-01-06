@@ -1,42 +1,31 @@
 package Items;
 
-import Game.Player;
+public class Weapons extends Items {
 
-public class Weapons{
+    int improveAttack;
+    int improveAttackSpeed;
+    int improveHP;
+    double improveCritRating;
 
-    int id;
-    String name;
-    double atk;
-    double str;
-    double crit;
+    int requireStrength;
 
-    public Weapons(int id, String name, double atk, double str, double crit) {
-        this.id = id;
-        this.name = name;
-        this.atk = atk;
-        Player.setAttack(atk);
-        this.str = str;
-        Player.setStrength(str);
-        this.crit = crit;
-        Player.setCrit(crit);
-    }
+    int durablity;
 
-    public Weapons(){
 
-    }
 
-    public static Weapons[] weaponzs = new Weapons[] {
-            new Weapons(0, "chujogrom", 5, 4, 3),
-            new Weapons(1, "dupochuj", 9, 5, 9)
-    };
+    public Weapons(int dimension_x, int dimension_y, String name, int id,
+                   int improveAttack, int improveAttackSpeed,
+                   double improveCritRating, int improveHP,
+                   int requireStrength, int durablity){
+        super(name, dimension_x, dimension_y, id);
 
-    public static void stats(int weaponID){
-        System.out.println("Id: " + weaponzs[weaponID].id);
-        System.out.println("Nazwa: " + weaponzs[weaponID].name);
-        System.out.println("Atak: " + weaponzs[weaponID].atk);
-        System.out.println("Sila: " + weaponzs[weaponID].str);
-        System.out.println("Krytyk: " + weaponzs[weaponID].crit);
-        System.out.println();
+        this.improveAttack = improveAttack;
+        this.improveAttackSpeed = improveAttackSpeed;
+        this.improveHP = improveHP;
+        this.improveCritRating = improveCritRating;
+        this.requireStrength = requireStrength;
+        this.durablity = durablity;
+
     }
 
 }

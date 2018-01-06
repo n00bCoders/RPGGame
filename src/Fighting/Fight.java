@@ -10,7 +10,6 @@ import Monsters.Zombie;
 public class Fight {
 
     public static void startBattle(){
-        if (Monster.getIsDead() == false){
             System.out.println("------------------------------------------");
             System.out.println("Zostales zaatakowany przez: " + Monster.getNameOfTheMonster());
             System.out.println("------------------------------------------");
@@ -27,10 +26,6 @@ public class Fight {
             else {
                 continueBattle();
             }
-        }
-        else {
-            isDead();
-        }
     }
 
     public static void continueBattle(){
@@ -98,11 +93,6 @@ public class Fight {
 
     public static void endFight(){
         System.out.println("Koniec walki");
-        isDead();
-    }
-
-    public static void isDead(){
-        Monster.setIsDead(true);
     }
 
 }

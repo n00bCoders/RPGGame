@@ -1,18 +1,26 @@
 package Items;
 
-public class Items{
+public class Items {
 
-    int id;
     String name;
+    int dimension_x;
+    int dimension_y;
+    int id;
 
-    public Items(int id, String name){
-        this.id = id;
-        this.name = name;
-    }
+
 
     public Items(){
 
     }
+
+    public Items(String name, int dimension_x, int dimension_y, int id){
+
+        this.name = name;
+        this.dimension_x = dimension_x;
+        this.dimension_y = dimension_y;
+        this.id = id;
+    }
+
 
 }
 
