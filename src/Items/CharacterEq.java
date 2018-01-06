@@ -8,10 +8,12 @@ public class CharacterEq {
     void show_Weapons_Eq(){
 
 
+
     }
 
 
     void setEq() {
+
 
 
     }
@@ -19,7 +21,6 @@ public class CharacterEq {
     void checkEqWeapon(){
 
         System.out.println(WeaponsList.Weapon3.improveAttack);
-
 
     }
 
