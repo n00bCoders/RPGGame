@@ -2,7 +2,6 @@ package Items;
 
 public class Shields extends Items {
 
-
     int improveDefense;
     int improveArmor;
     int improveHP;
