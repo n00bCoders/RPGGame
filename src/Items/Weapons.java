@@ -2,28 +2,28 @@ package Items;
 
 public class Weapons extends Items {
 
-    int improveAttack;
-    int improveAttackSpeed;
-    int improveHP;
+    int attack;
+    int speedAttack;
+    int health;
     double improveCritRating;
 
-    int requireStrength;
+    int strength;
 
     int durablity;
 
 
 
     public Weapons(int dimension_x, int dimension_y, String name, int id,
-                   int improveAttack, int improveAttackSpeed,
-                   double improveCritRating, int improveHP,
-                   int requireStrength, int durablity){
+                   int attack, int speedAttack,
+                   double improveCritRating, int health,
+                   int strength, int durablity){
         super(name, dimension_x, dimension_y, id);
 
-        this.improveAttack = improveAttack;
-        this.improveAttackSpeed = improveAttackSpeed;
-        this.improveHP = improveHP;
+        this.attack = attack;
+        this.speedAttack = speedAttack;
+        this.health = health;
         this.improveCritRating = improveCritRating;
-        this.requireStrength = requireStrength;
+        this.strength = strength;
         this.durablity = durablity;
 
     }

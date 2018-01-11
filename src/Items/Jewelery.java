@@ -2,31 +2,31 @@ package Items;
 
 public class Jewelery extends Items{
 
-    int improveHP;
-    int improveMana;
-    int improveDeffence;
-    int improveAttack;
+    int health;
+    int mana;
+    int deffence;
+    int attack;
 
-    int improveAgility;
-    int improveStrength;
-    int improveIntelligence;
-    int improveVitality;
-    int improveCrit;
+    int agility;
+    int strength;
+    int intelligence;
+    int vitality;
+    int crit;
 
-    public Jewelery(int dimension_x, int dimension_y, String name, int id, int improveHP, int improveMana, int improveDeffence,
-                    int improveAttack, int improveAgility, int improveStrength, int improveIntelligence, int improveVitality, int improveCrit){
+    public Jewelery(int dimension_x, int dimension_y, String name, int id, int health, int mana, int deffence,
+                    int attack, int agility, int strength, int intelligence, int vitality, int crit){
         super(name, dimension_x, dimension_y, id);
 
-        this.improveHP = improveHP;
-        this.improveMana = improveMana;
-        this.improveDeffence = improveDeffence;
-        this.improveAttack = improveAttack;
+        this.health = health;
+        this.mana = mana;
+        this.deffence = deffence;
+        this.attack = attack;
 
-        this.improveAgility = improveAgility;
-        this.improveStrength = improveStrength;
-        this.improveIntelligence = improveIntelligence;
-        this.improveVitality = improveVitality;
-        this.improveCrit = improveCrit;
+        this.agility = agility;
+        this.strength = strength;
+        this.intelligence = intelligence;
+        this.vitality = vitality;
+        this.crit = crit;
     }
 
 }

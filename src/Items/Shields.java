@@ -2,12 +2,12 @@ package Items;
 
 public class Shields extends Items {
 
-    int improveDefense;
+    int deffence;
     int improveArmor;
-    int improveHP;
-    double improveMana;
+    int health;
+    double mana;
 
-    int requireStrength;
+    int strength;
     boolean requireDualWielding;
 
     int durablity;
@@ -15,18 +15,18 @@ public class Shields extends Items {
 
 
     public Shields(int dimension_x, int dimension_y, String name, int id,
-                   int improveDefense, int improveArmor,
-                   int improveHP, double improveMana,
-                   int requireStrength, boolean requireDualWielding,
+                   int deffence, int improveArmor,
+                   int health, double mana,
+                   int strength, boolean requireDualWielding,
                    int durablity){
         super(name, dimension_x, dimension_y, id);
 
 
-        this.improveDefense = improveDefense;
+        this.deffence = deffence;
         this.improveArmor = improveArmor;
-        this.improveHP = improveHP;
-        this.improveMana = improveMana;
-        this.requireStrength = requireStrength;
+        this.health = health;
+        this.mana = mana;
+        this.strength = strength;
         this.requireDualWielding = requireDualWielding;
         this.durablity = durablity;
 

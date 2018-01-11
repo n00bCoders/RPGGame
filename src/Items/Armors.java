@@ -2,26 +2,25 @@ package Items;
 
 public class Armors extends Items {
 
-    double improveHP;
-    double improveDeffence;
-    double improveBlock;
-    double improveMana;
-
-    double requireStrength;
+    double health;
+    double deffence;
+    double block;
+    double mana;
+    double strength;
 
     int durablity;
 
     public Armors(int dimension_x, int dimension_y, String name, int id,
-                   int improveHP, int improveDeffence,
-                   double improveBlock, int improveMana,
-                   int requireStrength, int durablity){
+                   int health, int deffence,
+                   double block, int mana,
+                   int strength, int durablity){
         super(name, dimension_x, dimension_y, id);
 
-        this.improveHP = improveHP;
-        this.improveDeffence = improveDeffence;
-        this.improveBlock = improveBlock;
-        this.improveMana = improveMana;
-        this.requireStrength = requireStrength;
+        this.health = health;
+        this.deffence = deffence;
+        this.block = block;
+        this.mana = mana;
+        this.strength = strength;
         this.durablity = durablity;
 
     }
