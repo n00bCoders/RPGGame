@@ -22,7 +22,7 @@ public class CharacterEq {
 
     void checkEqWeapon(){
 
-        System.out.println(WeaponsList.Weapon3.attack);
+        System.out.println(WeaponsList.Weapon3.improveAttack);
 
     }
 

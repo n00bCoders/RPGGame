@@ -13,10 +13,10 @@ public class Eq {
     int getArrayEQ(int i) {
 
         i = i;
-        System.out.println(ArrayEQ[i].strength);
+        System.out.println(ArrayEQ[i].improveStrength);
 
-        return ArrayEQ[i].strength;
+        return ArrayEQ[i].improveStrength;
     }
 
-
+s
 }

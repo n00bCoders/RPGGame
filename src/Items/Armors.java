@@ -2,40 +2,37 @@ package Items;
 
 public class Armors extends Items {
 
+    public double improveHealth;
+    public double improveMana;
+    public double improveSpeedAttack;
+    public double improveDeffence;
+    public double improveAttack;
+    public double improveBlock;
 
-    private static double health;
-    private static double mana;
-    private static double speedAttack;
-    private static double deffence;
-    private static double attack;
-    private static double block;
+    public double improveAgility;
+    public double improveIntelligence;
+    public double improveVitality;
+    public double improveStrength;
+    public double improveCrit;
+    public int durablity;
 
-    private static double agility;
-    private static double intelligence;
-    private static double vitality;
-    private static double strength;
-    private static double crit;
-    int durablity;
-
-    public Armors(int dimension_x, int dimension_y, String name, int id,
-                   double health, double mana, double speedAttack,
-                   double deffence, double attack, double money, double block, double agility, double intelligence,
-                   double vitality, double strength, double crit, int durablity){
+    public Armors(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
+                   double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
+                   double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
+                   double improveCrit, double durability){
         super(name, dimension_x, dimension_y, id);
 
-        this.health = health;
-        this.healthMax = healthMax;
-        this.mana = mana;
-        this.manaMax = manaMax;
-        this.speedAttack = speedAttack;
-        this.deffence = deffence;
-        this.attack = attack;
-        this.block = block;
-        this.agility = agility;
-        this.intelligence = intelligence;
-        this.vitality = vitality;
-        this.strength = strength;
-        this.crit = crit;
+        this.improveHealth = improveHealth;
+        this.improveMana = improveMana;
+        this.improveSpeedAttack = improveSpeedAttack;
+        this.improveDeffence = improveDeffence;
+        this.improveAttack = improveAttack;
+        this.improveBlock = improveBlock;
+        this.improveAgility = improveAgility;
+        this.improveIntelligence = improveIntelligence;
+        this.improveVitality = improveVitality;
+        this.improveStrength = improveStrength;
+        this.improveCrit = improveCrit;
         this.durablity = durablity;
 
     }
