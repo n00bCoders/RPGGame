@@ -108,10 +108,6 @@ public class Player {
 		return crit;
 	}
 
-	public static double getBlock(){return block;
-	}
-
-
 
 	public static double getAttackPower(){
 		return attack*strength;
