@@ -21,7 +21,7 @@ public class Player {
 	private static double money = 0;
 	private static int level = champLevel();
 	private static double exp = 0;
-	private static double block;
+	private static double block=0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
@@ -102,6 +102,9 @@ public class Player {
 
 	public static double getCrit(){
 		return crit;
+	}
+
+	public static double getBlock(){return block;
 	}
 
 
@@ -250,7 +253,13 @@ public class Player {
 
 	public static boolean takeDamage(double damage) {
 		health = getHealth() - damage;
-		System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
+		if(Random.Block() == true) {
+			damage *= 0.2;
+			System.out.println("Zablokowaleś część obrażeń. Masz teraz: " + getHealthBar() + " punktow zycia ");
+		}
+		else {
+			System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
+		}
 		if (getHealth() <= 0) {
 			System.out.println("Umarles");
 			System.exit(1);
