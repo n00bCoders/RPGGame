@@ -26,8 +26,18 @@ public class Main {
 
         String name = WeaponsList.SwordsArray[weaponId].name;
         int id = WeaponsList.SwordsArray[weaponId].id;
-        double improveAttack = WeaponsList.SwordsArray[weaponId].attack;
-        double improveAttackSpeed = WeaponsList.SwordsArray[weaponId].speedAttack;
+        double improveHealth = WeaponsList.SwordsArray[weaponId].improveHealth;
+        double improveMana = WeaponsList.SwordsArray[weaponId].improveMana;
+        double improveSpeedAttack = WeaponsList.SwordsArray[weaponId].improveSpeedAttack;
+        double improveAttack = WeaponsList.SwordsArray[weaponId].improveAttack;
+        double improveBlock = WeaponsList.SwordsArray[weaponId].improveBlock;
+
+        double improveAgility = WeaponsList.SwordsArray[weaponId].improveAgility;
+        double improveIntelligence = WeaponsList.SwordsArray[weaponId].improveIntelligence;
+        double improveStrength = WeaponsList.SwordsArray[weaponId].improveStrength;
+        double improveCrit = WeaponsList.SwordsArray[weaponId].improveCrit;
+
+        double durability = WeaponsList.SwordsArray[weaponId].durablity;
 
     }
 
@@ -46,6 +56,7 @@ public class Main {
         double improveVitallity = ArmorsList.ArmorsArray[armorId].improveVitality;
         double improveStrength = ArmorsList.ArmorsArray[armorId].improveStrength;
         double improveCrit = ArmorsList.ArmorsArray[armorId].improveCrit;
+
 
     }
 }
