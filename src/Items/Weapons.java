@@ -15,14 +15,14 @@ public class Weapons extends Items {
     public double improveStrength;
     public double improveCrit;
 
-    public int durablity;
+    public double durablity;
 
 
 
     public Weapons(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
                    double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
                    double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
-                   double improveCrit){
+                   double improveCrit, double durablity){
         super(name, dimension_x, dimension_y, id);
 
         this.improveHealth = improveHealth;
