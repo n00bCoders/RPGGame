@@ -13,9 +13,9 @@ public class Eq {
     int getArrayEQ(int i) {
 
         i = i;
-        System.out.println(ArrayEQ[i].requireStrength);
+        System.out.println(ArrayEQ[i].strength);
 
-        return ArrayEQ[i].requireStrength;
+        return ArrayEQ[i].strength;
     }
 
 
