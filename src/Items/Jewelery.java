@@ -2,31 +2,38 @@ package Items;
 
 public class Jewelery extends Items{
 
-    int improveHP;
-    int improveMana;
-    int improveDeffence;
-    int improveAttack;
+    public double improveHealth;
+    public double improveMana;
+    public double improveSpeedAttack;
+    public double improveDeffence;
+    public double improveAttack;
+    public double improveBlock;
 
-    int improveAgility;
-    int improveStrength;
-    int improveIntelligence;
-    int improveVitality;
-    int improveCrit;
+    public double improveAgility;
+    public double improveIntelligence;
+    public double improveVitality;
+    public double improveStrength;
+    public double improveCrit;
+    public double durablity = 0;
 
-    public Jewelery(int dimension_x, int dimension_y, String name, int id, int improveHP, int improveMana, int improveDeffence,
-                    int improveAttack, int improveAgility, int improveStrength, int improveIntelligence, int improveVitality, int improveCrit){
+    public Jewelery(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
+                   double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
+                   double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
+                   double improveCrit, double durablity){
         super(name, dimension_x, dimension_y, id);
 
-        this.improveHP = improveHP;
+        this.improveHealth = improveHealth;
         this.improveMana = improveMana;
+        this.improveSpeedAttack = improveSpeedAttack;
         this.improveDeffence = improveDeffence;
         this.improveAttack = improveAttack;
-
+        this.improveBlock = improveBlock;
         this.improveAgility = improveAgility;
-        this.improveStrength = improveStrength;
         this.improveIntelligence = improveIntelligence;
         this.improveVitality = improveVitality;
+        this.improveStrength = improveStrength;
         this.improveCrit = improveCrit;
+        this.durablity = durablity;
     }
 
 

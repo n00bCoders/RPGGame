@@ -2,26 +2,37 @@ package Items;
 
 public class Armors extends Items {
 
-    double improveHP;
-    double improveDeffence;
-    double improveBlock;
-    double improveMana;
+    public double improveHealth;
+    public double improveMana;
+    public double improveSpeedAttack;
+    public double improveDeffence;
+    public double improveAttack;
+    public double improveBlock;
 
-    double requireStrength;
+    public double improveAgility;
+    public double improveIntelligence;
+    public double improveVitality;
+    public double improveStrength;
+    public double improveCrit;
+    public double durablity;
 
-    int durablity;
-
-    public Armors(int dimension_x, int dimension_y, String name, int id,
-                   int improveHP, int improveDeffence,
-                   double improveBlock, int improveMana,
-                   int requireStrength, int durablity){
+    public Armors(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
+                   double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
+                   double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
+                   double improveCrit, double durablity){
         super(name, dimension_x, dimension_y, id);
 
-        this.improveHP = improveHP;
-        this.improveDeffence = improveDeffence;
-        this.improveBlock = improveBlock;
+        this.improveHealth = improveHealth;
         this.improveMana = improveMana;
-        this.requireStrength = requireStrength;
+        this.improveSpeedAttack = improveSpeedAttack;
+        this.improveDeffence = improveDeffence;
+        this.improveAttack = improveAttack;
+        this.improveBlock = improveBlock;
+        this.improveAgility = improveAgility;
+        this.improveIntelligence = improveIntelligence;
+        this.improveVitality = improveVitality;
+        this.improveStrength = improveStrength;
+        this.improveCrit = improveCrit;
         this.durablity = durablity;
 
     }

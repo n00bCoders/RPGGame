@@ -2,33 +2,46 @@ package Items;
 
 public class Shields extends Items {
 
-    int improveDefense;
-    int improveArmor;
-    int improveHP;
-    double improveMana;
+    public double improveHealth;
+    public double improveMana;
+    public double improveSpeedAttack;
+    public double improveDeffence;
+    public double improveAttack;
+    public double improveBlock;
 
-    int requireStrength;
-    boolean requireDualWielding;
+    public double improveAgility;
+    public double improveIntelligence;
+    public double improveVitality;
+    public double improveStrength;
+    public double improveCrit;
 
-    int durablity;
+    public double durablity;
+    public boolean requireDualWielding;
 
 
 
-    public Shields(int dimension_x, int dimension_y, String name, int id,
-                   int improveDefense, int improveArmor,
-                   int improveHP, double improveMana,
-                   int requireStrength, boolean requireDualWielding,
-                   int durablity){
+
+
+    public Shields(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
+                   double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
+                   double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
+                   double improveCrit, double durablity, boolean requireDualWielding){
         super(name, dimension_x, dimension_y, id);
 
 
-        this.improveDefense = improveDefense;
-        this.improveArmor = improveArmor;
-        this.improveHP = improveHP;
+        this.improveHealth = improveHealth;
         this.improveMana = improveMana;
-        this.requireStrength = requireStrength;
-        this.requireDualWielding = requireDualWielding;
+        this.improveSpeedAttack = improveSpeedAttack;
+        this.improveDeffence = improveDeffence;
+        this.improveAttack = improveAttack;
+        this.improveBlock = improveBlock;
+        this.improveAgility = improveAgility;
+        this.improveIntelligence = improveIntelligence;
+        this.improveVitality = improveVitality;
+        this.improveStrength = improveStrength;
+        this.improveCrit = improveCrit;
         this.durablity = durablity;
+        this.requireDualWielding = requireDualWielding;
 
 
     }

@@ -38,4 +38,29 @@ public class Random {
         }
 
     }
+    public static boolean Block() {
+
+        int R = 100;
+        int C = (int) Player.getBlock();
+        int[] tablica = new int[R];
+        int[] tablica1 = new int[C];
+
+        for (int b = 1; b < R; b++) {
+            tablica[b] = b + 1;
+        }
+
+        for (int b = 1; b < C; b++) {
+            tablica1[b] = b + 1;
+        }
+
+        int x = (int) RInt(1, tablica.length);
+
+        if (x <= C) {
+            return true;
+
+        } else {
+            return false;
+
+        }
+    }
 }

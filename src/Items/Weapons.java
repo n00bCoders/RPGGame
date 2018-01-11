@@ -2,28 +2,42 @@ package Items;
 
 public class Weapons extends Items {
 
-  public int improveAttack;
-    public int improveAttackSpeed;
-    public int improveHP;
-    public double improveCritRating;
 
-    public int requireStrength;
+    public double improveHealth;
+    public double improveMana;
+    public double improveSpeedAttack;
+    public double improveDeffence;
+    public double improveAttack;
+    public double improveBlock;
 
-    public int durablity;
+    public double improveAgility;
+    public double improveIntelligence;
+    public double improveVitality;
+    public double improveStrength;
+    public double improveCrit;
+
+    public double durablity;
 
 
 
-    public Weapons(int dimension_x, int dimension_y, String name, int id,
-                   int improveAttack, int improveAttackSpeed,
-                   double improveCritRating, int improveHP,
-                   int requireStrength, int durablity){
+
+    public Weapons(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
+                   double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
+                   double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
+                   double improveCrit, double durablity){
         super(name, dimension_x, dimension_y, id);
 
+        this.improveHealth = improveHealth;
+        this.improveMana = improveMana;
+        this.improveSpeedAttack = improveSpeedAttack;
+        this.improveDeffence = improveDeffence;
         this.improveAttack = improveAttack;
-        this.improveAttackSpeed = improveAttackSpeed;
-        this.improveHP = improveHP;
-        this.improveCritRating = improveCritRating;
-        this.requireStrength = requireStrength;
+        this.improveBlock = improveBlock;
+        this.improveAgility = improveAgility;
+        this.improveIntelligence = improveIntelligence;
+        this.improveVitality = improveVitality;
+        this.improveStrength = improveStrength;
+        this.improveCrit = improveCrit;
         this.durablity = durablity;
 
     }

@@ -21,6 +21,7 @@ public class Player {
 	private static double money = 0;
 	private static int level = champLevel();
 	private static double exp = 0;
+	private static double block=0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
@@ -83,6 +84,8 @@ public class Player {
 
 
 
+
+
 	public static double getAgility() {
 		return agility;
 	}
@@ -102,7 +105,6 @@ public class Player {
 	public static double getCrit(){
 		return crit;
 	}
-
 
 
 	public static double getAttackPower(){
@@ -141,8 +143,8 @@ public class Player {
 		manaMax = max;
 	}
 
-	public static void setSpeedAttack(double speedAttack) {
-		Player.speedAttack = speedAttack;
+	public static void setSpeedAttack(double addSpeedAttack) {
+		speedAttack += addSpeedAttack;
 	}
 
 	public static void setDeffence(double addDeffence){
@@ -165,18 +167,22 @@ public class Player {
     	exp += addExp;
 	}
 
-
-
-	public static void setAgility(double agility) {
-		Player.agility = agility;
+	public static void setBlock(double addBlock){
+		block += addBlock;
 	}
 
-	public static void setIntelligence(double intelligence) {
-		Player.intelligence = intelligence;
+
+
+	public static void setAgility(double addAgility) {
+		agility += addAgility;
 	}
 
-	public static void setVitality(double vitality) {
-		Player.vitality = vitality;
+	public static void setIntelligence(double addIntelligence) {
+		intelligence += addIntelligence;
+	}
+
+	public static void setVitality(double addVitality) {
+		vitality += addVitality;
 	}
 
 	public static void setStrength(double addStrength){
@@ -248,8 +254,15 @@ public class Player {
 	}
 
 	public static boolean takeDamage(double damage) {
-		health = getHealth() - damage;
-		System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
+		if(Random.Block() == true) {
+			damage *= 0.2;
+			health = getHealth() - damage;
+			System.out.println("Zablokowaleś część obrażeń. Masz teraz: " + getHealthBar() + " punktow zycia ");
+		}
+		else {
+			health = getHealth() - damage;
+			System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
+		}
 		if (getHealth() <= 0) {
 			System.out.println("Umarles");
 			System.exit(1);
@@ -315,6 +328,10 @@ public class Player {
 			System.out.println("Zadales: " + damage + " punktow obrazen");
 			Monster.takeDamage(damage);
 		}
+	}
+
+	public static void equipEq(String nameOfTheItem, int itemID, double addHealth, double addMana){
+
 	}
 
 	public Player(){
