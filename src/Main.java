@@ -25,8 +25,8 @@ public class Main {
 
         String name = WeaponsList.SwordsArray[weaponId].name;
         int id = WeaponsList.SwordsArray[weaponId].id;
-        double improveAttack = WeaponsList.SwordsArray[weaponId].improveAttack;
-        double improveAttackSpeed = WeaponsList.SwordsArray[weaponId].improveAttackSpeed;
+        double improveAttack = WeaponsList.SwordsArray[weaponId].attack;
+        double improveAttackSpeed = WeaponsList.SwordsArray[weaponId].speedAttack;
 
     }
 
