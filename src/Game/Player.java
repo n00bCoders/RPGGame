@@ -21,6 +21,7 @@ public class Player {
 	private static double money = 0;
 	private static int level = champLevel();
 	private static double exp = 0;
+	private static double block;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
