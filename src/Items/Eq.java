@@ -18,5 +18,4 @@ public class Eq {
         return ArrayEQ[i].improveStrength;
     }
 
-s
 }

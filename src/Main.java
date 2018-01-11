@@ -1,4 +1,5 @@
 import Items.Armors;
+import Items.JeweleryList;
 import Items.Weapons;
 import Items.WeaponsList;
 
@@ -36,6 +37,26 @@ public class Main {
         int id = WeaponsList.SwordsArray[armorId].id;
         double improveAttack = WeaponsList.SwordsArray[armorId].improveAttack;
         double improveAttackSpeed = WeaponsList.SwordsArray[armorId].improveAttackSpeed;
+
+    }
+
+    public static void getJewelery(int jeweleryId) {
+        String name = JeweleryList.JeweleryArray[jeweleryId].name;
+        int id = JeweleryList.JeweleryArray[jeweleryId].id;
+        double improveHealth = JeweleryList.JeweleryArray[jeweleryId].improveHealth;
+        double improveMana = JeweleryList.JeweleryArray[jeweleryId].improveMana;;
+        double improveSpeedAttack = JeweleryList.JeweleryArray[jeweleryId].improveSpeedAttack;;
+        double improveDeffence = JeweleryList.JeweleryArray[jeweleryId].improveDeffence;
+        double improveAttack = JeweleryList.JeweleryArray[jeweleryId].improveAttack;
+        double improveBlock = JeweleryList.JeweleryArray[jeweleryId].improveBlock;
+        double improveAgility = JeweleryList.JeweleryArray[jeweleryId].improveAgility;
+        double improveIntelligence = JeweleryList.JeweleryArray[jeweleryId].improveIntelligence;
+        double improveVitality = JeweleryList.JeweleryArray[jeweleryId].improveVitality;
+        double improveStrength = JeweleryList.JeweleryArray[jeweleryId].improveStrength;
+        double improveCrit = JeweleryList.JeweleryArray[jeweleryId].improveCrit;
+        double durablity = JeweleryList.JeweleryArray[jeweleryId].durablity;
+
+
 
     }
 }
