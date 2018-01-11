@@ -2,6 +2,16 @@ package Items;
 
 public class Items {
 
+    /*
+
+    x = 1 bronie
+    x = 2 armors
+    x = 3 shields
+    x = 4 jewelery
+    x = 5 quest items
+
+     */
+
     public String name;
     public int dimension_x;
     public int dimension_y;

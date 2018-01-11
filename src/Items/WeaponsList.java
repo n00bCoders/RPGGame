@@ -11,8 +11,8 @@ public class WeaponsList {
             1, 1, 1, 1, 50);
 
     public static Weapons Weapon2 = new Weapons(1, 3, "Steel Sword", 3, 3,
-            0, 0.3, 0, 0, 2, 1
-    1, 1, 1, 50);
+            0, 0.3, 0, 0, 2, 1,
+    1, 1, 1, 5, 50);
 
     public static Weapons Weapon3 = new Weapons(1, 4, "Double Axe", 4, 3,
             0, 0.3, 0, 0, 3, 5,
@@ -23,8 +23,8 @@ public class WeaponsList {
             6, 5, 4, 2, 50);
 
     public static Weapons Weapon5 = new Weapons(1, 6, "Metal Claws", 6, 3,
-            0, 0.3, 0, 0, 4, 8
-    4, 1, 1, 50);
+            0, 0.3, 0, 0, 4, 8,
+    4, 1, 1, 5, 50);
 
     public static Weapons Weapon6 = new Weapons(1, 7, "Staff of Death", 7, 3,
             0, 0.3, 0, 0, 2, 8,

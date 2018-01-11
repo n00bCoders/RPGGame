@@ -10,8 +10,6 @@ public class Main {
 
     public static void main(String args[]) {
 
-
-
         /*
         TO DO:
         1. Zrobić ekwipunek.
@@ -21,6 +19,7 @@ public class Main {
         5. Zrobić jakiś warunek w booleanie, żeby sprawdzał czy zabiliśmy już tego przeciwnika. np. idę na wschód, zabiję Zombie
             i chcę żeby było coś w stylu isZombieDead = true;
          */
+
     }
 
     public static void getWeapon(int weaponId){
