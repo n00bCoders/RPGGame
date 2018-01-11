@@ -15,6 +15,7 @@ public class Shields extends Items {
     public double improveStrength;
     public double improveCrit;
 
+    public double requireStrength;
     public double durablity;
     public boolean requireDualWielding;
 
@@ -25,7 +26,7 @@ public class Shields extends Items {
     public Shields(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
                    double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
                    double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
-                   double improveCrit, double durablity, boolean requireDualWielding){
+                   double improveCrit, double durablity, double requireStrength,boolean requireDualWielding){
         super(name, dimension_x, dimension_y, id);
 
 
@@ -40,6 +41,7 @@ public class Shields extends Items {
         this.improveVitality = improveVitality;
         this.improveStrength = improveStrength;
         this.improveCrit = improveCrit;
+        this.requireStrength = requireStrength;
         this.durablity = durablity;
         this.requireDualWielding = requireDualWielding;
 
