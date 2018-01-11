@@ -14,12 +14,12 @@ public class Armors extends Items {
     public double improveVitality;
     public double improveStrength;
     public double improveCrit;
-    public int durablity;
+    public double durablity;
 
     public Armors(int dimension_x, int dimension_y, String name, int id, double improveHealth, double improveMana,
                    double improveSpeedAttack, double improveDeffence, double improveAttack, double improveBlock,
                    double improveAgility, double improveIntelligence, double improveVitality, double improveStrength,
-                   double improveCrit, double durability){
+                   double improveCrit, double durablity){
         super(name, dimension_x, dimension_y, id);
 
         this.improveHealth = improveHealth;

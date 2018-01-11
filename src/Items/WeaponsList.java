@@ -3,7 +3,8 @@ package Items;
 public class WeaponsList {
 
     public static Weapons Weapon0 = new Weapons(1, 1, "Raw steel", 1, 3,
-            0, 0.3, 0, 0, 45);
+            0, 0.3, 0, 5, 1, 1,
+            1, 1, 1, 1, 50);
 
     public static Weapons Weapon1 = new Weapons(1, 2, "Rust Sword", 2, 5,
             2, 0.6, 2, 2, 55);
