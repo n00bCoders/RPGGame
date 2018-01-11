@@ -2,7 +2,6 @@ package Items;
 
 public class Armors extends Items {
 
-<<<<<<< HEAD
     public double health;
     public double deffence;
     public double block;
@@ -10,7 +9,7 @@ public class Armors extends Items {
     public double strength;
 
     public int durablity;
-=======
+
 
     private static double health;
     private static double mana;
@@ -25,7 +24,7 @@ public class Armors extends Items {
     private static double strength;
     private static double crit;
     int durablity;
->>>>>>> e9127e9ac0df071217e4a460e4dc4dbdbf92847a
+
 
     public Armors(int dimension_x, int dimension_y, String name, int id,
                    double health, double mana, double speedAttack,
