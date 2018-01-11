@@ -1,18 +1,14 @@
 import Items.Armors;
 import Items.Weapons;
+import Items.WeaponsList;
+
+import static Items.WeaponsList.SwordsArray;
 
 public class Main {
+
     public static void main(String args[]) {
 
-        //Wypisywanie statystyk z Weapons
-        System.out.println("Miecze:");
-        Weapons.stats(1);
-        Weapons.stats(0);
 
-        //Wypisywanie statystyk z Armors
-        System.out.println("Zbroje:");
-        Armors.stats(0);
-        Armors.stats(1);
 
         /*
         TO DO:
@@ -24,4 +20,14 @@ public class Main {
             i chcę żeby było coś w stylu isZombieDead = true;
          */
     }
+
+    public static void getWeapon(int weaponId){
+
+        String name = WeaponsList.SwordsArray[weaponId].name;
+        int id = WeaponsList.SwordsArray[weaponId].id;
+        double improveAttack = WeaponsList.SwordsArray[weaponId].improveAttack;
+        double improveAttackSpeed = WeaponsList.SwordsArray[weaponId].improveAttackSpeed;
+
+    }
+
 }

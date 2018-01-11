@@ -317,6 +317,10 @@ public class Player {
 		}
 	}
 
+	public static void equipEq(String nameOfTheItem, int itemID, double addHealth, double addMana){
+
+	}
+
 	public Player(){
 
 	}

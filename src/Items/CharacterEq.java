@@ -12,7 +12,9 @@ public class CharacterEq {
     }
 
 
-    void setEq() {
+    void setEq(int ID) {
+
+
 
 
 
