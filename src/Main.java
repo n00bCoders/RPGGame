@@ -1,4 +1,5 @@
 import Items.Armors;
+import Items.ArmorsList;
 import Items.Weapons;
 import Items.WeaponsList;
 
@@ -32,10 +33,19 @@ public class Main {
 
     public static void getArmor(int armorId){
 
-        String name = WeaponsList.SwordsArray[armorId].name;
-        int id = WeaponsList.SwordsArray[armorId].id;
-        double improveAttack = WeaponsList.SwordsArray[armorId].improveAttack;
-        double improveAttackSpeed = WeaponsList.SwordsArray[armorId].improveAttackSpeed;
+        String name = ArmorsList.ArmorsArray[armorId].name;
+        int id = ArmorsList.ArmorsArray[armorId].id;
+        double improveHealth = ArmorsList.ArmorsArray[armorId].improveHealth;
+        double improveMana = ArmorsList.ArmorsArray[armorId].improveMana;
+        double improveSpeedAttack = ArmorsList.ArmorsArray[armorId].improveSpeedAttack;
+        double improveDeffence = ArmorsList.ArmorsArray[armorId].improveDeffence;
+        double improveAttack = ArmorsList.ArmorsArray[armorId].improveAttack;
+        double improveBlock = ArmorsList.ArmorsArray[armorId].improveBlock;
+        double improveAgility = ArmorsList.ArmorsArray[armorId].improveAgility;
+        double improveIntelligence = ArmorsList.ArmorsArray[armorId].improveIntelligence;
+        double improveVitallity = ArmorsList.ArmorsArray[armorId].improveVitality;
+        double improveStrength = ArmorsList.ArmorsArray[armorId].improveStrength;
+        double improveCrit = ArmorsList.ArmorsArray[armorId].improveCrit;
 
     }
 }
