@@ -30,12 +30,4 @@ public class Main {
 
     }
 
-    public static void getArmor(int armorId){
-
-        String name = WeaponsList.SwordsArray[armorId].name;
-        int id = WeaponsList.SwordsArray[armorId].id;
-        double improveAttack = WeaponsList.SwordsArray[armorId].improveAttack;
-        double improveAttackSpeed = WeaponsList.SwordsArray[armorId].improveAttackSpeed;
-
-    }
 }
