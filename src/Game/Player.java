@@ -82,9 +82,7 @@ public class Player {
 		return exp;
 	}
 
-	public static double getBlock(){
-		return block;
-	}
+
 
 
 
@@ -260,12 +258,13 @@ public class Player {
 	}
 
 	public static boolean takeDamage(double damage) {
-		health = getHealth() - damage;
 		if(Random.Block() == true) {
+			health = getHealth() - damage;
 			damage *= 0.2;
 			System.out.println("Zablokowaleś część obrażeń. Masz teraz: " + getHealthBar() + " punktow zycia ");
 		}
 		else {
+			health = getHealth() - damage;
 			System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
 		}
 		if (getHealth() <= 0) {
