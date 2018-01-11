@@ -82,6 +82,10 @@ public class Player {
 		return exp;
 	}
 
+	public static double getBlock(){
+		return block;
+	}
+
 
 
 	public static double getAgility() {
@@ -142,8 +146,8 @@ public class Player {
 		manaMax = max;
 	}
 
-	public static void setSpeedAttack(double speedAttack) {
-		Player.speedAttack = speedAttack;
+	public static void setSpeedAttack(double addSpeedAttack) {
+		speedAttack += addSpeedAttack;
 	}
 
 	public static void setDeffence(double addDeffence){
@@ -166,18 +170,22 @@ public class Player {
     	exp += addExp;
 	}
 
-
-
-	public static void setAgility(double agility) {
-		Player.agility = agility;
+	public static void setBlock(double addBlock){
+		block += addBlock;
 	}
 
-	public static void setIntelligence(double intelligence) {
-		Player.intelligence = intelligence;
+
+
+	public static void setAgility(double addAgility) {
+		agility += addAgility;
 	}
 
-	public static void setVitality(double vitality) {
-		Player.vitality = vitality;
+	public static void setIntelligence(double addIntelligence) {
+		intelligence += addIntelligence;
+	}
+
+	public static void setVitality(double addVitality) {
+		vitality += addVitality;
 	}
 
 	public static void setStrength(double addStrength){
