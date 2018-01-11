@@ -2,6 +2,7 @@ package Items;
 
 public class Weapons extends Items {
 
+
     public double improveHealth;
     public double improveMana;
     public double improveSpeedAttack;
@@ -16,6 +17,7 @@ public class Weapons extends Items {
     public double improveCrit;
 
     public double durablity;
+
 
 
 
