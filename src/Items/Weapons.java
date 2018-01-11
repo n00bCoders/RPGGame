@@ -2,14 +2,14 @@ package Items;
 
 public class Weapons extends Items {
 
-    int improveAttack;
-    int improveAttackSpeed;
-    int improveHP;
-    double improveCritRating;
+  public int improveAttack;
+    public int improveAttackSpeed;
+    public int improveHP;
+    public double improveCritRating;
 
-    int requireStrength;
+    public int requireStrength;
 
-    int durablity;
+    public int durablity;
 
 
 

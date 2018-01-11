@@ -29,4 +29,6 @@ public class Jewelery extends Items{
         this.improveCrit = improveCrit;
     }
 
+
+
 }

@@ -2,10 +2,10 @@ package Items;
 
 public class Items {
 
-    String name;
-    int dimension_x;
-    int dimension_y;
-    int id;
+    public String name;
+    public int dimension_x;
+    public int dimension_y;
+    public int id;
 
 
 

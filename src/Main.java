@@ -1,18 +1,19 @@
 import Items.Armors;
 import Items.Weapons;
+import Items.WeaponsList;
 
 public class Main {
     public static void main(String args[]) {
 
         //Wypisywanie statystyk z Weapons
         System.out.println("Miecze:");
-        Weapons.stats(1);
-        Weapons.stats(0);
+
 
         //Wypisywanie statystyk z Armors
         System.out.println("Zbroje:");
-        Armors.stats(0);
-        Armors.stats(1);
+
+        //Eq.Equip.get_ItemEq(4);
+        WeaponsList.FindInArray();
 
         /*
         TO DO:
