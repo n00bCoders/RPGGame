@@ -5,6 +5,7 @@ import Monsters.Goblin;
 import Monsters.Monster;
 import Monsters.Zombie;
 
+import java.lang.reflect.Field;
 import java.util.Scanner;
 
 /**
@@ -138,16 +139,18 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                Mansion();
 
             case "idz na poludnie":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na wschod":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na zachod":
-
+                Field2();
 
             case "statystyki":
                 Player.getStats();
@@ -168,15 +171,17 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na poludnie":
-
+                Graveyard();
 
             case "idz na wschod":
-
+                System.out.println("tam nic nie ma");
 
             case "idz na zachod":
+                System.out.println("tam nic nie ma");
 
 
             case "statystyki":
@@ -198,15 +203,18 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                Camp();
 
             case "idz na poludnie":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na wschod":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na zachod":
+                System.out.println("tam nic nie ma");
 
 
             case "statystyki":
@@ -228,15 +236,17 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                Dungeon();
 
             case "idz na poludnie":
-
+                Camp();
 
             case "idz na wschod":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na zachod":
+                System.out.println("tam nic nie ma");
 
 
             case "statystyki":
@@ -258,16 +268,16 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("tam nic nie ma");
 
             case "idz na poludnie":
-
+                Forest();
 
             case "idz na wschod":
-
+                System.out.println("tam nic nie ma");
 
             case "idz na zachod":
-
+                System.out.println("tam nic nie ma");
 
             case "statystyki":
                 Player.getStats();
@@ -318,16 +328,16 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                SwordPlace();
 
             case "idz na poludnie":
-
+                System.out.println("tam nic nie ma");
 
             case "idz na wschod":
-
+                Field1();
 
             case "idz na zachod":
-
+                System.out.println("tu bedzie jakas zagadka albo klucz");
 
             case "statystyki":
                 Player.getStats();
@@ -348,15 +358,17 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("tam nic nie ma");
 
             case "idz na poludnie":
-
+                Hut();
 
             case "idz na wschod":
+                System.out.println("tam nic nie ma");
 
 
             case "idz na zachod":
+                System.out.println("tam nic nie ma");
 
 
             case "statystyki":
