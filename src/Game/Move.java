@@ -5,7 +5,12 @@ import java.util.Scanner;
 /**
  * Created by Przykład Jan on 07.11.2017.
  */
+
 public class Move {
+
+    static int keyToMansion = 0;
+    static int torch = 0;
+    static int secretRoom = 0;
 
     static Scanner scanner = new Scanner(System.in);
     static String a = scanner.nextLine(); // nasz glowny scanner
@@ -35,7 +40,6 @@ public class Move {
 
             case "wyjdz":
                 System.exit(1);
-
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
@@ -308,16 +312,20 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("Cosik");
+                SecretRoom();
 
             case "idz na poludnie":
-
+                System.out.println("Cosik");
+                SecretRoom();
 
             case "idz na wschod":
-
+                System.out.println("Wyjdz na Field1");
+                Field1();
 
             case "idz na zachod":
-
+                System.out.println("Cosik");
+                SecretRoom();
 
             case "statystyki":
                 Player.getStats();
@@ -347,7 +355,8 @@ public class Move {
                 Field1();
 
             case "idz na zachod":
-                System.out.println("tu bedzie jakas zagadka albo klucz");
+                System.out.println("tu bedzie jakas zagadka albo klucz do Secret Roomu");
+                Hut();
 
             case "statystyki":
                 Player.getStats();
@@ -356,6 +365,9 @@ public class Move {
             case "wyjdz":
                 System.exit(1);
 
+            case "przeszukaj domek":
+                System.out.println("Znalazles pochodnie!");
+                torch = 1;
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
@@ -375,11 +387,11 @@ public class Move {
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
-
+                SwordPlace();
 
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
-
+                SwordPlace();
 
             case "statystyki":
                 Player.getStats();
