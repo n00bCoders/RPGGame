@@ -1,6 +1,7 @@
 package Game;
 
 import Additional.Random;
+import Additional.Rounding;
 import Fighting.HeroMagic;
 import Monsters.Monster;
 
@@ -112,19 +113,19 @@ public class Player {
 	}
 
 	public static void getStats(){
-		System.out.println("Imie: " + getName());
+		System.out.println("Imie: " + nameOfThePlayer);
 		System.out.println("Zycie: " + getHealthBar());
 		System.out.println("Mana: " + getManaBar());
-		System.out.println("Predkosc ataku: " + getSpeedAttack());
-		System.out.println("Obrona: " + getDeffence());
-		System.out.println("Atak: " + getAttack());
-		System.out.println("Lvl: " + getLvl());
-		System.out.println("Exp: " + getExp());
-		System.out.println("Zrecznosc: " + getAgility());
-		System.out.println("Inteligencja: " + getIntelligence());
-		System.out.println("Witalnosc: " + getVitality());
-		System.out.println("Sila: " + getStrength());
-		System.out.println("Szansa na uderzenie krytyczne: " + getCrit() + "%");
+		System.out.println("Predkosc ataku: " + Rounding.round(speedAttack, 2));
+		System.out.println("Obrona: " + deffence);
+		System.out.println("Atak: " + attack);
+		System.out.println("Lvl: " + level);
+		System.out.println("Exp: " + exp);
+		System.out.println("Zrecznosc: " + agility);
+		System.out.println("Inteligencja: " + intelligence);
+		System.out.println("Witalnosc: " + vitality);
+		System.out.println("Sila: " + strength);
+		System.out.println("Szansa na uderzenie krytyczne: " + crit + "%");
 	}
 
 	public static int getMyClass() {
