@@ -38,7 +38,12 @@ public class Main {
         double improveStrength;
         double improveCrit;
 
+
 /*
+=======
+        int x = 1; //Dimension X z items
+        
+>>>>>>> 2d507b528ad91c0fac238b7139e0b5bc134bf30e
         if(x == 1){
             improveHealth = WeaponsList.SwordsArray[weaponId].improveHealth;
             improveMana = WeaponsList.SwordsArray[weaponId].improveMana;
@@ -49,6 +54,7 @@ public class Main {
             improveIntelligence = WeaponsList.SwordsArray[weaponId].improveIntelligence;
             improveStrength = WeaponsList.SwordsArray[weaponId].improveStrength;
             improveCrit = WeaponsList.SwordsArray[weaponId].improveCrit;
+
 
             Player.setHealth(Player.getHealth(), Player.getHealthMax() + improveHealth);
             Player.setMana(Player.getMana(), Player.getManaMax() + improveMana);
