@@ -21,7 +21,8 @@ public class Player {
 	private static double money = 0;
 	private static int level = champLevel();
 	private static double exp = 0;
-	private static double block=0;
+	private static double block = 0;
+	private static int myClass = 0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
@@ -126,6 +127,9 @@ public class Player {
 		System.out.println("Szansa na uderzenie krytyczne: " + getCrit() + "%");
 	}
 
+	public static int getMyClass() {
+		return myClass;
+	}
 
 	//SETTERS
 	public static void setName(String nameOfThePlayer){
@@ -160,11 +164,38 @@ public class Player {
 
 	public static void setLevel(double addLvl){
 		level += addLvl;
+		System.out.println("Gratulacje! Awansowałeś, masz teraz: " + level + " Twoje statystyki wzrosły.");
+		if (myClass == 1){
+			health += 20;
+			healthMax += 20;
+			speedAttack += 0.05;
+			deffence += 2;
+			attack += 2;
+			strength += 1;
+		}
+		else if(myClass == 2){
+			health += 10;
+			healthMax += 10;
+			speedAttack += 0.1;
+			attack += 1;
+			agility += 1;
+			crit += 3;
+		}
+		else{
+			health += 10;
+			healthMax += 10;
+			attack += 1;
+			intelligence += 3;
+		}
 	}
 
 	public static void setExp(double addExp){
     	exp += addExp;
     	playerLevelUp();
+	}
+
+	public static void setMyClass(int takenClass){
+		myClass = takenClass;
 	}
 
 	public static void setBlock(double addBlock){
