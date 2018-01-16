@@ -3,3 +3,7 @@
 
 *.iml
 
+src/.idea/workspace.xml
+*.xml
+src/.idea/workspace.xml
+*.xml
