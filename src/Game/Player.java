@@ -255,7 +255,7 @@ public class Player {
 		return 0;
 	}
 
-	/* public static boolean takeDamage(double damage) {
+	 public static boolean takeDamage(double damage) {
 		if(Random.Block() == true) {
 			damage *= 0.2;
 			health = getHealth() - damage;
@@ -272,7 +272,7 @@ public class Player {
 		}
 		return false;
 	}
-*/
+
 	public static void dealDamage() {
 		System.out.println("Co chcesz teraz zrobic?");
 		String fight = scanner.nextLine();
