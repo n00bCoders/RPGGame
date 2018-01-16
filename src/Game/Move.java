@@ -33,11 +33,11 @@ public class Move {
                 Battlefield();
 
             case "idz na zachod":
-                System.out.println("Idziesz do Well");
-                Well();
+                System.out.println("Idziesz do Field1");
+                Field1();
 
             case "idz na wschod":
-                System.out.println("Idziesz na Field1");
+                System.out.println("Idziesz do well");
                 Well();
 
             case "statystyki":
