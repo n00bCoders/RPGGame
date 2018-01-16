@@ -12,13 +12,12 @@ public class Move {
     static int secretRoom = 0;
 
     static Scanner scanner = new Scanner(System.in);
-    static String a = scanner.nextLine(); // nasz glowny scanner
 
     public static void Camp() {
-
+        String a = scanner.nextLine();
         switch (a) {
             case "idz na polnoc":
-                if(1==1){
+                if(torch==1){
                     System.out.println("Padpalasz pochodnia haszcze ktore blokowalay droge. Teraz mozesz przedostać sie dalej");
                     Forest();
                 }else
