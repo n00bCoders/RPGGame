@@ -38,7 +38,8 @@ public class Main {
         double improveStrength;
         double improveCrit;
 
-
+        int x = 1; //Dimension X z items
+        
         if(x == 1){
             improveHealth = WeaponsList.SwordsArray[weaponId].improveHealth;
             improveMana = WeaponsList.SwordsArray[weaponId].improveMana;
