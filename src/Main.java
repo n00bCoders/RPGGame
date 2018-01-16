@@ -51,6 +51,7 @@ public class Main {
             improveStrength = WeaponsList.SwordsArray[weaponId].improveStrength;
             improveCrit = WeaponsList.SwordsArray[weaponId].improveCrit;
 
+
             Player.setHealth(Player.getHealth(), Player.getHealthMax() + improveHealth);
             Player.setMana(Player.getMana(), Player.getManaMax() + improveMana);
             Player.setSpeedAttack(improveSpeedAttack);
