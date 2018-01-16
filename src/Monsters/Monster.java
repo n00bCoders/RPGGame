@@ -1,6 +1,6 @@
 package Monsters;
 
-import Fighting.Magic;
+import Fighting.MonsterMagic;
 import Game.Player;
 import Additional.Random;
 
@@ -184,7 +184,7 @@ public class Monster {
     }
 
     public static void magicAttack(){
-        Magic.useMagic();
+        MonsterMagic.useMagic();
     }
 
     public static void physicAttack(double damageMin, double damageMax){

@@ -1,7 +1,7 @@
 package Monsters;
 
 import Additional.Random;
-import Fighting.Magic;
+import Fighting.MonsterMagic;
 
 public class Skeleton extends Monster {
 
@@ -28,9 +28,9 @@ public class Skeleton extends Monster {
     }
 
     public static void dealMagicDamage() {
-        Magic magic = new Magic();
+        MonsterMagic monsterMagic = new MonsterMagic();
 
-        magic.useFireBall();
+        monsterMagic.useFireBall();
     }
 
 }

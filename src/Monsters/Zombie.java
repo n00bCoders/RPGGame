@@ -1,7 +1,7 @@
 package Monsters;
 
 import Additional.Random;
-import Fighting.Magic;
+import Fighting.MonsterMagic;
 
 public class Zombie extends Monster{
 
@@ -30,7 +30,7 @@ public class Zombie extends Monster{
     }
 
     public static void dealMagicDamage() {
-        Magic.useReinforcedAttack(Monster.getDamageMin(), Monster.getDamageMax());
+        MonsterMagic.useReinforcedAttack(Monster.getDamageMin(), Monster.getDamageMax());
     }
 
 
