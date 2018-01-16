@@ -82,7 +82,9 @@ public class Player {
 		return exp;
 	}
 
-
+	public static double getBlock(){
+		return block;
+	}
 
 
 

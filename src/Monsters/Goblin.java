@@ -1,9 +1,7 @@
 package Monsters;
 
 import Additional.Random;
-import Fighting.Magic;
-import Game.Player;
-import Monsters.Monster;
+import Fighting.MonsterMagic;
 
 public class Goblin extends Monster {
 
@@ -34,6 +32,6 @@ public class Goblin extends Monster {
     }
 
     public static void dealMagicDamage(){
-        Magic.useStealHealth();
+        MonsterMagic.useStealHealth();
     }
 }
