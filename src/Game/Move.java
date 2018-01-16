@@ -5,7 +5,6 @@ import java.util.Scanner;
 /**
  * Created by Przykład Jan on 07.11.2017.
  */
-
 public class Move {
 
     static int keyToMansion = 0;
@@ -19,8 +18,14 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-                System.out.println("Idziesz do Forest <FLAGA>");
-                Forest();
+                if(1==1){
+                    System.out.println("Padpalasz pochodnia haszcze ktore blokowalay droge. Teraz mozesz przedostać sie dalej");
+                    Forest();
+                }else
+                {
+                    System.out.println("Droge blokuja haszcze, nie mozesz sie przedostac na druga strone");
+                    Camp();
+                }
 
             case "idz na poludnie":
                 System.out.println("Idziesz na Battlefield");
@@ -40,6 +45,7 @@ public class Move {
 
             case "wyjdz":
                 System.exit(1);
+
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
@@ -157,11 +163,11 @@ public class Move {
 
             case "idz na poludnie":
                 System.out.println("tam nic nie ma");
-
+                Graveyard();
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
-
+                Graveyard();
 
             case "idz na zachod":
                 Field2();
@@ -186,7 +192,7 @@ public class Move {
         switch (a) {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
-
+                Mansion();
 
             case "idz na poludnie":
                 Graveyard();
@@ -221,14 +227,15 @@ public class Move {
 
             case "idz na poludnie":
                 System.out.println("tam nic nie ma");
-
+                Battlefield();
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
-
+                Battlefield();
 
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
+                Battlefield();
 
 
             case "statystyki":
@@ -257,11 +264,11 @@ public class Move {
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
-
+                Forest();
 
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
-
+                Forest();
 
             case "statystyki":
                 Player.getStats();
@@ -283,16 +290,16 @@ public class Move {
         switch (a) {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
-
+                Dungeon();
             case "idz na poludnie":
                 Forest();
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
-
+                Dungeon();
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
-
+                Dungeon();
             case "statystyki":
                 Player.getStats();
                 Camp();
@@ -350,12 +357,12 @@ public class Move {
 
             case "idz na poludnie":
                 System.out.println("tam nic nie ma");
-
+                Hut();
             case "idz na wschod":
                 Field1();
 
             case "idz na zachod":
-                System.out.println("tu bedzie jakas zagadka albo klucz do Secret Roomu");
+                System.out.println("tu bedzie jakas zagadka albo klucz");
                 Hut();
 
             case "statystyki":

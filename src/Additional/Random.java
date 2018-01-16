@@ -38,6 +38,8 @@ public class Random {
         }
 
     }
+
+
   public static boolean Block() {
 
         int R = 100;
