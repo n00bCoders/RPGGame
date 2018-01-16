@@ -3,6 +3,7 @@ package Items;
 public class Items {
 
     /*
+
     x = 1 bronie
     x = 2 armors
     x = 3 shields

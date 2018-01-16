@@ -38,10 +38,10 @@ public class Random {
         }
 
     }
-    public static boolean Block() {
+  /*  public static boolean Block() {
 
         int R = 100;
-        int C = (int) Player.getBlock();
+        //int C = (int) Player.getBlock();
         int[] tablica = new int[R];
         int[] tablica1 = new int[C];
 
@@ -62,5 +62,5 @@ public class Random {
             return false;
 
         }
-    }
+    }*/
 }

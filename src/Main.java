@@ -38,7 +38,7 @@ public class Main {
         double improveStrength;
         double improveCrit;
 
-
+/*
         if(x == 1){
             improveHealth = WeaponsList.SwordsArray[weaponId].improveHealth;
             improveMana = WeaponsList.SwordsArray[weaponId].improveMana;
@@ -101,6 +101,6 @@ public class Main {
             Player.setIntelligence(improveIntelligence);
             Player.setStrength(improveStrength);
             Player.setCrit(improveCrit);
-        }
+        } */
     }
 }

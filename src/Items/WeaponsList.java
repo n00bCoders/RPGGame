@@ -2,6 +2,8 @@ package Items;
 
 import java.io.Console;
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class WeaponsList {
 
@@ -79,14 +81,27 @@ public class WeaponsList {
 
     }
 
+/////////////////////////////
 
 
+  public static void FindInArray() {
 
-  public static void FindInArray(){
+      Scanner odczyt = new Scanner(System.in);
+      odczyt = new
+      int c;
+      c = odczyt;
 
 
+      for(int i = 0; i < SwordsArray.length; i++){
 
+          if(SwordsArray[WeaponsList.Weapon0]){
+              System.out.println("Znaleziono liczbę w indeksie " + i + ", liczba ta wynosi: " + c);
+          }
+          else if(tab[i] != c){
+              System.out.println("Sout testowy gdy wartośc jest nieznaleziona ! Trzeba później wrzucić ją w wyjątek");
+          }
 
-    }
+      }
 
+  }
 }
