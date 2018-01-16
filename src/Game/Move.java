@@ -32,12 +32,12 @@ public class Move {
                 System.out.println("Idziesz na Battlefield");
                 Battlefield();
 
-            case "idz na wschod":
-                System.out.println("Idziesz na Field1");
-                Field1();
-
             case "idz na zachod":
                 System.out.println("Idziesz do Well");
+                Well();
+
+            case "idz na wschod":
+                System.out.println("Idziesz na Field1");
                 Well();
 
             case "statystyki":
@@ -46,7 +46,6 @@ public class Move {
 
             case "wyjdz":
                 System.exit(1);
-
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
@@ -67,25 +66,24 @@ public class Move {
                 System.out.println("Nie da się tam iść");
                 Well();
 
-            case "idz na wschod":
-                System.out.println("Wracasz do Camp");
-                Camp();
-
             case "idz na zachod":
                 System.out.println("Idziesz do Field2");
                 Field2();
 
+            case "idz na wschod":
+                System.out.println("Wracasz do Camp");
+                Camp();
+
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Well();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Well();
         }
 
     }
@@ -113,15 +111,14 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Field1();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Field1();
         }
 
     }
@@ -153,7 +150,6 @@ public class Move {
 
             case "wyjdz":
                 System.exit(1);
-
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
@@ -188,10 +184,9 @@ public class Move {
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Graveyard();
         }
 
     }
@@ -210,14 +205,15 @@ public class Move {
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
+                Mansion();
 
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
-
+                Mansion();
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Mansion();
 
             case "wyjdz":
                 System.exit(1);
@@ -225,7 +221,7 @@ public class Move {
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Mansion();
         }
 
     }
@@ -253,7 +249,7 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Battlefield();
 
             case "wyjdz":
                 System.exit(1);
@@ -261,7 +257,7 @@ public class Move {
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Battlefield();
         }
 
     }
@@ -287,15 +283,14 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Forest();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Forest();
         }
 
     }
@@ -308,26 +303,28 @@ public class Move {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
                 Dungeon();
+
             case "idz na poludnie":
                 Forest();
 
             case "idz na wschod":
                 System.out.println("tam nic nie ma");
                 Dungeon();
+
             case "idz na zachod":
                 System.out.println("tam nic nie ma");
                 Dungeon();
+
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Dungeon();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Dungeon();
         }
 
     }
@@ -355,15 +352,14 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Field1();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Field1();
         }
 
     }
@@ -379,6 +375,7 @@ public class Move {
             case "idz na poludnie":
                 System.out.println("tam nic nie ma");
                 Hut();
+
             case "idz na wschod":
                 Field1();
 
@@ -388,7 +385,7 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                Hut();
 
             case "wyjdz":
                 System.exit(1);
@@ -396,10 +393,11 @@ public class Move {
             case "przeszukaj domek":
                 System.out.println("Znalazles pochodnie!");
                 torch = 1;
+                Hut();
 
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                Hut();
         }
 
     }
@@ -411,6 +409,7 @@ public class Move {
         switch (a) {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
+                SwordPlace();
 
             case "idz na poludnie":
                 Hut();
@@ -425,15 +424,14 @@ public class Move {
 
             case "statystyki":
                 Player.getStats();
-                Camp();
+                SwordPlace();
 
             case "wyjdz":
                 System.exit(1);
 
-
             default:
                 System.out.println("Co Ty odpierdalasz?");
-                Camp();
+                SwordPlace();
         }
 
     }
