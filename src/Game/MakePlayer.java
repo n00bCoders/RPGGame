@@ -19,16 +19,17 @@ public class MakePlayer {
         System.out.println("3 - Szaman");
 
         int playerClass = scanner.nextInt();
+        Player.setMyClass(playerClass);
 
-        if (playerClass == 1 ){
+        if (Player.getMyClass() == 1 ){
             Warrior warrior = new Warrior(100, 100, 30, 30, 0.8, 5, 10, 3, 5, 5, 5, name);
             System.out.println("Wybrałeś/aś wojownika, powodzenia!");
         }
-        else if (playerClass == 2){
+        else if (Player.getMyClass() == 2){
             Rogue rogue = new Rogue(100, 100, 30, 30, 1, 5, 5, 5, 5, 5, 5, name);
             System.out.println("Wybrałeś/aś łotra, powodzenia!");
         }
-        else if (playerClass == 3){
+        else if (Player.getMyClass() == 3){
             //Szaman do stworzenia
         }
         else {

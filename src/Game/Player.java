@@ -1,6 +1,7 @@
 package Game;
 
 import Additional.Random;
+import Additional.Rounding;
 import Fighting.HeroMagic;
 import Monsters.Monster;
 
@@ -21,7 +22,8 @@ public class Player {
 	private static double money = 0;
 	private static int level = champLevel();
 	private static double exp = 0;
-	private static double block=0;
+	private static double block = 0;
+	private static int myClass = 0;
 
 	private static double agility = 5;
 	private static double intelligence = 5;
@@ -86,8 +88,6 @@ public class Player {
 		return block;
 	}
 
-
-
 	public static double getAgility() {
 		return agility;
 	}
@@ -108,27 +108,29 @@ public class Player {
 		return crit;
 	}
 
-
 	public static double getAttackPower(){
 		return attack*strength;
 	}
 
 	public static void getStats(){
-		System.out.println("Imie: " + getName());
+		System.out.println("Imie: " + nameOfThePlayer);
 		System.out.println("Zycie: " + getHealthBar());
 		System.out.println("Mana: " + getManaBar());
-		System.out.println("Predkosc ataku: " + getSpeedAttack());
-		System.out.println("Obrona: " + getDeffence());
-		System.out.println("Atak: " + getAttack());
-		System.out.println("Lvl: " + getLvl());
-		System.out.println("Exp: " + getExp());
-		System.out.println("Zrecznosc: " + getAgility());
-		System.out.println("Inteligencja: " + getIntelligence());
-		System.out.println("Witalnosc: " + getVitality());
-		System.out.println("Sila: " + getStrength());
-		System.out.println("Szansa na uderzenie krytyczne: " + getCrit() + "%");
+		System.out.println("Predkosc ataku: " + Rounding.round(speedAttack, 2));
+		System.out.println("Obrona: " + deffence);
+		System.out.println("Atak: " + attack);
+		System.out.println("Lvl: " + level);
+		System.out.println("Exp: " + exp);
+		System.out.println("Zrecznosc: " + agility);
+		System.out.println("Inteligencja: " + intelligence);
+		System.out.println("Witalnosc: " + vitality);
+		System.out.println("Sila: " + strength);
+		System.out.println("Szansa na uderzenie krytyczne: " + crit + "%");
 	}
 
+	public static int getMyClass() {
+		return myClass;
+	}
 
 	//SETTERS
 	public static void setName(String nameOfThePlayer){
@@ -163,17 +165,43 @@ public class Player {
 
 	public static void setLevel(double addLvl){
 		level += addLvl;
+		System.out.println("Gratulacje! Awansowałeś, masz teraz: " + level + " Twoje statystyki wzrosły.");
+		if (myClass == 1){
+			health += 20;
+			healthMax += 20;
+			speedAttack += 0.05;
+			deffence += 2;
+			attack += 2;
+			strength += 1;
+		}
+		else if(myClass == 2){
+			health += 10;
+			healthMax += 10;
+			speedAttack += 0.1;
+			attack += 1;
+			agility += 1;
+			crit += 3;
+		}
+		else{
+			health += 10;
+			healthMax += 10;
+			attack += 1;
+			intelligence += 3;
+		}
 	}
 
 	public static void setExp(double addExp){
     	exp += addExp;
+    	playerLevelUp();
+	}
+
+	public static void setMyClass(int takenClass){
+		myClass = takenClass;
 	}
 
 	public static void setBlock(double addBlock){
 		block += addBlock;
 	}
-
-
 
 	public static void setAgility(double addAgility) {
 		agility += addAgility;
@@ -215,6 +243,15 @@ public class Player {
 
 
 	//Other methods
+	public static void playerLevelUp(){
+		if (exp >= 0 && exp <= 100)
+			Player.setLevel(1);
+		else if(exp >= 100 && exp <= 200)
+			Player.setLevel(1);
+		else
+			System.out.println("Osiągnąłeś maksymalny poziom");
+
+	}
 	public static int champLevel() {
 		if (exp < 200) {
 			System.out.println("Twoj level wynosi 1 ");
@@ -255,7 +292,8 @@ public class Player {
 		return 0;
 	}
 
-	/* public static boolean takeDamage(double damage) {
+	public static boolean takeDamage(double damage) {
+
 		if(Random.Block() == true) {
 			damage *= 0.2;
 			health = getHealth() - damage;
@@ -272,7 +310,7 @@ public class Player {
 		}
 		return false;
 	}
-*/
+
 	public static void dealDamage() {
 		System.out.println("Co chcesz teraz zrobic?");
 		String fight = scanner.nextLine();

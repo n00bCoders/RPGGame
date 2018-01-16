@@ -49,38 +49,9 @@ public class WeaponsList {
     public static Weapons SwordsArray[] = {Weapon1, Weapon2, Weapon3, Weapon4, Weapon5, Weapon6, Weapon7, Weapon8};
     Scanner odczyt = new Scanner(System.in);
 
-    // Metoda testowa
-
-    public static void ShowAllWeaponParams(int id) {
-
-        System.out.println("Basic info");
-        System.out.println("X = " + SwordsArray[id].dimension_x);
-        System.out.println("Y = " + SwordsArray[id].dimension_y);
-        System.out.println("ID = " + SwordsArray[id].id);
-        System.out.println("Name = " + SwordsArray[id].name);
-
-        System.out.println(" ");
-
-        System.out.println("Stats improve");
-        System.out.println("Attack improve= " + SwordsArray[id].improveAttack);
-        System.out.println("Attack Speed Improve = " + SwordsArray[id].improveSpeedAttack);
-        System.out.println("Crit Rating improve =" + SwordsArray[id].improveCrit);
-        System.out.println("HP improve = " + SwordsArray[id].improveHealth);
-
-        System.out.println("");
-
-        System.out.println("Requires");
-        //System.out.println("Strenght Require = " + SwordsArray[id].requireStrength);
-
-        System.out.println("");
-
-        System.out.println("Others");
-        System.out.println("Durability = " + SwordsArray[id].durablity);
-
-    }
 // METODY DO ZNAJDOWANIA OKRESLONYCH PARAMSÓW W TABLICY WEAPONS.
-/////////////////////////////
 
+//-------------------------------------------------------------------------------------------------------
     // Wybierz indeks itemu który miał zostać wysłany
     public static void FindInArrayID(int iD) {
 
@@ -89,13 +60,16 @@ public class WeaponsList {
         for (int i = 0; i < SwordsArray.length; i++) {
 
             if (SwordsArray[i].id == iD) {
-                System.out.println("Przedmiot o identyfikatorze: " + iD + " to:  " + SwordsArray[i].name + ". Dodaje " + SwordsArray[i].improveAttack + " do ataku.");
+                System.out.println("Przedmiot o identyfikatorze: " + iD + " to:  " + SwordsArray[i].name);
             } else if (SwordsArray[i].id != iD) {
                 System.out.println("Sout testowy gdy wartośc jest nieznaleziona ! Trzeba później wrzucić ją w wyjątek");
             }
         }
 
     }
+    //-------------------------------------------------------------------------------------------------------
+
+
 
     public static void FindInArrayName(String newName) {
 
@@ -110,8 +84,9 @@ public class WeaponsList {
             }
         }
 
-    }
 
+
+    }
 
     public static void GetAllWeaponParams(int iD) {
         iD = iD;
@@ -128,7 +103,7 @@ public class WeaponsList {
                 System.out.println("IMPROVMENTS");
                 System.out.println("___________________________________________________");
                 System.out.println("Health: " +SwordsArray[i].improveHealth);
-                System.out.println("Crit: " +SwordsArray[i].improveCrit);
+                System.out.println("Crit: " + SwordsArray[i].improveCrit);
                 System.out.println("Attack: " +SwordsArray[i].improveAttack);
                 System.out.println("Speed Attack: " +SwordsArray[i].improveSpeedAttack);
                 System.out.println("Strength: " +SwordsArray[i].improveStrength);
@@ -149,7 +124,11 @@ public class WeaponsList {
         }
 
 
-    }
+
+
+
+}
+
 
 
 }
