@@ -86,8 +86,6 @@ public class Player {
 		return block;
 	}
 
-
-
 	public static double getAgility() {
 		return agility;
 	}
@@ -107,7 +105,6 @@ public class Player {
 	public static double getCrit(){
 		return crit;
 	}
-
 
 	public static double getAttackPower(){
 		return attack*strength;
@@ -167,13 +164,12 @@ public class Player {
 
 	public static void setExp(double addExp){
     	exp += addExp;
+    	playerLevelUp();
 	}
 
 	public static void setBlock(double addBlock){
 		block += addBlock;
 	}
-
-
 
 	public static void setAgility(double addAgility) {
 		agility += addAgility;
@@ -215,6 +211,15 @@ public class Player {
 
 
 	//Other methods
+	public static void playerLevelUp(){
+		if (exp >= 0 && exp <= 100)
+			Player.setLevel(1);
+		else if(exp >= 100 && exp <= 200)
+			Player.setLevel(1);
+		else
+			System.out.println("Osiągnąłeś maksymalny poziom");
+
+	}
 	public static int champLevel() {
 		if (exp < 200) {
 			System.out.println("Twoj level wynosi 1 ");
@@ -254,8 +259,6 @@ public class Player {
 		}
 		return 0;
 	}
-
-
 
 	public static boolean takeDamage(double damage) {
 

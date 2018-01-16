@@ -47,6 +47,11 @@ public class Move {
             case "wyjdz":
                 System.exit(1);
 
+            case "dodaj expa":
+                Player.setExp(50);
+                System.out.println("Dodałeś sobie 50 expa");
+                Camp();
+
             default:
                 System.out.println("Co Ty odpierdalasz?");
                 Camp();
