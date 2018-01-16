@@ -12,13 +12,14 @@ public class Move {
     static int secretRoom = 0;
 
     static Scanner scanner = new Scanner(System.in);
-    static String a = scanner.nextLine(); // nasz glowny scanner
 
     public static void Camp() {
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
-                if(1==1){
+                if(torch == 1){
                     System.out.println("Padpalasz pochodnia haszcze ktore blokowalay droge. Teraz mozesz przedostać sie dalej");
                     Forest();
                 }else
@@ -55,6 +56,8 @@ public class Move {
 
     public static void Well(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 System.out.println("Nie da się tam iść");
@@ -88,6 +91,8 @@ public class Move {
     }
 
     public static void Field1(){
+
+        String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
@@ -123,6 +128,8 @@ public class Move {
 
     public static void Field2(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 System.out.println("Nie da się tam iść");
@@ -157,6 +164,8 @@ public class Move {
 
     public static void Graveyard(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 Mansion();
@@ -189,6 +198,8 @@ public class Move {
 
     public static void Mansion(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
@@ -220,6 +231,8 @@ public class Move {
     }
 
     public static void Battlefield(){
+
+        String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
@@ -255,6 +268,8 @@ public class Move {
 
     public static void Forest(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 Dungeon();
@@ -287,6 +302,8 @@ public class Move {
 
     public static void Dungeon(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 System.out.println("tam nic nie ma");
@@ -316,6 +333,8 @@ public class Move {
     }
 
     public static void SecretRoom(){
+
+        String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
@@ -351,6 +370,8 @@ public class Move {
 
     public static void Hut(){
 
+        String a = scanner.nextLine();
+
         switch (a) {
             case "idz na polnoc":
                 SwordPlace();
@@ -384,6 +405,8 @@ public class Move {
     }
 
     public static void SwordPlace(){
+
+        String a = scanner.nextLine();
 
         switch (a) {
             case "idz na polnoc":
