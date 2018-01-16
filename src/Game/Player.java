@@ -255,7 +255,10 @@ public class Player {
 		return 0;
 	}
 
-	 public static boolean takeDamage(double damage) {
+
+
+	public static boolean takeDamage(double damage) {
+
 		if(Random.Block() == true) {
 			damage *= 0.2;
 			health = getHealth() - damage;

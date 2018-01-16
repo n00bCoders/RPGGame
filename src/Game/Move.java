@@ -1,11 +1,5 @@
 package Game;
 
-import Fighting.Fight;
-import Monsters.Goblin;
-import Monsters.Monster;
-import Monsters.Zombie;
-
-import java.lang.reflect.Field;
 import java.util.Scanner;
 
 /**
@@ -20,16 +14,20 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("Idziesz do Forest <FLAGA>");
+                Forest();
 
             case "idz na poludnie":
-
+                System.out.println("Idziesz na Battlefield");
+                Battlefield();
 
             case "idz na wschod":
-
+                System.out.println("Idziesz na Field1");
+                Field1();
 
             case "idz na zachod":
-
+                System.out.println("Idziesz do Well");
+                Well();
 
             case "statystyki":
                 Player.getStats();
@@ -49,16 +47,20 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("Nie da się tam iść");
+                Well();
 
             case "idz na poludnie":
-
+                System.out.println("Nie da się tam iść");
+                Well();
 
             case "idz na wschod":
-
+                System.out.println("Wracasz do Camp");
+                Camp();
 
             case "idz na zachod":
-
+                System.out.println("Idziesz do Field2");
+                Field2();
 
             case "statystyki":
                 Player.getStats();
@@ -79,16 +81,20 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("Nie da się tam iść");
+                Field1();
 
             case "idz na poludnie":
-
+                System.out.println("Nie da się tam iść");
+                Field1();
 
             case "idz na wschod":
-
+                System.out.println("Idziesz do Camp");
+                Camp();
 
             case "idz na zachod":
-
+                System.out.println("Idziesz do Hut");
+                Hut();
 
             case "statystyki":
                 Player.getStats();
@@ -109,16 +115,20 @@ public class Move {
 
         switch (a) {
             case "idz na polnoc":
-
+                System.out.println("Nie da się tam iść");
+                Field2();
 
             case "idz na poludnie":
-
+                System.out.println("Nie da się tam iść");
+                Field2();
 
             case "idz na wschod":
-
+                System.out.println("Idziesz do Graveyard");
+                Graveyard();
 
             case "idz na zachod":
-
+                System.out.println("Idziesz do Well");
+                Field2();
 
             case "statystyki":
                 Player.getStats();

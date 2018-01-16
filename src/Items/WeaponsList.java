@@ -84,7 +84,7 @@ public class WeaponsList {
 /////////////////////////////
 
 
-  public static void FindInArray() {
+ /* public static void FindInArray() {
 
       Scanner odczyt = new Scanner(System.in);
       odczyt = new
@@ -104,4 +104,5 @@ public class WeaponsList {
       }
 
   }
+  KOMENTARZ BO NIE DZIAŁAŁO*/
 }

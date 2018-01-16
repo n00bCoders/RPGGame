@@ -25,30 +25,38 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="572">
+              <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1516135505953" expanded="true" signature="3167:3440" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="3476:4076" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="4110:4740" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="4778:5404" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="5437:6035" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="6069:6694" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="6731:7172" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="7202:7823" ph="{...}" />
+                <marker date="1516135505953" expanded="true" signature="7860:8484" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="284" column="26" lean-forward="true" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="26" />
+            <state relative-caret-position="167">
+              <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Random.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Random.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Additional/Random.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,7 +67,7 @@
       <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Monsters/Monster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
+            <state relative-caret-position="725">
               <caret line="192" column="20" lean-forward="false" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
               <folding />
             </state>
@@ -98,8 +106,8 @@
         <option value="$PROJECT_DIR$/Items/CharacterEq.java" />
         <option value="$PROJECT_DIR$/Main.java" />
         <option value="$PROJECT_DIR$/Game/Move.java" />
-        <option value="$PROJECT_DIR$/Additional/Random.java" />
         <option value="$PROJECT_DIR$/Game/Player.java" />
+        <option value="$PROJECT_DIR$/Additional/Random.java" />
       </list>
     </option>
   </component>
@@ -418,10 +426,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1365000" />
+    <option name="totallyTimeSpent" value="1528000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -689,10 +697,18 @@
     <entry file="file://$USER_HOME$/Downloads/Szukanie elementu - Java/Szukanie_elementu.java" />
     <entry file="file://$PROJECT_DIR$/Game/Move.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="572">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1516135505953" expanded="true" signature="3167:3440" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="3476:4076" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="4110:4740" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="4778:5404" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="5437:6035" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="6069:6694" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="6731:7172" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="7202:7823" ph="{...}" />
+            <marker date="1516135505953" expanded="true" signature="7860:8484" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -804,29 +820,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Additional/Random.java">
+    <entry file="file://$PROJECT_DIR$/Game/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Monsters/Monster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
+        <state relative-caret-position="725">
           <caret line="192" column="20" lean-forward="false" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/Player.java">
+    <entry file="file://$PROJECT_DIR$/Additional/Random.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="284" column="26" lean-forward="true" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -38,7 +38,9 @@ public class Random {
         }
 
     }
-   public static boolean Block() {
+
+
+  public static boolean Block() {
 
         int R = 100;
         int C = (int) Player.getBlock();
