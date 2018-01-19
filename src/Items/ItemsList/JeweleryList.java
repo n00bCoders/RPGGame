@@ -1,4 +1,6 @@
-package Items;
+package Items.ItemsList;
+
+import Items.ItemsConstructor.Jewelery;
 
 public class JeweleryList {
 

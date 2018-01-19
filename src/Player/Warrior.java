@@ -1,6 +1,6 @@
-package Classes;
+package Player;
 
-import Game.Player;
+import Player.Player;
 
 public class Warrior extends Player {
 

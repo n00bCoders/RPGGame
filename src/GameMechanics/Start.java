@@ -1,4 +1,7 @@
-package Game;
+package GameMechanics;
+
+import GameMechanics.MakePlayer;
+import GameMechanics.Move;
 
 /**
  * Created by Przykład Jan on 27.10.2017.

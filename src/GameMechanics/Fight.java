@@ -1,7 +1,7 @@
-package Fighting;
+package GameMechanics;
 
 import Additional.Random;
-import Game.Player;
+import Player.Player;
 import Monsters.Goblin;
 import Monsters.Monster;
 import Monsters.Skeleton;

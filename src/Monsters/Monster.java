@@ -1,7 +1,6 @@
 package Monsters;
 
-import Fighting.MonsterMagic;
-import Game.Player;
+import Player.Player;
 import Additional.Random;
 
 

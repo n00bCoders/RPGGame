@@ -1,7 +1,7 @@
-package Fighting;
+package Player;
 
 import Additional.Random;
-import Game.Player;
+import Player.Player;
 import Monsters.Monster;
 
 public class HeroMagic {

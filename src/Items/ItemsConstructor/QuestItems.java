@@ -1,4 +1,6 @@
-package Items;
+package Items.ItemsConstructor;
+
+import Items.Items;
 
 public class QuestItems extends Items {
 

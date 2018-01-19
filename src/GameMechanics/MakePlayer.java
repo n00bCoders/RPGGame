@@ -1,7 +1,8 @@
-package Game;
+package GameMechanics;
 
-import Classes.Rogue;
-import Classes.Warrior;
+import Player.Rogue;
+import Player.Warrior;
+import Player.Player;
 
 import java.util.Scanner;
 

@@ -1,8 +1,7 @@
-package Game;
+package Player;
 
 import Additional.Random;
 import Additional.Rounding;
-import Fighting.HeroMagic;
 import Monsters.Monster;
 
 import java.util.Scanner;
@@ -20,7 +19,7 @@ public class Player {
 	private static double deffence = 5;
 	private static double attack = 5;
 	private static double money = 0;
-	private static int level = champLevel();
+	private static int level;
 	private static double exp = 0;
 	private static double block = 0;
 	private static int myClass = 0;
@@ -252,63 +251,24 @@ public class Player {
 			System.out.println("Osiągnąłeś maksymalny poziom");
 
 	}
-	public static int champLevel() {
-		if (exp < 200) {
-			System.out.println("Twoj level wynosi 1 ");
-			return level = 1;
-		}
-		if (exp >= 200 && exp < 300) {
-			System.out.println("Twoj level wynosi 2 ");
-			return level = 2;
-		}
-		if (exp >= 300 && exp < 400) {
-			System.out.println("Twoj level wynosi 3 ");
-			return level = 3;
-		}
-		if (exp >= 400 && exp < 500) {
-			System.out.println("Twoj level wynosi 4 ");
-			return level = 4;
-		}
-		if (exp >= 500 && exp < 600) {
-			System.out.println("Twoj level wynosi 5 ");
-			return level = 5;
-		}
-		if (exp >= 600 && exp < 700) {
-			System.out.println("Twoj level wynosi 6 ");
-			return level = 6;
-		}
-		if (exp >= 700 && exp < 800) {
-			System.out.println("Twoj level wynosi 7 ");
-			return level = 7;
-		}
-		if (exp >= 800 && exp < 900) {
-			System.out.println("Twoj level wynosi 8 ");
-			return level = 8;
-		}
-		if (exp >= 900 && exp < 1000) {
-			System.out.println("Twoj level wynosi 9 ");
-			return level = 9;
-		}
-		return 0;
-	}
 
-	public static boolean takeDamage(double damage) {
+	public static void takeDamage(double damage) {
+        if(Random.Block() == true) {
+            damage *= 0.2;
+            health = getHealth() - damage;
+            System.out.println("Zablokowaleś część obrażeń. Masz teraz: " + getHealthBar() + " punktow zycia ");
+        }
+        else {
+            health = getHealth() - damage;
+            System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
+        }
 
-		if(Random.Block() == true) {
-			damage *= 0.2;
-			health = getHealth() - damage;
-			System.out.println("Zablokowaleś część obrażeń. Masz teraz: " + getHealthBar() + " punktow zycia ");
-		}
-		else {
-			health = getHealth() - damage;
-			System.out.println("Masz teraz: " + getHealthBar() + " punktow zycia");
-		}
-		if (getHealth() <= 0) {
-			System.out.println("Umarles");
-			System.exit(1);
-			return true;
-		}
-		return false;
+        if (getHealth() <= 0) {
+            System.out.println("Umarles");
+            System.exit(1);
+        }
+
+
 	}
 
 	public static void dealDamage() {

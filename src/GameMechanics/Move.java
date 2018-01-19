@@ -1,4 +1,6 @@
-package Game;
+package GameMechanics;
+
+import Player.Player;
 
 import java.util.Scanner;
 

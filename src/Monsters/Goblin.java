@@ -1,7 +1,6 @@
 package Monsters;
 
 import Additional.Random;
-import Fighting.MonsterMagic;
 
 public class Goblin extends Monster {
 

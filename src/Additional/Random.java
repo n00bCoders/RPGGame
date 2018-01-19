@@ -1,6 +1,6 @@
 package Additional;
 
-import Game.Player;
+import Player.Player;
 
 import java.util.concurrent.ThreadLocalRandom;
 

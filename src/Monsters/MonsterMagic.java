@@ -1,10 +1,10 @@
-package Fighting;
+package Monsters;
 
 import Additional.Random;
-import Game.Player;
+import Player.Player;
 import Monsters.Monster;
 
-public class Magic {
+public class MonsterMagic {
 
     public static void useFireBall()    {
         int requiredMana = 20;

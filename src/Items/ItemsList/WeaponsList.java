@@ -1,7 +1,7 @@
-package Items;
+package Items.ItemsList;
 
-import java.io.Console;
-import java.util.Arrays;
+import Items.ItemsConstructor.Weapons;
+
 import java.util.Scanner;
 
 
