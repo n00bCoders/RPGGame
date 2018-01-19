@@ -113,20 +113,9 @@ public class Player {
 	}
 
 	public static void getStats(){
-		System.out.println("Imie: " + getName());
 		System.out.println("Imie: " + nameOfThePlayer);
 		System.out.println("Zycie: " + getHealthBar());
 		System.out.println("Mana: " + getManaBar());
-		System.out.println("Predkosc ataku: " + getSpeedAttack());
-		System.out.println("Obrona: " + getDeffence());
-		System.out.println("Atak: " + getAttack());
-		System.out.println("Lvl: " + getLvl());
-		System.out.println("Exp: " + getExp());
-		System.out.println("Zrecznosc: " + getAgility());
-		System.out.println("Inteligencja: " + getIntelligence());
-		System.out.println("Witalnosc: " + getVitality());
-		System.out.println("Sila: " + getStrength());
-		System.out.println("Szansa na uderzenie krytyczne: " + getCrit() + "%");
 		System.out.println("Predkosc ataku: " + Rounding.round(speedAttack, 2));
 		System.out.println("Obrona: " + deffence);
 		System.out.println("Atak: " + attack);
@@ -255,7 +244,9 @@ public class Player {
 
 	//Other methods
 	public static void playerLevelUp(){
+		if (getExp() >= 0 && getExp() <= 100)
 			Player.setLevel(1);
+		else if(getExp() >= 100 && getExp() <= 200)
 			Player.setLevel(1);
 		else
 			System.out.println("Osiągnąłeś maksymalny poziom");
